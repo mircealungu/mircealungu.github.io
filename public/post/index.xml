@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Post-rsses on M</title>
-    <link>https://mircealungu.github.io/post/index.xml</link>
+    <link>https://mircealungu.github.io/public/post/index.xml</link>
     <description>Recent content in Post-rsses on M</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Big Software Data</title>
-      <link>https://mircealungu.github.io/post/big_software_data/</link>
+      <link>https://mircealungu.github.io/public/post/big_software_data/</link>
       <pubDate>Wed, 20 Apr 2016 12:00:00 +0000</pubDate>
       
-      <guid>https://mircealungu.github.io/post/big_software_data/</guid>
+      <guid>https://mircealungu.github.io/public/post/big_software_data/</guid>
       <description></description>
     </item>
     
