@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>M</title>
+    <link>https://mircealungu.github.io/tags/ecosystems/index.xml</link>
+    <description>Recent content on M</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016 Mircea F Lungu</copyright>
+    <atom:link href="/tags/ecosystems/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Bootstrapping an Ubiquitous Ecosystem @ WEA&#39;16</title>
+      <link>https://mircealungu.github.io/post/16-09-20-bootstrapping-an-ubiquitous-ecosystem/</link>
+      <pubDate>Tue, 20 Sep 2016 12:00:00 +0000</pubDate>
+      
+      <guid>https://mircealungu.github.io/post/16-09-20-bootstrapping-an-ubiquitous-ecosystem/</guid>
+      <description>&lt;p&gt;I was happy to hear that my paper on Bootstrapping a Ubiquitous Monitoring Ecosystem (&lt;a href=&#34;https://github.com/mircealungu/Bootstrapping_an_Ecosystem__WEA16/blob/master/preprint.pdf&#34;&gt;preprint online&lt;/a&gt;) was accepted for presentation at WEA (Workshop on Ecosystem Architectures) that will take place in Copenhagen and is colocated with ECSA.&lt;/p&gt;
+
+&lt;p&gt;The paper talks about some of the challenges and
+opportunities that come with bootstrapping a
+ubiquitous monitoring ecosystem. It is a case
+study inspired from our &lt;a href=&#34;https://zeeguu.unibe.ch&#34;&gt;Zeeguu&lt;/a&gt; project.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
