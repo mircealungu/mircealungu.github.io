@@ -40,7 +40,13 @@ closer to natural language. (&lt;a href=&#34;https://github.com/mircealungu/Poli
       <pubDate>Tue, 20 Sep 2016 12:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/post/16-09-20-bootstrapping-an-ubiquitous-ecosystem/</guid>
-      <description>&lt;p&gt;I was happy to hear that my paper on Bootstrapping a Ubiquitous Monitoring Ecosystem (&lt;a href=&#34;https://github.com/mircealungu/Bootstrapping_an_Ecosystem__WEA16/blob/master/preprint.pdf&#34;&gt;preprint online&lt;/a&gt;) was accepted for presentation at WEA (Workshop on Ecosystem Architectures) that will take place in Copenhagen and is colocated with ECSA.&lt;/p&gt;
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;An unconventional idea for an ecosystem, which shows well that there are many more opportunities to benefit from the ecosystem idea, than the various industrial applications. The concrete examples of the platform and the applications make the ideas tangible and well understandable. I particularly like the discussions of the lessons learned [&amp;hellip;]&amp;rdquo; (a reviewer for the paper :)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I loved that review!&lt;/p&gt;
+
+&lt;p&gt;I was happy to hear that my paper on Bootstrapping a Ubiquitous Monitoring Ecosystem (&lt;a href=&#34;https://github.com/mircealungu/Bootstrapping_an_Ecosystem__WEA16/blob/master/preprint.pdf&#34;&gt;preprint online&lt;/a&gt;) was accepted for presentation at WEA (Workshop on Ecosystem Architectures) that will take place in Copenhagen and is colocated with ECSA.&lt;/p&gt;
 
 &lt;p&gt;The paper talks about some of the challenges and
 opportunities that come with bootstrapping a
@@ -190,19 +196,6 @@ Download one of the sample systems that are available online (work in progress)&
 &lt;p&gt;After this Softwarenaut builds the internal hierarchical graphs for every version and you are ready to proceed to analysis. The models for all the versions will now know that they are part of the same history.&lt;/p&gt;
 
 &lt;p&gt;Multi-Version views will be enabled in the detail view tab. One such example is the Relationship Evolution detail view for dependencies.&lt;/p&gt;
-
-&lt;h3 id=&#34;the-structure-of-this-repository&#34;&gt;The Structure of This Repository&lt;/h3&gt;
-
-&lt;p&gt;====&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;dist-base: base folder for
-building the distributions
-for the different OSes.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;dist-scripts: scripts to
-build the distributions&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

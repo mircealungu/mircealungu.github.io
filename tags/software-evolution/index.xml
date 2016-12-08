@@ -150,19 +150,6 @@ Download one of the sample systems that are available online (work in progress)&
 &lt;p&gt;After this Softwarenaut builds the internal hierarchical graphs for every version and you are ready to proceed to analysis. The models for all the versions will now know that they are part of the same history.&lt;/p&gt;
 
 &lt;p&gt;Multi-Version views will be enabled in the detail view tab. One such example is the Relationship Evolution detail view for dependencies.&lt;/p&gt;
-
-&lt;h3 id=&#34;the-structure-of-this-repository&#34;&gt;The Structure of This Repository&lt;/h3&gt;
-
-&lt;p&gt;====&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;dist-base: base folder for
-building the distributions
-for the different OSes.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;dist-scripts: scripts to
-build the distributions&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     
