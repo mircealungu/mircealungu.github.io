@@ -55,22 +55,25 @@ of information&amp;rdquo;&lt;/b&gt; (Steward Brand, Inventing the Future at MIT)
 
 &lt;p&gt;Indeed StackOverflow has information about how information flows between users in the form of answers to questions. Since a large number of users have provided their geolocation information in their profiles we can build a hierarchical graph of this data and visualize it with Quicksilver. We grabbed thus a public dump of the SO data curated by Alberto Bacchellii and Luca Ponzanelli at the University of Lugano.&lt;/p&gt;
 
-&lt;p&gt;With this data we created the following map of the software engineering information flow in the world through the medium of StackOverflow:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://mircealungu.github.io/img/stackoverflow-full.png&#34;&gt;&lt;img src=&#34;https://mircealungu.github.io/img/stackoverflow-full.png&#34; alt=&#34;stackoverflow-full&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The map is built using the following conventions:&lt;/p&gt;
+&lt;p&gt;With this data we created a map of the software engineering information flow in the world mediated by SO with the following conventions:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Countries and continents are represented using treemaps. Their areas are proportional to the aggregated reputation received by their corresponding users (e.g. UK has 10x more reputation than Switzerland)&lt;/li&gt;
-&lt;li&gt;The thickness of an arrow indicating information flow between regions is proportional to the number of answers abstracted in it (e.g. Australia imports three times more information than it exports)&lt;/li&gt;
+&lt;li&gt;The thickness of an arrow indicating information flow between regions is proportional to the number of answers abstracted in it (e.g. Australia imports three times more information than it exports)
+
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Several observations on this map:&lt;/p&gt;
+&lt;div style=&#34;margin: 0 -48%; padding: 0 -48%; background-color: red;&#34;&gt;
+    &lt;img src=&#34;https://mircealungu.github.io/img/stackoverflow-full.png&#34; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The most straightforward observations based on this map are:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;America and Europe are the main contributors&lt;/li&gt;
-&lt;li&gt;Some small countries like Switzerland or Netherland have disproportionately high reputation&lt;/li&gt;
+&lt;li&gt;EU is exporting more answers to the US&lt;/li&gt;
+&lt;li&gt;US has more reputation than EU&lt;/li&gt;
+&lt;li&gt;Several small countries like Switzerland or Netherland have disproportionately high reputation&lt;/li&gt;
 &lt;li&gt;Africa does not contribute much&lt;/li&gt;
 &lt;li&gt;China is practically absent even if Joel &lt;a href=&#34;https://stackoverflow.blog/2011/04/stack-overflow-around-the-world/&#34;&gt;reports&lt;/a&gt; large numbers of visitors to the site from there&lt;/li&gt;
 &lt;/ul&gt;

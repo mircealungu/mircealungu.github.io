@@ -158,22 +158,25 @@ of information&rdquo;</b> (Steward Brand, Inventing the Future at MIT)</p>
 
 <p>Indeed StackOverflow has information about how information flows between users in the form of answers to questions. Since a large number of users have provided their geolocation information in their profiles we can build a hierarchical graph of this data and visualize it with Quicksilver. We grabbed thus a public dump of the SO data curated by Alberto Bacchellii and Luca Ponzanelli at the University of Lugano.</p>
 
-<p>With this data we created the following map of the software engineering information flow in the world through the medium of StackOverflow:</p>
-
-<p><a href="/img/stackoverflow-full.png"><img src="/img/stackoverflow-full.png" alt="stackoverflow-full" /></a></p>
-
-<p>The map is built using the following conventions:</p>
+<p>With this data we created a map of the software engineering information flow in the world mediated by SO with the following conventions:</p>
 
 <ul>
 <li>Countries and continents are represented using treemaps. Their areas are proportional to the aggregated reputation received by their corresponding users (e.g. UK has 10x more reputation than Switzerland)</li>
-<li>The thickness of an arrow indicating information flow between regions is proportional to the number of answers abstracted in it (e.g. Australia imports three times more information than it exports)</li>
+<li>The thickness of an arrow indicating information flow between regions is proportional to the number of answers abstracted in it (e.g. Australia imports three times more information than it exports)
+
+<br /></li>
 </ul>
 
-<p>Several observations on this map:</p>
+<div style="margin: 0 -48%; padding: 0 -48%; background-color: red;">
+    <img src="/img/stackoverflow-full.png" />
+</div>
+
+<p>The most straightforward observations based on this map are:</p>
 
 <ul>
-<li>America and Europe are the main contributors</li>
-<li>Some small countries like Switzerland or Netherland have disproportionately high reputation</li>
+<li>EU is exporting more answers to the US</li>
+<li>US has more reputation than EU</li>
+<li>Several small countries like Switzerland or Netherland have disproportionately high reputation</li>
 <li>Africa does not contribute much</li>
 <li>China is practically absent even if Joel <a href="https://stackoverflow.blog/2011/04/stack-overflow-around-the-world/">reports</a> large numbers of visitors to the site from there</li>
 </ul>
