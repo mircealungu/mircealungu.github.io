@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.17" />
+  <meta name="author" content="Dr. Mircea Lungu">
+  <meta name="description" content="Assistant Professor in Software Engineering">
+
+  <link rel="stylesheet" href="/css/highlight.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  <link rel="alternate" href="https://mircealungu.github.io/index.xml" type="application/rss+xml" title="Mircea Lungu">
+  <link rel="feed" href="https://mircealungu.github.io/index.xml" type="application/rss+xml" title="Mircea Lungu">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="https://mircealungu.github.io/post/13-09-01-visualizing-stack-overflow/">
+
+  
+
+  <title>Visualizing Stack Overflow @ SSE&#39;13 | Mircea Lungu</title>
+
+</head>
+<body id="top">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Mircea Lungu</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse" id="#navbar-collapse-1">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li class="nav-item"><a href="/#top">About</a></li>
+        
+        <li class="nav-item"><a href="/#posts">Academic Log</a></li>
+        
+        <li class="nav-item"><a href="/#teaching">Teaching</a></li>
+        
+        <li class="nav-item"><a href="https://scholar.google.nl/citations?user=kLqXicUAAAAJ&amp;hl=en">Publications</a></li>
+        
+        <li class="nav-item"><a href="/#contact">Contact</a></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+    
+
+    <h1 itemprop="name">Visualizing Stack Overflow @ SSE&#39;13</h1>
+
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2013-11-20 12:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Wed, Nov 20, 2013
+    </time>
+  </span>
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a class="article-tag-link" href="https://mircealungu.github.io/tags/papers">Papers</a
+    >, 
+    
+    <a class="article-tag-link" href="https://mircealungu.github.io/tags/ecosystems">Ecosystems</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmircealungu.github.io%2fpost%2f13-09-01-visualizing-stack-overflow%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Visualizing%20Stack%20Overflow%20%40%20SSE%2713&amp;url=https%3a%2f%2fmircealungu.github.io%2fpost%2f13-09-01-visualizing-stack-overflow%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmircealungu.github.io%2fpost%2f13-09-01-visualizing-stack-overflow%2f&amp;title=Visualizing%20Stack%20Overflow%20%40%20SSE%2713"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<p><img src="/img/stackoverflow.png" alt="visualizing-stack-overflow" /></p>
+
+<p><b>&ldquo;A nobel prize is waiting for the one who visualizes the economy
+of information&rdquo;</b> (Steward Brand, Inventing the Future at MIT)</p>
+
+<p>One of my current travelling companions is “The Media Lab – Inventing the Future at MIT” by Steward Brand. Like several other books about the history of computing in the 80s, this one is also fascinating and it shows again how much ahead of their time were people in those years… and how we are still reaping the ideas that they saw. The book reports on an anecdote by Harlan Cleveland :</p>
+
+<blockquote>
+<p>“I have wanted for some time to find a map of information flows around the world. The other day I had one hour to kill between appointments in new york city, so I dropped into the Rand-McNally shop to ask for such a map. My request created quite a stir, and virtually every employee was called into consultation. They brought out all sorts of maps showing flows of food and feedgrains, oil and coal, weapons and manufacturers – but finally admitted that they had no map of information flows and didn’t think their competitors had one either.” (Steward Brand, Inventing the Future at MIT, pp. 245)</p>
+</blockquote>
+
+<p>Can we make maps of information flow in the world today? In the article about StackOverflow that we will present at SSE in Saint Petersburg this summer we show that we can at least map components of this information transfer, in our particular case software engineering knowledge.</p>
+
+<h3 id="every-map-has-it-own-story">Every Map has it Own Story</h3>
+
+<p>Dennis Schenk is a master student in our group and he is working on Quicksilver, an infrastructure for visualizing hierarchical graphs. Software systems are the classical subject for such a tool since they are naturally organized as hierarchical graphs. Nevertheless, we wanted the infrastructure independent of this individual use case, so we looked for something else to visualize. Something that would be “hierarchical graph”-y but not software.</p>
+
+<p>We found StackOverflow.</p>
+
+<p>The StackOverflow database, of which dumps are publicly available, contains information about how knowledge is transferred between users in the form of questions and answers. Since a large number of users have provided their geolocation information in their profiles we can build a hierarchical graph of this data and visualize it with Quicksilver. We grabbed a public dump of the SO data curated by Alberto Bacchellii and Luca Ponzanelli at the University of Lugano.</p>
+
+<h3 id="our-map-of-the-known-so-world">Our Map of the (Known SO) World</h3>
+
+<p>With this data we created the map of the flow of knowledge in the world through StackOverflow as a medium.</p>
+
+<p><img src="/img/stackoverflow-full.png" alt="stackoverflow-full" /></p>
+
+<p>The map is built using the following conventions:
+- Countries and continents are represented using treemaps. Their areas are proportional to the aggregated reputation received by their corresponding users. One can see that UK contributes ten times more information than Switzerland
+- The arrows indicate the flow of information between continents. The thickness of an arrow is proportional to the number of answers. One can see that Australia imports three times more information than it exports.</p>
+
+<p>Several observations on this map:</p>
+
+<ul>
+<li>America and Europe are the main contributors</li>
+<li>Small countries like Switzerland or Sweden have disproportionately high reputation</li>
+<li>China is almost invisible even if Joel <a href="https://stackoverflow.blog/2011/04/stack-overflow-around-the-world/">reports</a> a large number of visits from China.</li>
+<li>Africa does not contribute much</li>
+</ul>
+
+<p>The map is taken from our paper (<a href="http://scg.unibe.ch/archive/papers/Sche13a-GeolocatingStackOverflow.pdf">pdf</a>, <a href="http://scg.unibe.ch/scgbib?_k=dvvBNH0e&amp;query=Sche13a&amp;display=bibtex">Bibtex</a>) which contains more details about the data collection and analysis (including details on geo-locating users, and the evolution over time of the data).</p>
+
+<p>If you read it we would love to get your feedback in the comments section of this blog entry.</p>
+
+<p>In the meantime think about the following questions:</p>
+
+<ul>
+<li>Could the SO Knowledge Flow map be representative of the way computing knowledge is distributed in the world? What does it say about our world?</li>
+<li>Could the fact that SO is in English be the main reason for US and UK to be so much ahead of the other countries in terms of reputation?</li>
+</ul>
+
+    </div>
+
+  </article>
+
+  <nav>
+  <ul class="pager">
+    
+
+    
+    <li class="next"><a href="https://mircealungu.github.io/post/15-01-20-tool-softwarenaut/">Tool: Softwarenaut <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+  
+
+
+</div>
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2016 Mircea F Lungu &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="/js/jquery-1.12.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    <script async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+    
+
+  </body>
+</html>
+
