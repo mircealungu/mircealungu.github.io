@@ -218,25 +218,22 @@ of information&amp;rdquo;&lt;/b&gt; (Steward Brand, Inventing the Future at MIT)
 &lt;p&gt;“I have wanted for some time to find a map of information flows around the world. The other day I had one hour to kill between appointments in new york city, so I dropped into the Rand-McNally shop to ask for such a map. My request created quite a stir, and virtually every employee was called into consultation. They brought out all sorts of maps showing flows of food and feedgrains, oil and coal, weapons and manufacturers – but finally admitted that they had no map of information flows and didn’t think their competitors had one either.” (Steward Brand, Inventing the Future at MIT, pp. 245)&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Can we make maps of information flow in the world today? In the article about StackOverflow that we will present at SSE in Saint Petersburg this summer we show that we can at least map components of this information transfer, in our particular case software engineering knowledge.&lt;/p&gt;
+&lt;h3 id=&#34;the-software-engineering-information-flow&#34;&gt;The Software Engineering Information Flow&lt;/h3&gt;
 
-&lt;h3 id=&#34;every-map-has-it-own-story&#34;&gt;Every Map has it Own Story&lt;/h3&gt;
-
-&lt;p&gt;Dennis Schenk is a master student in our group and he is working on Quicksilver, an infrastructure for visualizing hierarchical graphs. Software systems are the classical subject for such a tool since they are naturally organized as hierarchical graphs. Nevertheless, we wanted the infrastructure independent of this individual use case, so we looked for something else to visualize. Something that would be “hierarchical graph”-y but not software.&lt;/p&gt;
-
-&lt;p&gt;We found StackOverflow.&lt;/p&gt;
+&lt;p&gt;Can we make maps of information flow in the world today? In the article about StackOverflow that we will present at SSE in Saint Petersburg this summer we show that we can at least map components of this information transfer; in our particular case software engineering knowledge.&lt;/p&gt;
 
 &lt;p&gt;The StackOverflow database, of which dumps are publicly available, contains information about how knowledge is transferred between users in the form of questions and answers. Since a large number of users have provided their geolocation information in their profiles we can build a hierarchical graph of this data and visualize it with Quicksilver. We grabbed a public dump of the SO data curated by Alberto Bacchellii and Luca Ponzanelli at the University of Lugano.&lt;/p&gt;
-
-&lt;h3 id=&#34;our-map-of-the-known-so-world&#34;&gt;Our Map of the (Known SO) World&lt;/h3&gt;
 
 &lt;p&gt;With this data we created the map of the flow of knowledge in the world through StackOverflow as a medium.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://mircealungu.github.io/img/stackoverflow-full.png&#34; alt=&#34;stackoverflow-full&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;The map is built using the following conventions:
-- Countries and continents are represented using treemaps. Their areas are proportional to the aggregated reputation received by their corresponding users. One can see that UK contributes ten times more information than Switzerland
-- The arrows indicate the flow of information between continents. The thickness of an arrow is proportional to the number of answers. One can see that Australia imports three times more information than it exports.&lt;/p&gt;
+&lt;p&gt;The map is built using the following conventions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Countries and continents are represented using treemaps. Their areas are proportional to the aggregated reputation received by their corresponding users (e.g. UK has 10x more reputation than Switzerland)&lt;/li&gt;
+&lt;li&gt;The arrows indicate the flow of information between continents. The thickness of an arrow is proportional to the number of answers (e.g. Australia imports three times more information than it exports)&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Several observations on this map:&lt;/p&gt;
 
