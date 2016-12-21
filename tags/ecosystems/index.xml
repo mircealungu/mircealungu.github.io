@@ -63,21 +63,21 @@ of information&amp;rdquo;&lt;/b&gt; (Steward Brand, Inventing the Future at MIT)
 
 &lt;ul&gt;
 &lt;li&gt;Countries and continents are represented using treemaps. Their areas are proportional to the aggregated reputation received by their corresponding users (e.g. UK has 10x more reputation than Switzerland)&lt;/li&gt;
-&lt;li&gt;The arrows indicate the flow of information between continents. The thickness of an arrow is proportional to the number of answers (e.g. Australia imports three times more information than it exports)&lt;/li&gt;
+&lt;li&gt;The thickness of an arrow indicating information flow between regions is proportional to the number of answers abstracted in it (e.g. Australia imports three times more information than it exports)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Several observations on this map:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;America and Europe are the main contributors&lt;/li&gt;
-&lt;li&gt;Small countries like Switzerland or Sweden have disproportionately high reputation&lt;/li&gt;
-&lt;li&gt;China is almost invisible even if Joel &lt;a href=&#34;https://stackoverflow.blog/2011/04/stack-overflow-around-the-world/&#34;&gt;reports&lt;/a&gt; a large number of visits from China.&lt;/li&gt;
+&lt;li&gt;Some small countries like Switzerland or Netherland have disproportionately high reputation&lt;/li&gt;
 &lt;li&gt;Africa does not contribute much&lt;/li&gt;
+&lt;li&gt;China is practically absent even if Joel &lt;a href=&#34;https://stackoverflow.blog/2011/04/stack-overflow-around-the-world/&#34;&gt;reports&lt;/a&gt; large numbers of visitors to the site from there&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;The map is taken from our paper (&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Sche13a-GeolocatingStackOverflow.pdf&#34;&gt;pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?_k=dvvBNH0e&amp;amp;query=Sche13a&amp;amp;display=bibtex&#34;&gt;Bibtex&lt;/a&gt;) which contains more details about the data collection and analysis (including details on geo-locating users, and the evolution over time of the data).&lt;/p&gt;
 
-&lt;p&gt;If you read it we would love to get your feedback in the comments section of this blog entry.&lt;/p&gt;
+&lt;p&gt;If you read it we would love to get your feedback.&lt;/p&gt;
 
 &lt;p&gt;In the meantime think about the following questions:&lt;/p&gt;
 
