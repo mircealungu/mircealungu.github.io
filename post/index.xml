@@ -7,38 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Mircea F Lungu</copyright>
-    <lastBuildDate>Sun, 20 Nov 2016 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Nov 2016 12:00:00 +0000</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Polite Programmers, Use Sentence Case 📝NOOL&#39;16</title>
-      <link>https://mircealungu.github.io/post/16-11-20-polite-smalltalk-at-nool/</link>
-      <pubDate>Sun, 20 Nov 2016 12:00:00 +0000</pubDate>
-      
-      <guid>https://mircealungu.github.io/post/16-11-20-polite-smalltalk-at-nool/</guid>
-      <description>&lt;p&gt;The programming languages reseachers have a healthy sense of humor. The -1th edition of the NOOL (New Object Oriented Languages) Workshop had a very creative call for papers. To keep up with the state of affairs, Jan Kurs and I submitted a paper with a most concise abstract:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;JavaProgrammersUseCamelCaseToSeparateWordsInIdentifiers. &lt;br/&gt;
-   Pythonistas_and_others_use_underscore_in_their_identifiers. &lt;br/&gt;
-   Polite programmers can use spaces if they like.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The paper presents briefly some of the design decisions that went into Polite, our evolutionary mutation of Smalltalk that brings the language
-closer to natural language. (&lt;a href=&#34;https://github.com/mircealungu/Polite_Programmers__NOOL16/blob/master/preprint.pdf&#34;&gt;preprint is online&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;Further Work on Polite Smalltalk:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;To try out Polite Smalltalk, &lt;a href=&#34;https://zenodo.org/record/61578#.WDYtDKIrKXQ&#34;&gt;Download the latest release from Zenodo&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
     
     <item>
       <title>🎉 Nominated for the Teacher of the Year Award</title>
       <link>https://mircealungu.github.io/post/16-11-20-teacher-of-the-year/</link>
-      <pubDate>Sun, 20 Nov 2016 12:00:00 +0000</pubDate>
+      <pubDate>Mon, 21 Nov 2016 12:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/post/16-11-20-teacher-of-the-year/</guid>
       <description>&lt;p&gt;I have been nominated for the teacher of the year award!
@@ -65,6 +40,31 @@ Hopefully before I start the next batch!&lt;/p&gt;
 
 &lt;p&gt;And now for the impossible challenge: can you spot me in the picture?
 &lt;img src=&#34;https://mircealungu.github.io/img/teacher.jpg&#34; alt=&#34;lala&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Polite Programmers, Use Sentence Case 📝NOOL&#39;16</title>
+      <link>https://mircealungu.github.io/post/16-11-20-polite-smalltalk-at-nool/</link>
+      <pubDate>Sun, 20 Nov 2016 12:00:00 +0000</pubDate>
+      
+      <guid>https://mircealungu.github.io/post/16-11-20-polite-smalltalk-at-nool/</guid>
+      <description>&lt;p&gt;The programming languages reseachers have a healthy sense of humor. The -1th edition of the NOOL (New Object Oriented Languages) Workshop had a very creative call for papers. To keep up with the state of affairs, Jan Kurs and I submitted a paper with a most concise abstract:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;JavaProgrammersUseCamelCaseToSeparateWordsInIdentifiers. &lt;br/&gt;
+   Pythonistas_and_others_use_underscore_in_their_identifiers. &lt;br/&gt;
+   Polite programmers can use spaces if they like.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The paper presents briefly some of the design decisions that went into Polite, our evolutionary mutation of Smalltalk that brings the language
+closer to natural language. (&lt;a href=&#34;https://github.com/mircealungu/Polite_Programmers__NOOL16/blob/master/preprint.pdf&#34;&gt;preprint is online&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Further Work on Polite Smalltalk:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;To try out Polite Smalltalk, &lt;a href=&#34;https://zenodo.org/record/61578#.WDYtDKIrKXQ&#34;&gt;Download the latest release from Zenodo&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
