@@ -10,7 +10,7 @@
     <atom:link href="/tags/papers/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Polite Programmers, Use Sentence Case 📝NOOL&#39;16</title>
+      <title>Polite Programmers, Use Sentence Case 📝</title>
       <link>https://mircealungu.github.io/post/16-11-20-polite-smalltalk-at-nool/</link>
       <pubDate>Sun, 20 Nov 2016 12:00:00 +0000</pubDate>
       
@@ -35,7 +35,7 @@ closer to natural language. (&lt;a href=&#34;https://github.com/mircealungu/Poli
     </item>
     
     <item>
-      <title>Bootstrapping an Ubiquitous Ecosystem 📝WEA&#39;16</title>
+      <title>Bootstrapping an Ecosystem 📝</title>
       <link>https://mircealungu.github.io/post/16-09-20-bootstrapping-an-ubiquitous-ecosystem/</link>
       <pubDate>Tue, 20 Sep 2016 12:00:00 +0000</pubDate>
       
@@ -56,7 +56,160 @@ study inspired from our &lt;a href=&#34;https://zeeguu.unibe.ch&#34;&gt;Zeeguu&l
     </item>
     
     <item>
-      <title>Mapping the Open Information Economy 📝SSE&#39;13</title>
+      <title>Evolutionary and collaborative software architecture recovery with Softwarenaut 📝</title>
+      <link>https://mircealungu.github.io/post/14-01-01-evolutionary-and-collaborative-software-architecture-recovery/</link>
+      <pubDate>Wed, 01 Jan 2014 12:00:00 +0000</pubDate>
+      
+      <guid>https://mircealungu.github.io/post/14-01-01-evolutionary-and-collaborative-software-architecture-recovery/</guid>
+      <description>
+
+&lt;p&gt;Our work on Softwarenaut has finally been published in the Science
+of Computer Programming. The paper (&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung14a.pdf&#34;&gt;pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?query=lung14a&amp;amp;display=bibtex&#34;&gt;bibtex&lt;/a&gt;,&lt;a href=&#34;https://scholar.google.nl/scholar?cites=16074008290934254937&amp;amp;as_sdt=2005&amp;amp;sciodt=0,5&amp;amp;hl=en&#34;&gt;citations&lt;/a&gt;) is summarized
+with the following highlights:&lt;/p&gt;
+
+&lt;p&gt;➡ Softwarenaut is a visual, interactive architecture recovery tool which
+➡ leverages evolution to support advanced filters and detailed views and
+➡ enables sharing architectural views through an online view repository.
+➡ We illustrate the functionality of Softwarenaut through examples of its application.
+➡ We discuss architectural and tool-building aspects, and report on a usability study.&lt;/p&gt;
+
+&lt;p&gt;This page contains a tutorial-like description of the tool. For a more detailed discussion see the paper
+(&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung14a.pdf&#34;&gt;pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?query=lung14a&amp;amp;display=bibtex&#34;&gt;bibtex&lt;/a&gt;,&lt;a href=&#34;https://scholar.google.nl/scholar?cites=16074008290934254937&amp;amp;as_sdt=2005&amp;amp;sciodt=0,5&amp;amp;hl=en&#34;&gt;citations&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h3 id=&#34;aggregating-low-level-relations-along-a-hierarcical-decomposition-of-a-system&#34;&gt;Aggregating low-level relations along a hierarcical decomposition of a system&lt;/h3&gt;
+
+&lt;p&gt;Softwarenaut aggregates low-level relations along a hierarcical decomposition of a system (e.g. the package structure in Java). Softwarenaut can thus present a high-level overview of the architectural relationships between the modules in a system.&lt;/p&gt;
+
+&lt;p&gt;The figure presents the architecture of Softwarenaut visualized in Softwarenaut. The module sizes are proportional to their LOC and the relationships are proportional to the number of low-level relationships abstracted.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/464519/21022444/eb463a12-bd7c-11e6-9a37-f6925f371eff.png&#34; alt=&#34;architecture-of-softwarenaut&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;augmenting-the-big-picture-with-evolutionary-information&#34;&gt;Augmenting The Big Picture With Evolutionary Information&lt;/h3&gt;
+
+&lt;p&gt;The following view presents Softwarenaut visualizing itself but this time, augmenting the structure with evolutionary information. On top of the architectural view we have highlighted the classes that have the most activity in the recent evolution of the system (as of February 2011). One can see that it is a minority of classes that have been changing.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/464519/21022349/9ec2f748-bd7c-11e6-87ad-29c5332caba9.png&#34; alt=&#34;evolution screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;!-- ### Details About Relationship Evolution
+
+The following figure presents the evolution filmstrip for the relationship between the uml and kernel modules in ArgoUML between 2003 and 2007. Inheritance relationships are represented with red and invocation relationships are represented with black. One can see that in 2004 a reverse dependency was introduced between kernel and uml and it remained in the system until its latest analyzed version
+
+![screen-shot-2011-10-10-at-5 27 36-pm](https://cloud.githubusercontent.com/assets/464519/21023545/4c41a97e-bd81-11e6-81b1-fb038bd3b156.png)
+ --&gt;
+
+&lt;h3 id=&#34;details-about-module-evolution&#34;&gt;Details About Module Evolution&lt;/h3&gt;
+
+&lt;p&gt;There are mahy module detail views which present information about a particular module. The Module Evolution presents a compressed version of the module history. The module is represented in every analyzed version as a treemap. When a new class is introduced it is marked with yellow. When a class changes it is colored with a shade of blue which is darker for larger changes. The figure presents the history of the cognitive package in ArgoUML.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/464519/21023626/9cffc058-bd81-11e6-906f-4f62c440717a.png&#34; alt=&#34;screen-shot-2011-10-14-at-1 56 14-am&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;coping-with-the-explosion-of-information-through-filtering&#34;&gt;Coping with the explosion of information through filtering&lt;/h3&gt;
+
+&lt;p&gt;Filters help coping with the explosion of information during exploration. There are two types of filters: entity filters and relationship filters. The Filters Panel allows the user to add and remove various filters during exploration. The filters panel appears instead of the Detail Panel when no entity is selected in the Architectural View.&lt;/p&gt;
+
+&lt;p&gt;Two categories of &lt;strong&gt;entity filters&lt;/strong&gt; are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Size Related: Filters all the modules that are under a certain threshold (Small Modules) or above a certain threshold (Large modules).&lt;/li&gt;
+&lt;li&gt;Evolution Related:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Two categories of &lt;strong&gt;relationship filters&lt;/strong&gt; are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Dependency Strength: they filters the relationships based on the number of low-level explicit relationships that are abstracted in the visible relationships (e.g. Weak dependencies, Strong dependencies). These are useful when starting the analysis of systems that have a large number of modules and dependencies between them.&lt;/li&gt;
+&lt;li&gt;Evolutionary: they filter relationships based on the evolution of the relationships during the lifetime of the system. Examples are: lifetime, newborn, old, new. They are available only when multiple versions of a system are loaded. They are useful for either limiting the amount of information at the first encounter with a system (e.g. lifetime) or trying to find problems (e.g. newborn combined with bidirectional).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;a-screencast-of-softwarenaut-in-action&#34;&gt;A Screencast of Softwarenaut in Action&lt;/h3&gt;
+
+&lt;p&gt;In 2012 I prepared a screencast of the way the
+tool looked at the time. I think screencasts are very important
+for research tools since they may give ideas to new toolmakers
+long after they tool does not compile anymore :)&lt;/p&gt;
+
+&lt;iframe src=&#34;https://player.vimeo.com/video/62767181&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&#34;for-further-reading-see-our-article-from-2014&#34;&gt;For Further Reading See Our Article from 2014&lt;/h3&gt;
+
+&lt;p&gt;The description on this page is a summary of the details presented in our article:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung14a.pdf&#34;&gt;Evolutionary and Collaborative Software Architecture Recovery with Softwarenaut&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To cite the article, use the following bibtex:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;@article{Lung14a,
+    Annote = {internationaljournal},
+    Author = {Mircea Lungu and Michele Lanza and Oscar Nierstrasz},
+    Doi = {10.1016/j.scico.2012.04.007},
+    Journal = {Science of Computer Programming},
+    Medium = {2},
+    Number = {0},
+    Pages = {204 - 223},
+    Peerreview = {yes},
+    Publisher = {Elsevier},
+    Title = {Evolutionary and Collaborative Software Architecture Recovery with {Softwarenaut}},
+    Volume = {79},
+    Year = {2014}}&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;installation&#34;&gt;Installation&lt;/h1&gt;
+
+&lt;p&gt;Softwarenaut is built on top of the Cincom distribution of Smalltalk for historical reasons. This means that in order to run the tool you also need Cincom Smalltalk.&lt;/p&gt;
+
+&lt;p&gt;To download the source code you need to have an installation of Cincom VisualWorks. It seems that recently the only way you can do that is by ordering a CD from Cincom. They are very quick in sending it, but it is still a nuissance and a very archaic way of distributing software! Once you have your VisualWorks installed you are ready to download the sources.&lt;/p&gt;
+
+&lt;p&gt;Connecting to the Bern Store&lt;/p&gt;
+
+&lt;p&gt;In the Store menu of the launcher, choose ’Connect to Repository’. A dialog pops up where you have to fill in information for connecting to a Store database. Provide the following information:&lt;/p&gt;
+
+&lt;p&gt;Interface: select PostgreSql from the dropdown box
+Environment: db.iam.unibe.ch:5432_scgStore
+User Name: storeguest (if you have one, use it)
+Password: storeguest (if you have one, use it)&lt;/p&gt;
+
+&lt;p&gt;To access the SCG Store do the following: in the Store menu of the launcher: Store -&amp;gt; Published Items.&lt;/p&gt;
+
+&lt;p&gt;Once there, load the MetaDBDevelopment bundle followed by the SoftwarenautDevelopment bundle. Every time you are asked to select a prerequisite, select the latest version that is available. (You can avoid clicking through a zillion of Ok&amp;rsquo;s if you go to Settings&amp;gt;Store&amp;gt;Prerequisites and select the &amp;ldquo;Load latest version&amp;hellip;&amp;rdquo; option.)&lt;/p&gt;
+
+&lt;h3 id=&#34;importing-a-system&#34;&gt;Importing a System&lt;/h3&gt;
+
+&lt;p&gt;In order to make Softwarenaut independent of the language that your system is written in, we have made it work on an intermediate representation that can work with any object-oriented language. That representation is the FAMIX meta-model.&lt;/p&gt;
+
+&lt;p&gt;There are a few ways in which you can obtain a FAMIX model of your system:&lt;/p&gt;
+
+&lt;p&gt;For Smalltalk systems, the importer is in the same image with Softwarenaut
+Using a third-party tool that can analyze your source-code and export it into FAMIX
+Importing a system from the SourcererDB (work in progress)
+Download one of the sample systems that are available online (work in progress)&lt;/p&gt;
+
+&lt;p&gt;When you run Softwarenaut, it runs out of a Smalltalk &amp;ldquo;image&amp;rdquo;, a full smalltalk system whose source code co-exists with that of Softwarenaut and is interpreted by a Smalltalk VM. This means that the tool has access to its own source code together with a few other thousand classes that make up a basic Smalltalk distribution.&lt;/p&gt;
+
+&lt;p&gt;You can import and analyze any system from smalltalk by selecting the menu option Import-&amp;gt;From Smalltalk&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Once you select the option, you are presented with a list of namespaces that you can import. One special namespace is SN - the namespace of the Softwarenaut itself. If you load it you can analyze the system with itself.&lt;/p&gt;
+
+&lt;h3 id=&#34;importing-multiple-versions&#34;&gt;Importing Multiple Versions&lt;/h3&gt;
+
+&lt;p&gt;Softwarenaut provides also multi-version analysis support. For this one needs to have multiple models of the same system.&lt;/p&gt;
+
+&lt;p&gt;To load multiple models of the same system for multi-version analysis choose the option File&amp;gt;Import History of FAMIX (2.1) Models and in the pop-up dialog select a directory where you have already prepared models for several versions of the system that you are analyzing.&lt;/p&gt;
+
+&lt;p&gt;Warning: For large systems, importing a single version can take a few minutes. Consequently importing multiple versions will take proportionally more time. This means that you want to keep the number of versions that you analyze small. Select the versions that you want to analyze accordingly.&lt;/p&gt;
+
+&lt;p&gt;Once all your versions are loaded, you are presented with a Model History builder. From the left panel select the versions that constitute your history and add them to the right panel. Then select &amp;ldquo;Build History&amp;rdquo; and give a name to your history (usually the name of the system).&lt;/p&gt;
+
+&lt;p&gt;After this Softwarenaut builds the internal hierarchical graphs for every version and you are ready to proceed to analysis. The models for all the versions will now know that they are part of the same history.&lt;/p&gt;
+
+&lt;p&gt;Multi-Version views will be enabled in the detail view tab. One such example is the Relationship Evolution detail view for dependencies.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mapping the Open Information Economy 📝</title>
       <link>https://mircealungu.github.io/post/13-09-01-visualizing-stack-overflow/</link>
       <pubDate>Wed, 20 Nov 2013 12:00:00 +0000</pubDate>
       

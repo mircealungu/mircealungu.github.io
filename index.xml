@@ -54,7 +54,7 @@ Hopefully before I start the next batch!&lt;/p&gt;
     </item>
     
     <item>
-      <title>Polite Programmers, Use Sentence Case 📝NOOL&#39;16</title>
+      <title>Polite Programmers, Use Sentence Case 📝</title>
       <link>https://mircealungu.github.io/post/16-11-20-polite-smalltalk-at-nool/</link>
       <pubDate>Sun, 20 Nov 2016 12:00:00 +0000</pubDate>
       
@@ -105,7 +105,7 @@ while not being too easy nor too challenging? We&amp;rsquo;ll see!&lt;/p&gt;
     </item>
     
     <item>
-      <title>Bootstrapping an Ubiquitous Ecosystem 📝WEA&#39;16</title>
+      <title>Bootstrapping an Ecosystem 📝</title>
       <link>https://mircealungu.github.io/post/16-09-20-bootstrapping-an-ubiquitous-ecosystem/</link>
       <pubDate>Tue, 20 Sep 2016 12:00:00 +0000</pubDate>
       
@@ -145,16 +145,45 @@ study inspired from our &lt;a href=&#34;https://zeeguu.unibe.ch&#34;&gt;Zeeguu&l
     </item>
     
     <item>
-      <title>Softwarenaut - Tool for Architecture Evolution</title>
-      <link>https://mircealungu.github.io/post/15-01-20-tool-softwarenaut/</link>
-      <pubDate>Tue, 20 Jan 2015 12:00:00 +0000</pubDate>
+      <title> Evolutionary and Collaborative Software Architecture Recovery with Softwarenaut</title>
+      <link>https://mircealungu.github.io/publication/softwarenaut/</link>
+      <pubDate>Fri, 10 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://mircealungu.github.io/post/15-01-20-tool-softwarenaut/</guid>
+      <guid>https://mircealungu.github.io/publication/softwarenaut/</guid>
+      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Softwarenaut </title>
+      <link>https://mircealungu.github.io/project/softwarenaut/</link>
+      <pubDate>Sun, 27 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://mircealungu.github.io/project/softwarenaut/</guid>
+      <description>&lt;p&gt;Softwarenaut is built on top of the Cincom distribution of Smalltalk for historical reasons. This means that in order to run the tool you also need Cincom Smalltalk. There are three ways in which you can install the tool.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Evolutionary and collaborative software architecture recovery with Softwarenaut 📝</title>
+      <link>https://mircealungu.github.io/post/14-01-01-evolutionary-and-collaborative-software-architecture-recovery/</link>
+      <pubDate>Wed, 01 Jan 2014 12:00:00 +0000</pubDate>
+      
+      <guid>https://mircealungu.github.io/post/14-01-01-evolutionary-and-collaborative-software-architecture-recovery/</guid>
       <description>
 
-&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;[&amp;hellip;] supports architecture recovery through interactive exploration and visualization. Interactive exploration, filtering and contextual details, are enhanced with evolutionary capabilities when versioning information is available. The tool allows sharing and discovering the results of previous analysis sessions through a global repository of architectural views indexed by systems.&amp;rdquo; (Lungu et al., &lt;a href=&#34;http://scg.unibe.ch/scgbib?query=Lung14a&amp;amp;display=abstract&#34;&gt;Evolutionary and Collaborative Software Architecture Recovery with Softwarenaut&lt;/a&gt;)&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Our work on Softwarenaut has finally been published in the Science
+of Computer Programming. The paper (&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung14a.pdf&#34;&gt;pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?query=lung14a&amp;amp;display=bibtex&#34;&gt;bibtex&lt;/a&gt;,&lt;a href=&#34;https://scholar.google.nl/scholar?cites=16074008290934254937&amp;amp;as_sdt=2005&amp;amp;sciodt=0,5&amp;amp;hl=en&#34;&gt;citations&lt;/a&gt;) is summarized
+with the following highlights:&lt;/p&gt;
+
+&lt;p&gt;➡ Softwarenaut is a visual, interactive architecture recovery tool which
+➡ leverages evolution to support advanced filters and detailed views and
+➡ enables sharing architectural views through an online view repository.
+➡ We illustrate the functionality of Softwarenaut through examples of its application.
+➡ We discuss architectural and tool-building aspects, and report on a usability study.&lt;/p&gt;
+
+&lt;p&gt;This page contains a tutorial-like description of the tool. For a more detailed discussion see the paper
+(&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung14a.pdf&#34;&gt;pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?query=lung14a&amp;amp;display=bibtex&#34;&gt;bibtex&lt;/a&gt;,&lt;a href=&#34;https://scholar.google.nl/scholar?cites=16074008290934254937&amp;amp;as_sdt=2005&amp;amp;sciodt=0,5&amp;amp;hl=en&#34;&gt;citations&lt;/a&gt;)&lt;/p&gt;
 
 &lt;h3 id=&#34;aggregating-low-level-relations-along-a-hierarcical-decomposition-of-a-system&#34;&gt;Aggregating low-level relations along a hierarcical decomposition of a system&lt;/h3&gt;
 
@@ -289,27 +318,7 @@ Download one of the sample systems that are available online (work in progress)&
     </item>
     
     <item>
-      <title> Evolutionary and Collaborative Software Architecture Recovery with Softwarenaut</title>
-      <link>https://mircealungu.github.io/publication/softwarenaut/</link>
-      <pubDate>Fri, 10 Oct 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://mircealungu.github.io/publication/softwarenaut/</guid>
-      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Softwarenaut </title>
-      <link>https://mircealungu.github.io/project/softwarenaut/</link>
-      <pubDate>Sun, 27 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://mircealungu.github.io/project/softwarenaut/</guid>
-      <description>&lt;p&gt;Softwarenaut is built on top of the Cincom distribution of Smalltalk for historical reasons. This means that in order to run the tool you also need Cincom Smalltalk. There are three ways in which you can install the tool.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Mapping the Open Information Economy 📝SSE&#39;13</title>
+      <title>Mapping the Open Information Economy 📝</title>
       <link>https://mircealungu.github.io/post/13-09-01-visualizing-stack-overflow/</link>
       <pubDate>Wed, 20 Nov 2013 12:00:00 +0000</pubDate>
       

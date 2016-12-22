@@ -1,109 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Post-rsses on Mircea Lungu</title>
-    <link>https://mircealungu.github.io/post/index.xml</link>
-    <description>Recent content in Post-rsses on Mircea Lungu</description>
+    <title>Mircea Lungu</title>
+    <link>https://mircealungu.github.io/tags/visualization/index.xml</link>
+    <description>Recent content on Mircea Lungu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Mircea F Lungu</copyright>
-    <lastBuildDate>Mon, 21 Nov 2016 12:00:00 +0000</lastBuildDate>
-    <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>🎉 Nominated for the Teacher of the Year Award</title>
-      <link>https://mircealungu.github.io/post/16-11-20-teacher-of-the-year/</link>
-      <pubDate>Mon, 21 Nov 2016 12:00:00 +0000</pubDate>
-      
-      <guid>https://mircealungu.github.io/post/16-11-20-teacher-of-the-year/</guid>
-      <description>&lt;p&gt;I have been nominated for the teacher of the year award!
-I consider this an honor that I do not deserve personally,
-especially seeing all the other nominations. However, it is also
-true that together with my team, we put a lot of effort in
-  coming up with cool project ideas and
-  running them
-in the timespan of five months.&lt;/p&gt;
-
-&lt;p&gt;Thus, many thanks and congratulations for my teaching assistants:
-Laura Baakman,
-Jeroen Brandsma,
-Georgios Digkas,
-Sybren Gjaltema,
-Jelle van Wezel,
-Angelo Karountzos,
-Alexander Lukjanenkovs.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve been long due to write up the lessons learned during
-the most recent software engineering courses.
-Now I feel the duty to do it even more.
-Hopefully before I start the next batch!&lt;/p&gt;
-
-&lt;p&gt;And now for the impossible challenge: can you spot me in the picture?
-&lt;img src=&#34;https://mircealungu.github.io/img/teacher.jpg&#34; alt=&#34;lala&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Polite Programmers, Use Sentence Case 📝</title>
-      <link>https://mircealungu.github.io/post/16-11-20-polite-smalltalk-at-nool/</link>
-      <pubDate>Sun, 20 Nov 2016 12:00:00 +0000</pubDate>
-      
-      <guid>https://mircealungu.github.io/post/16-11-20-polite-smalltalk-at-nool/</guid>
-      <description>&lt;p&gt;The programming languages reseachers have a healthy sense of humor. The -1th edition of the NOOL (New Object Oriented Languages) Workshop had a very creative call for papers. To keep up with the state of affairs, Jan Kurs and I submitted a paper with a most concise abstract:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;JavaProgrammersUseCamelCaseToSeparateWordsInIdentifiers. &lt;br/&gt;
-   Pythonistas_and_others_use_underscore_in_their_identifiers. &lt;br/&gt;
-   Polite programmers can use spaces if they like.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The paper presents briefly some of the design decisions that went into Polite, our evolutionary mutation of Smalltalk that brings the language
-closer to natural language. (&lt;a href=&#34;https://github.com/mircealungu/Polite_Programmers__NOOL16/blob/master/preprint.pdf&#34;&gt;preprint is online&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;Further Work on Polite Smalltalk:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;To try out Polite Smalltalk, &lt;a href=&#34;https://zenodo.org/record/61578#.WDYtDKIrKXQ&#34;&gt;Download the latest release from Zenodo&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>New Course: Introduction to Data Science</title>
-      <link>https://mircealungu.github.io/post/16-11-16-introduction-to-data-science-course/</link>
-      <pubDate>Wed, 16 Nov 2016 12:00:00 +0000</pubDate>
-      
-      <guid>https://mircealungu.github.io/post/16-11-16-introduction-to-data-science-course/</guid>
-      <description>&lt;p&gt;Today we are starting our new course on Introduction to Data
-Science with &lt;a href=&#34;http://www.cs.rug.nl/~kbunte/&#34;&gt;Kerstin Bunte&lt;/a&gt;.
-This is going to be a very interesting challenge since we have
-60 first year master students from multiple disciplines:
-computer science, astronomy, and mathematics. What do they have
-in common? What can we talk about that they can all benefit from
-while not being too easy nor too challenging? We&amp;rsquo;ll see!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Bootstrapping an Ecosystem 📝</title>
-      <link>https://mircealungu.github.io/post/16-09-20-bootstrapping-an-ubiquitous-ecosystem/</link>
-      <pubDate>Tue, 20 Sep 2016 12:00:00 +0000</pubDate>
-      
-      <guid>https://mircealungu.github.io/post/16-09-20-bootstrapping-an-ubiquitous-ecosystem/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;An unconventional idea for an ecosystem, which shows well that there are many more opportunities to benefit from the ecosystem idea, than the various industrial applications. The concrete examples of the platform and the applications make the ideas tangible and well understandable. I particularly like the discussions of the lessons learned [&amp;hellip;]&amp;rdquo; (a reviewer for the paper :)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I loved that review!&lt;/p&gt;
-
-&lt;p&gt;I was happy to hear that my paper on Bootstrapping a Ubiquitous Monitoring Ecosystem (&lt;a href=&#34;https://github.com/mircealungu/Bootstrapping_an_Ecosystem__WEA16/blob/master/preprint.pdf&#34;&gt;preprint online&lt;/a&gt;) was accepted for presentation at WEA (Workshop on Ecosystem Architectures) that will take place in Copenhagen and is colocated with ECSA.&lt;/p&gt;
-
-&lt;p&gt;The paper talks about some of the challenges and
-opportunities that come with bootstrapping a
-ubiquitous monitoring ecosystem. It is a case
-study inspired from our &lt;a href=&#34;https://zeeguu.unibe.ch&#34;&gt;Zeeguu&lt;/a&gt; project.&lt;/p&gt;
-</description>
-    </item>
+    <atom:link href="/tags/visualization/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Evolutionary and collaborative software architecture recovery with Softwarenaut 📝</title>
@@ -255,62 +159,6 @@ Download one of the sample systems that are available online (work in progress)&
 &lt;p&gt;After this Softwarenaut builds the internal hierarchical graphs for every version and you are ready to proceed to analysis. The models for all the versions will now know that they are part of the same history.&lt;/p&gt;
 
 &lt;p&gt;Multi-Version views will be enabled in the detail view tab. One such example is the Relationship Evolution detail view for dependencies.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Mapping the Open Information Economy 📝</title>
-      <link>https://mircealungu.github.io/post/13-09-01-visualizing-stack-overflow/</link>
-      <pubDate>Wed, 20 Nov 2013 12:00:00 +0000</pubDate>
-      
-      <guid>https://mircealungu.github.io/post/13-09-01-visualizing-stack-overflow/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;https://mircealungu.github.io/img/stackoverflow.png&#34; alt=&#34;visualizing-stack-overflow&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;&amp;ldquo;A nobel prize is waiting for the one who visualizes the economy
-of information&amp;rdquo;&lt;/b&gt; (Steward Brand, Inventing the Future at MIT)&lt;/p&gt;
-
-&lt;p&gt;One of my current travelling companions is “The Media Lab – Inventing the Future at MIT” by Steward Brand. Like several other books about the history of computing in the 80s, this one is also fascinating and it shows again how much ahead of their time were people in those years… and how we are still reaping the ideas that they saw. The book reports on an anecdote by Harlan Cleveland :&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;“I have wanted for some time to find a map of information flows around the world. The other day I had one hour to kill between appointments in new york city, so I dropped into the Rand-McNally shop to ask for such a map. My request created quite a stir, and virtually every employee was called into consultation. They brought out all sorts of maps showing flows of food and feedgrains, oil and coal, weapons and manufacturers – but finally admitted that they had no map of information flows and didn’t think their competitors had one either.” (Steward Brand, Inventing the Future at MIT, pp. 245)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;software-engineering-information-flow-around-the-world&#34;&gt;Software Engineering Information Flow Around the World&lt;/h3&gt;
-
-&lt;p&gt;Can we make maps of information flow in the world today? Yes we can! In the article that we will present at SSE in Saint Petersburg this summer we show how can we do it for software engineering.&lt;/p&gt;
-
-&lt;p&gt;StackOverflow is the principal website for software engineers in search for answers to programming questions. The quality of the answers and the fact that the mean time to a question being answered is 11 minutes make it the &lt;em&gt;de facto&lt;/em&gt; market for information regarding programming. In this virtual economy in exchange for information one receives &lt;em&gt;reputation points&lt;/em&gt; from the askers of the question and those who found the answer useful.&lt;/p&gt;
-
-&lt;p&gt;Based on the geolocation information provided by the users in their profile pages and the almost ten million questions and answers published as a database dump provided by A. Bacchelli at U. Lugano we created a map that shows how software engineering information flows around the world.&lt;/p&gt;
-
-&lt;div style=&#34;margin: 0 -48%; padding: 0 -48%;&#34;&gt;
-    &lt;img src=&#34;https://mircealungu.github.io/img/stackoverflow-full.png&#34; /&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The map is visualized using the following conventions:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The areas of countries and continents is proportional to the reputation of their users&lt;/li&gt;
-&lt;li&gt;The thickness of an arrow indicating information flow between regions is proportional to the number of answers abstracted in it&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The most straightforward observations based on this map are:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;EU is exporting more answers to the US&lt;/li&gt;
-&lt;li&gt;US has more reputation than EU&lt;/li&gt;
-&lt;li&gt;Several small countries like Switzerland or Netherland have surprisingly high reputation with respect to their population&lt;/li&gt;
-&lt;li&gt;China is practically absent even if Joel &lt;a href=&#34;https://stackoverflow.blog/2011/04/stack-overflow-around-the-world/&#34;&gt;reports&lt;/a&gt; large numbers of visitors to the site from there&lt;/li&gt;
-&lt;li&gt;Africa does not contribute much&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The map is taken from our paper (&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Sche13a-GeolocatingStackOverflow.pdf&#34;&gt;pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?_k=dvvBNH0e&amp;amp;query=Sche13a&amp;amp;display=bibtex&#34;&gt;Bibtex&lt;/a&gt;) which contains more details about the data collection and analysis (including details on geo-locating users, and the evolution over time of the data).&lt;/p&gt;
-
-&lt;p&gt;Is the map representative of the way programming information is spread around the world? Are there other similar maps that you are aware of?&lt;/p&gt;
-
-&lt;p&gt;If you want to talk more about this topic &lt;a href=&#34;https://mircealungu.github.io/#contact&#34;&gt; let me know&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
