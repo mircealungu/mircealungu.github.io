@@ -55,9 +55,9 @@ of information&amp;rdquo;&lt;/b&gt; (Steward Brand, Inventing the Future at MIT)
 
 &lt;p&gt;StackOverflow is the principal website for programmers to ask technical questions. The quality of the answers and the fact that the mean time to a question being answered is eleven minutes make it the &lt;em&gt;de facto&lt;/em&gt; market for information regarding software engineering. In this virtual economy in exchange for information one receives &lt;em&gt;reputation points&lt;/em&gt; from the askers of the question and those who found the answer useful.&lt;/p&gt;
 
-&lt;p&gt;Based on the geolocation information provided by the users in their profile pages we created a map that shows how software engineering information flows around the world.&lt;/p&gt;
+&lt;p&gt;Based on the geolocation information provided by the users in their profile pages and the almost ten million questions and answers published as a database dump provided by A. Bacchelli at U. Lugano we created a map that shows how software engineering information flows around the world.&lt;/p&gt;
 
-&lt;div style=&#34;margin: 0 -48%; padding: 0 -48%; background-color: red;&#34;&gt;
+&lt;div style=&#34;margin: 0 -48%; padding: 0 -48%;&#34;&gt;
     &lt;img src=&#34;https://mircealungu.github.io/img/stackoverflow-full.png&#34; /&gt;
 &lt;/div&gt;
 
