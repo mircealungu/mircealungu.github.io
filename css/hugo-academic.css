@@ -1,13 +1,18 @@
 /*************************************************
- *  Hugo Academic: an academic theme for Hugo.
- *  Designed by @GeorgeCushen.
+ *  Hugo M-Academic: an academic theme for Hugo.
+ *  Originally designed by @GeorgeCushen. 
+ *  Modified by @MirceaLungu
  *  https://github.com/gcushen/hugo-academic
  **************************************************/
 
 /***
-* Mircea's changes
+* M-Academic changes
 ****/
 
+
+body {
+    background-color: #e9e9e9 !important;
+}
 #bio {
   font-size: 18px;
   text-align: justify;
@@ -29,7 +34,7 @@
 }
 
 html {
-  font-family: 'Lato', sans-serif;
+  font-family: "Helvetica Neue";
   font-size: 16px;
   color: rgba(0,0,0,0.8);
   line-height: 1.65;
@@ -355,8 +360,20 @@ ul.share li:hover .fa {
 .article {
   margin-left: auto;
   margin-right:auto;
-  width: 600px;
-  font-size: 20px;
+  width: 800px;
+  
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 40px;
+  margin-top: 80px;
+  padding-bottom: 80px;
+  background-color: white;
+  font-family: Merriweather, "Georgia";
+  font-weight: lighter;
+  font-size: 17px;
+  line-height: 28px;
+  color:#444444 !important;
+
 }
 .article-title {
   font-size: 1.75rem;
