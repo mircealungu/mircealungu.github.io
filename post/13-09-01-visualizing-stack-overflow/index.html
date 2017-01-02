@@ -99,6 +99,9 @@
     >, 
     
     <a class="article-tag-link" href="https://mircealungu.github.io/tags/ecosystems">Ecosystems</a
+    >, 
+    
+    <a class="article-tag-link" href="https://mircealungu.github.io/tags/student-projects">Student Projects</a
     >
     
   </span>
@@ -153,24 +156,32 @@ of information&rdquo;</b> (Steward Brand, Inventing the Future at MIT)</p>
 <p>“I have wanted for some time to find a map of information flows around the world. The other day I had one hour to kill between appointments in new york city, so I dropped into the Rand-McNally shop to ask for such a map. My request created quite a stir, and virtually every employee was called into consultation. They brought out all sorts of maps showing flows of food and feedgrains, oil and coal, weapons and manufacturers – but finally admitted that they had no map of information flows and didn’t think their competitors had one either.” (Steward Brand, Inventing the Future at MIT, pp. 245)</p>
 </blockquote>
 
-<h3 id="software-engineering-information-flow-around-the-world">Software Engineering Information Flow Around the World</h3>
+<h3 id="can-we-make-a-map-of-information-flow-in-the-world-today">Can we make a map of information flow in the world today?</h3>
 
-<p>Can we make maps of information flow in the world today? Yes we can! In the article that we will present at SSE in Saint Petersburg this summer we show how can we do it for software engineering.</p>
+<p>Yes we can! In the article that we will present at SSE in Saint Petersburg this summer we show how can we do it for software engineering based on StackOverflow data.</p>
 
-<p>StackOverflow is the principal website for software engineers in search for answers to programming questions. The quality of the answers and the fact that the mean time to a question being answered is 11 minutes make it the <em>de facto</em> market for information regarding programming. In this virtual economy in exchange for information one receives <em>reputation points</em> from the askers of the question and those who found the answer useful.</p>
+<p>StackOverflow is the principal website for software engineers in search for answers to programming questions. The quality of the answers and the fact that the mean time to a question being answered is 11 minutes make it the <em>de facto market for information</em> regarding programming.</p>
 
-<p>Based on the geolocation information provided by the users in their profile pages and the almost ten million questions and answers published as a database dump provided by A. Bacchelli at U. Lugano we created a map that shows how software engineering information flows around the world.</p>
+<p>In the StackOverflow information market the currency is <em>reputation points</em>. The reputation points are offered by the user originating a question to the one that best answers it. Others who found the answer useful can provide further points by upvoting the answer later.</p>
+
+<p>This map of software engineering information flow in the paper looks like the figure below:</p>
 
 <div style="margin: 0 -48%; padding: 0 -48%;">
     <img src="/img/stackoverflow-full.png" />
 </div>
 
+<h3 id="how-was-the-map-built">How was the map built?</h3>
+
+<p>The data source for the map is the ten million questions and answers published as a database dump provided by A. Bacchelli at U. Lugano. The database contains also geolocation information provided by the users in their profile pages.</p>
+
 <p>The map is visualized using the following conventions:</p>
 
 <ul>
 <li>The areas of countries and continents is proportional to the reputation of their users</li>
-<li>The thickness of an arrow indicating information flow between regions is proportional to the number of answers abstracted in it</li>
+<li>The thickness of an arrow indicating information flow (answers) between regions is proportional to the number of answers abstracted in it</li>
 </ul>
+
+<h3 id="what-can-we-learn">What can we learn?</h3>
 
 <p>The most straightforward observations based on this map are:</p>
 
@@ -182,11 +193,17 @@ of information&rdquo;</b> (Steward Brand, Inventing the Future at MIT)</p>
 <li>Africa does not contribute much</li>
 </ul>
 
+<h3 id="what-next">What next?</h3>
+
 <p>The map is taken from our paper (<a href="http://scg.unibe.ch/archive/papers/Sche13a-GeolocatingStackOverflow.pdf">pdf</a>, <a href="http://scg.unibe.ch/scgbib?_k=dvvBNH0e&amp;query=Sche13a&amp;display=bibtex">Bibtex</a>) which contains more details about the data collection and analysis (including details on geo-locating users, and the evolution over time of the data).</p>
 
 <p>Is the map representative of the way programming information is spread around the world? Are there other similar maps that you are aware of?</p>
 
 <p>If you want to talk more about this topic <a href="/#contact"> let me know</a>.</p>
+
+<h3 id="possible-student-project">Possible Student Project</h3>
+
+<p>There are a few very nice ways in which this work could be continued. A student interested in working on this topic for a thesis should <a href="/#contact"> contact me</a>.</p>
 
     </div>
 
