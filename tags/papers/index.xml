@@ -235,32 +235,35 @@ of information&amp;rdquo;&lt;/b&gt; (Steward Brand, Inventing the Future at MIT)
 
 &lt;p&gt;In the StackOverflow information market the currency is &lt;em&gt;reputation points&lt;/em&gt;. The reputation points are offered by the user originating a question to the one that best answers it. Others who found the answer useful can provide further points by upvoting the answer later.&lt;/p&gt;
 
+&lt;p&gt;As data source for our map we use ten million questions and answers (published as a database dump by A. Bacchelli at U. Lugano). Among other things the data source contains also geolocation information for a large percentage of the the users. Thus, if we aggregate the exchanges of information to geographical regions we will obtain a map.&lt;/p&gt;
+
+&lt;h3 id=&#34;how-to-visualize-the-map&#34;&gt;How to &lt;em&gt;visualize&lt;/em&gt; the map?&lt;/h3&gt;
+
+&lt;p&gt;Inspired from our earlier work on
+    &lt;a href=&#34;https://mircealungu.github.io/post/14-01-01-evolutionary-and-collaborative-software-architecture-recovery/&#34;&gt;visualizing software&lt;/a&gt;
+we used the following conventions for visualizing our information map:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The areas of countries and continents is proportional to the reputation of their users&lt;/li&gt;
+&lt;li&gt;The thickness of an arrow indicating information flow (answers) between regions is proportional to the number of answers abstracted in it&lt;/li&gt;
+&lt;li&gt;Where we had sufficient space, we labelled countries with their corresponding flags&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;p&gt;This map of software engineering information flow in the paper looks like the figure below:&lt;/p&gt;
 
 &lt;div style=&#34;margin: 0 -48%; padding: 0 -48%;&#34;&gt;
     &lt;img src=&#34;https://mircealungu.github.io/img/stackoverflow-full.png&#34; /&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&#34;how-was-the-map-built&#34;&gt;How was the map built?&lt;/h3&gt;
-
-&lt;p&gt;The data source for the map is the ten million questions and answers published as a database dump provided by A. Bacchelli at U. Lugano. The database contains also geolocation information provided by the users in their profile pages.&lt;/p&gt;
-
-&lt;p&gt;The map is visualized using the following conventions:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The areas of countries and continents is proportional to the reputation of their users&lt;/li&gt;
-&lt;li&gt;The thickness of an arrow indicating information flow (answers) between regions is proportional to the number of answers abstracted in it&lt;/li&gt;
-&lt;/ul&gt;
-
 &lt;h3 id=&#34;what-can-we-learn&#34;&gt;What can we learn?&lt;/h3&gt;
 
 &lt;p&gt;The most straightforward observations based on this map are:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;EU is exporting more answers to the US&lt;/li&gt;
-&lt;li&gt;US has more reputation than EU&lt;/li&gt;
-&lt;li&gt;Several small countries like Switzerland or Netherland have surprisingly high reputation with respect to their population&lt;/li&gt;
-&lt;li&gt;China is practically absent even if Joel &lt;a href=&#34;https://stackoverflow.blog/2011/04/stack-overflow-around-the-world/&#34;&gt;reports&lt;/a&gt; large numbers of visitors to the site from there&lt;/li&gt;
+&lt;li&gt;EU is exporting more answers to the US than the other way around!&lt;/li&gt;
+&lt;li&gt;However, US has more reputation than EU&lt;/li&gt;
+&lt;li&gt;Several small countries like Switzerland or Netherland have disproportionately high reputation with respect to their population&lt;/li&gt;
+&lt;li&gt;China is practically absent even if Joel Spolsky (the founder of SO) &lt;a href=&#34;https://stackoverflow.blog/2011/04/stack-overflow-around-the-world/&#34;&gt;reports&lt;/a&gt; large numbers of visitors to the site from there&lt;/li&gt;
 &lt;li&gt;Africa does not contribute much&lt;/li&gt;
 &lt;/ul&gt;
 
