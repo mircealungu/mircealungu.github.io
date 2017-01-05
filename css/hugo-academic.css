@@ -15,7 +15,7 @@ body {
 }
 #bio {
   font-size: 18px;
-  text-align: justify;
+  text-align: left;
 }
 /*************************************************
  *  Core
@@ -192,6 +192,7 @@ blockquote p:last-child {
 .home-section {
   background-color: rgb(255, 255, 255);
   padding: 60px 0 60px 0;
+
 }
 @media screen and (max-width: 768px) {
   .home-section {
