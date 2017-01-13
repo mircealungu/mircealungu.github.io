@@ -1,0 +1,425 @@
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300,300italic,400,400italic,700,700italic" rel="stylesheet" type="text/css">
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.17" />
+  <meta name="author" content="Dr. Mircea Lungu">
+  <meta name="description" content="Assistant Professor in Software Engineering">
+
+  <link rel="stylesheet" href="/css/highlight.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  <link rel="alternate" href="https://mircealungu.github.io/index.xml" type="application/rss+xml" title="Mircea Lungu">
+  <link rel="feed" href="https://mircealungu.github.io/index.xml" type="application/rss+xml" title="Mircea Lungu">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="https://mircealungu.github.io/post/17-01-06-essentiality-of-context/">
+
+  
+
+  <title>The Essentiality of Context in Software Analytics | Mircea Lungu</title>
+
+</head>
+<body id="top">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Mircea Lungu</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse" id="#navbar-collapse-1">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li class="nav-item"><a href="/#top">About</a></li>
+        
+        <li class="nav-item"><a href="/#posts">Academic Log</a></li>
+        
+        <li class="nav-item"><a href="/#teaching">Teaching</a></li>
+        
+        <li class="nav-item"><a href="https://scholar.google.nl/citations?user=kLqXicUAAAAJ&amp;hl=en">Publications</a></li>
+        
+        <li class="nav-item"><a href="/#contact">Contact</a></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+    
+
+    <h1 itemprop="name">The Essentiality of Context in Software Analytics</h1>
+
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-01-06 12:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Fri, Jan 6, 2017
+    </time>
+  </span>
+
+  
+  
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmircealungu.github.io%2fpost%2f17-01-06-essentiality-of-context%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=The%20Essentiality%20of%20Context%20in%20Software%20Analytics&amp;url=https%3a%2f%2fmircealungu.github.io%2fpost%2f17-01-06-essentiality-of-context%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmircealungu.github.io%2fpost%2f17-01-06-essentiality-of-context%2f&amp;title=The%20Essentiality%20of%20Context%20in%20Software%20Analytics"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<p>I am preparing a talk for the SE symposium.
+This is the yearly meeting of the SE researchers
+in the Netherlands. Since this is one of the first
+times that I get the chance to talk in front of the
+community, I&rsquo;d like to report on some of the work
+that I&rsquo;ve been involved in doing. Thus, I spent some
+time thinking about ways in which I can look
+at my past work to present it in a cohesive way.</p>
+
+<p>One perspective that I have found is arguing about
+the usefulness of taking the context into account
+in software analytics.</p>
+
+<p>I paste below the transcript of my talk for those
+who will have not been able to attend.</p>
+
+<hr />
+
+<h1 id="what-is-software-analytics">What is Software Analytics?</h1>
+
+<p>Let me tell you the story of my students whom I asked once what do they prefer to be reading: the source code of ArgoUML or <em>War and Peace</em>. It turns out that they don&rsquo;t want to read either. I guess they prefer to be writing their own ode, and tweet their own tweets. Millenials&hellip;</p>
+
+<p>Truth is, nobody wants to read so much source code. Thus, one of the goals of software analytics is to automatically extract a high-level view of a software system. To help us gather insights into a given software system.</p>
+
+<p>One of my favorite science fiction writers is Vernor Vinge. He is a retired computer science professor from California. One really memorable book that he wrote is A Deepness in the Sky. One of the quotations in that book is:</p>
+
+<pre><code>nobody knew what the system was doing. 
+the programmers were long time dead. 
+</code></pre>
+
+<p>This is where we are going with the software. There is alreday nobody that can
+understand the full stack of software that is running on a single machine&hellip;</p>
+
+<p>This is where software analytics comes into the picture.</p>
+
+<p>But let me tell you one more story.
+There was this movie called Moneyball that some of you have seen.
+In it we see how the domain of baseball discovers the knapsack problem.
+They discover that their old approach of greedy heuristic in selecting
+a soccer team is inferior to an approach which finds a global optimum
+by selecting a team instead of individual players.</p>
+
+<p>A few years ago already, I was attending a conference where a software
+producer was showing a demo of the analytics software they provide to
+their soccer team partners. They track every individual characteristic
+of all the players in play, in order to discover the best combinations
+of players, and data mine their own teams and the other teams</p>
+
+<p>One of my friends works in finance, and they have been heavily applying
+data analysis on the information from the italian Guardia di Financia in
+order to detect people who are evading taxes. It seems that their project
+has been cancelled half-way through&hellip; which you can interpret in multiple
+ways.</p>
+
+<p>In 2014, more than 75% of the stock traded in the US was traded by automated
+trading systems.</p>
+
+<p>In a world where software empowers and makes possible the optimization
+of all these other domains, we need to make sure that the domain of
+building software itself is not left behding, especially since software
+is underlying all these other domains.</p>
+
+<h1 id="who-am-i">Who Am I?</h1>
+
+<p>I have been working for several years in the domain of software
+analytics. I am currently working for the University of Groningen
+as assistant professor in the SEARCH research group. Before joinig
+the kingdon of the north here in groningen, I was with the University
+of Bern in Switzerland, and with the University of Lugano, also in
+Switzerland.</p>
+
+<p>Today, in the next half an hour, I would like to
+show to you a few of the things that we can do if we set out to
+consider software to be the subject of our analytics.</p>
+
+<hr />
+
+<p>(tangential)
+ When I started working in this domain, about 10 years ago, I started working with Radu Marinescu on detection strategies. These were formulas for detecting problems in software systems. They were smart formulas, and they encoded a lot of individual expertise. They would tell you when a class was not good enough based on thresholds and metrics. My diploma thesis was to discover a way of softening those thresholds. I introduced what was called Fuzzy Detection Strategies which would be using Fuzzy logic&hellip;</p>
+
+<h1 id="the-most-basic-insight-in-software-analytics">The Most Basic Insight in Software Analytics?</h1>
+
+<p>The most basic insight in software analytics is as new as the Lisp programming language&hellip; That is, it is not new at all. But it is a surprisingly powerful approach nevertheless. That the source code is simply data. (cite the paper of mcCarthy)</p>
+
+<p>To provide insights into the system, we must first move away from one of the models that most of the people have in their mind: that of the separation of the source code and data. Usually the source code is in the IDE and the data is in the Database.</p>
+
+<p>However, every one of us, once we have taken a compiler construction course, knows that software is data too. Sure, it is a special kind of data, since it is very dense and non-repetitive. But still data after all.</p>
+
+<p>Once we look at the source code as pure data, we can start applying all the tools of data analytics. And these tools are:
+- visualization and exploration
+- clustering
+- data mining
+- &hellip;</p>
+
+<p>Let us start with the beginning. Visualizing software systems.
+Visualization is an important first step in any data analysis
+context. The importance of this step in software analyitcs is
+given by the longevity of the software visualization conference
+which has been live and kicking for many years now.</p>
+
+<h1 id="let-me-give-you-an-example-of-how-we-would-visualize-a-software-system">Let me give you an example of how we would visualize a software system</h1>
+
+<p>Let me show you one way in which I like to visualize software that is based on two characteristics of software: it&rsquo;s hierarchical structure and it&rsquo;s dependency structure.</p>
+
+<p>Another one that I like, because I implemented it during
+my PhD is this automatically generated  interactive visualization that is extracted directly from the source code. It shows modules in the system and dependencies between them. Visually, the size of the modules is proportional with the size of the modules. The width of the dependency relations is also proportional to the strength of the dependency.</p>
+
+<p>So if we look now at a system that I worked once on,  we can see that it is at the highest level structured as a collection of modules &hellip; (discuss a bit about the modules and their relationshps)</p>
+
+<p>In software, we have something that very few other types of data have, and that is, we like to keep track of the evolution of our &ldquo;data&rdquo;. This is why, we can, look at a given system, in the context of it&rsquo;s past.</p>
+
+<h1 id="the-long-term-evolutionary-context">The Long Term Evolutionary Context</h1>
+
+<p>But as manny lehman, argued, a system that does not change is dead. And a version of the system that we look at without taking into account its broader history is dead. In our case, if we augment our analysis with more context we can learn many useful things about this system.</p>
+
+<p>In fact, we often think about software systems in terms of their architecture. This is a very useful metaphor that serves us very well.</p>
+
+<p>At this point, I would like to suggest another metaphor, and that is, the metaphor of a plant. A plant is ever evolving. And you must take care of it, or it will die.</p>
+
+<p>So the first context that we have learned in our work that is important is the historical context. And just as the real history, if we take the long view, we must summarize heavily. But when we take the short term view, we can go into more details. And the two are useful for different goals. Take for example the long term view.</p>
+
+<p>If we look at the context, we see that some parts of a software system are evolving much more than the others. Knowing the long term evolutionary context in which the system became what it is, can help us steer it in the future.</p>
+
+<h1 id="the-short-term-evolutionary-context">The Short-Term Evolutionary Context</h1>
+
+<p>And just as the long term context can help us steer the system towards the long term future, the short term context can help us steer it towards the short term future. Quite obvious you&rsquo;ll say. And you&rsquo;d be right.</p>
+
+<p>This is what we showed with my colleague Lille Hattori at the Univerisy of Lugano, to which I contributed a little bit. In this case, the goal was to be able to replay past development sessions to give context to somebody trying to understand a piece of code.</p>
+
+<p>One of the ways in which this worked very well for us was &hellip;</p>
+
+<h1 id="the-very-long-term">The Very Long Term?</h1>
+
+<p>&ndash; I remember a keynote by a biologist &hellip;
+&ndash; Who is looking at the very long view?
+&ndash; There is the work of Stewart Brand and the Long Now Foundation who are working on thinking really long term. What are the equivalent software projects? How do we ensure that our systems will be running 1000 years later?</p>
+
+<h1 id="the-ecosystem-context">The Ecosystem Context</h1>
+
+<p>No man is an island, entirely of itself says the poet John Donne.</p>
+
+<p>Any useful non-trivial system is part of a larger ecosystem.</p>
+
+<p>As Vernor Vinge says,</p>
+
+<p>And just as a sociologist, or a historian, when trying to understand somebody, they need to understand them in context, as a software analyst one must take the broader ecosystem in context. The system that we looked at earlier, if we zoom out we learn that is part of a larger ecosystem in which it interacts with other systems.</p>
+
+<p>This is the software context.</p>
+
+<p>Surely, we can zoom out even more and look at all the systems that are written in a given language. If we do that however, there are often challenges in extracting dependencies. And also the analysis can often become less reliable because it is hard to verify that the data is actually correct in some cases (can point to a later example with antarctica&hellip;)</p>
+
+<h1 id="the-social-context-of-an-ecosystem">The Social Context of an Ecosystem</h1>
+
+<p>And then, there is the social context.</p>
+
+<p>This is the co</p>
+
+<p>Some organizational ecosystems can however be large. Google is famously storing all their code in one place.</p>
+
+<p>Some very interesting work can be done if we analyze an ecosystem in its broader context, and some very interesting statistics can be derived if we understand the ecosystem in itself.</p>
+
+<p>The ecosystem policies, the rules written or unwritten determine the long term survival of the ecosystem. E.g.
+- the R community enforces all the published packages to depend on the latest version of every other package.
+- At the opposite spectrum seems to me to be the Mathlab ecosystem, where reuse is based on some files on a website that can be downloaded. No version control. No history. No dependency management.
+- the Google ecosystem has a billion lines of code that are available to everybody. You can load all the projects in eclipse. and in this huge forrest of projects, automated bots float around and make a large number of commits to the version repository.
+- at the same time while Backward Inc. which employs thousands of software professionals can not reproduce an earlier version of their system in A.D. 2014
+- tell me the rules of your ecosystem, and I can tell you whether it&rsquo;s meant to be healthy or not.</p>
+
+<p>This is why designing the rules of the game for an ecosystem is a tricky business.
+The examples I gave are large, huge, ecosystems that very few of us will ever start.</p>
+
+<p>But, on the other hand, even a smaller ecosystem requires a &ldquo;constitution&rdquo;, a basic set of rules by which it functions if it is to survive. And why would you want an ecosystem? Take for example one of the projects that I&rsquo;ve started recently which aims to model the knowledge of a learner in order to help them improve. Learner tracing through a knowledge field. We want to track him in every place in which he encounters knowledge. But in the days in which everyone has so many devices in which one can interact with knowledge, tablets, phones, phablets, smartwatches, laptops, smart TVs, etc. it becomes increasingly unlikely that a single player can provide all the tracking. We thus need an ecosystem of independent players who can collaborate.
+- what should the platform</p>
+
+<h2 id="api-statistics">&ndash; API Statistics&hellip;</h2>
+
+<p>API</p>
+
+<p>Take for example an API. You can look at it as much as you want, and you can analyze it in the context too, but as long as you don&rsquo;t start to look at it in the broader Java ecosystem in which it is used there are things that you will never learn about it.</p>
+
+<p>For example, only if you look at the way the clients of the JDK, or the downstream as we call them use the JDK will you be able to learn about what are the most important parts of it. And if you did, you could probably improve the way documentation is being generated and code is being navigated.</p>
+
+<p>This is something that we did together with my colleague Boris. We augmented the documentation browser based on the usage of the APIs.</p>
+
+<p>This is a general problem, it does not happen only with the JDK. I am reminded of</p>
+
+<p>We once did a study on what are the developer needs in software ecosystems.</p>
+
+<h2 id="the-knowledge-context">&ndash; The Knowledge Context</h2>
+
+<p>What about our metrics which talk about</p>
+
+<h1 id="what-does-google-say-about-context">What Does Google Say About Context?</h1>
+
+<p>The future is contextualization.</p>
+
+<p>take this system here:
+- we look at it: looks quite simple and metrics look quite good (happy)
+- a lot of dead code, code that is not used by any other part of the system (sad)
+- we look at it&rsquo;s evolution: it&rsquo;s been evolving for years, refining, and refining: must be important.
+- we look at the dependencies: a lot of dead code???  (sad)
+- we zoom out in the organization - we see a system that everybody depends on (happy)(must be important)
+- we look at the organization - it&rsquo;s an organization which moves too fast, and people can not keep up, they make breaking changes &hellip; so, it&rsquo;s going to be hard to keep up. do we want (sad)
+- still, the community has been supporting this project and similar ones for many years, and we can trust that they will do it in the future. (happy)</p>
+
+    </div>
+
+  </article>
+
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://mircealungu.github.io/post/16-11-20-teacher-of-the-year/"><span
+      aria-hidden="true">&larr;</span> 🎉 Nominated for the Teacher of the Year Award</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+  
+
+
+</div>
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2016 Mircea F Lungu &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="/js/jquery-1.12.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-89557275-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:377989,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    <script async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+    
+
+  </body>
+</html>
+

@@ -7,8 +7,223 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Mircea F Lungu</copyright>
-    <lastBuildDate>Mon, 21 Nov 2016 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Jan 2017 12:00:00 +0000</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>The Essentiality of Context in Software Analytics</title>
+      <link>https://mircealungu.github.io/post/17-01-06-essentiality-of-context/</link>
+      <pubDate>Fri, 06 Jan 2017 12:00:00 +0000</pubDate>
+      
+      <guid>https://mircealungu.github.io/post/17-01-06-essentiality-of-context/</guid>
+      <description>
+
+&lt;p&gt;I am preparing a talk for the SE symposium.
+This is the yearly meeting of the SE researchers
+in the Netherlands. Since this is one of the first
+times that I get the chance to talk in front of the
+community, I&amp;rsquo;d like to report on some of the work
+that I&amp;rsquo;ve been involved in doing. Thus, I spent some
+time thinking about ways in which I can look
+at my past work to present it in a cohesive way.&lt;/p&gt;
+
+&lt;p&gt;One perspective that I have found is arguing about
+the usefulness of taking the context into account
+in software analytics.&lt;/p&gt;
+
+&lt;p&gt;I paste below the transcript of my talk for those
+who will have not been able to attend.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;what-is-software-analytics&#34;&gt;What is Software Analytics?&lt;/h1&gt;
+
+&lt;p&gt;Let me tell you the story of my students whom I asked once what do they prefer to be reading: the source code of ArgoUML or &lt;em&gt;War and Peace&lt;/em&gt;. It turns out that they don&amp;rsquo;t want to read either. I guess they prefer to be writing their own ode, and tweet their own tweets. Millenials&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Truth is, nobody wants to read so much source code. Thus, one of the goals of software analytics is to automatically extract a high-level view of a software system. To help us gather insights into a given software system.&lt;/p&gt;
+
+&lt;p&gt;One of my favorite science fiction writers is Vernor Vinge. He is a retired computer science professor from California. One really memorable book that he wrote is A Deepness in the Sky. One of the quotations in that book is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;nobody knew what the system was doing. 
+the programmers were long time dead. 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is where we are going with the software. There is alreday nobody that can
+understand the full stack of software that is running on a single machine&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;This is where software analytics comes into the picture.&lt;/p&gt;
+
+&lt;p&gt;But let me tell you one more story.
+There was this movie called Moneyball that some of you have seen.
+In it we see how the domain of baseball discovers the knapsack problem.
+They discover that their old approach of greedy heuristic in selecting
+a soccer team is inferior to an approach which finds a global optimum
+by selecting a team instead of individual players.&lt;/p&gt;
+
+&lt;p&gt;A few years ago already, I was attending a conference where a software
+producer was showing a demo of the analytics software they provide to
+their soccer team partners. They track every individual characteristic
+of all the players in play, in order to discover the best combinations
+of players, and data mine their own teams and the other teams&lt;/p&gt;
+
+&lt;p&gt;One of my friends works in finance, and they have been heavily applying
+data analysis on the information from the italian Guardia di Financia in
+order to detect people who are evading taxes. It seems that their project
+has been cancelled half-way through&amp;hellip; which you can interpret in multiple
+ways.&lt;/p&gt;
+
+&lt;p&gt;In 2014, more than 75% of the stock traded in the US was traded by automated
+trading systems.&lt;/p&gt;
+
+&lt;p&gt;In a world where software empowers and makes possible the optimization
+of all these other domains, we need to make sure that the domain of
+building software itself is not left behding, especially since software
+is underlying all these other domains.&lt;/p&gt;
+
+&lt;h1 id=&#34;who-am-i&#34;&gt;Who Am I?&lt;/h1&gt;
+
+&lt;p&gt;I have been working for several years in the domain of software
+analytics. I am currently working for the University of Groningen
+as assistant professor in the SEARCH research group. Before joinig
+the kingdon of the north here in groningen, I was with the University
+of Bern in Switzerland, and with the University of Lugano, also in
+Switzerland.&lt;/p&gt;
+
+&lt;p&gt;Today, in the next half an hour, I would like to
+show to you a few of the things that we can do if we set out to
+consider software to be the subject of our analytics.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;(tangential)
+ When I started working in this domain, about 10 years ago, I started working with Radu Marinescu on detection strategies. These were formulas for detecting problems in software systems. They were smart formulas, and they encoded a lot of individual expertise. They would tell you when a class was not good enough based on thresholds and metrics. My diploma thesis was to discover a way of softening those thresholds. I introduced what was called Fuzzy Detection Strategies which would be using Fuzzy logic&amp;hellip;&lt;/p&gt;
+
+&lt;h1 id=&#34;the-most-basic-insight-in-software-analytics&#34;&gt;The Most Basic Insight in Software Analytics?&lt;/h1&gt;
+
+&lt;p&gt;The most basic insight in software analytics is as new as the Lisp programming language&amp;hellip; That is, it is not new at all. But it is a surprisingly powerful approach nevertheless. That the source code is simply data. (cite the paper of mcCarthy)&lt;/p&gt;
+
+&lt;p&gt;To provide insights into the system, we must first move away from one of the models that most of the people have in their mind: that of the separation of the source code and data. Usually the source code is in the IDE and the data is in the Database.&lt;/p&gt;
+
+&lt;p&gt;However, every one of us, once we have taken a compiler construction course, knows that software is data too. Sure, it is a special kind of data, since it is very dense and non-repetitive. But still data after all.&lt;/p&gt;
+
+&lt;p&gt;Once we look at the source code as pure data, we can start applying all the tools of data analytics. And these tools are:
+- visualization and exploration
+- clustering
+- data mining
+- &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Let us start with the beginning. Visualizing software systems.
+Visualization is an important first step in any data analysis
+context. The importance of this step in software analyitcs is
+given by the longevity of the software visualization conference
+which has been live and kicking for many years now.&lt;/p&gt;
+
+&lt;h1 id=&#34;let-me-give-you-an-example-of-how-we-would-visualize-a-software-system&#34;&gt;Let me give you an example of how we would visualize a software system&lt;/h1&gt;
+
+&lt;p&gt;Let me show you one way in which I like to visualize software that is based on two characteristics of software: it&amp;rsquo;s hierarchical structure and it&amp;rsquo;s dependency structure.&lt;/p&gt;
+
+&lt;p&gt;Another one that I like, because I implemented it during
+my PhD is this automatically generated  interactive visualization that is extracted directly from the source code. It shows modules in the system and dependencies between them. Visually, the size of the modules is proportional with the size of the modules. The width of the dependency relations is also proportional to the strength of the dependency.&lt;/p&gt;
+
+&lt;p&gt;So if we look now at a system that I worked once on,  we can see that it is at the highest level structured as a collection of modules &amp;hellip; (discuss a bit about the modules and their relationshps)&lt;/p&gt;
+
+&lt;p&gt;In software, we have something that very few other types of data have, and that is, we like to keep track of the evolution of our &amp;ldquo;data&amp;rdquo;. This is why, we can, look at a given system, in the context of it&amp;rsquo;s past.&lt;/p&gt;
+
+&lt;h1 id=&#34;the-long-term-evolutionary-context&#34;&gt;The Long Term Evolutionary Context&lt;/h1&gt;
+
+&lt;p&gt;But as manny lehman, argued, a system that does not change is dead. And a version of the system that we look at without taking into account its broader history is dead. In our case, if we augment our analysis with more context we can learn many useful things about this system.&lt;/p&gt;
+
+&lt;p&gt;In fact, we often think about software systems in terms of their architecture. This is a very useful metaphor that serves us very well.&lt;/p&gt;
+
+&lt;p&gt;At this point, I would like to suggest another metaphor, and that is, the metaphor of a plant. A plant is ever evolving. And you must take care of it, or it will die.&lt;/p&gt;
+
+&lt;p&gt;So the first context that we have learned in our work that is important is the historical context. And just as the real history, if we take the long view, we must summarize heavily. But when we take the short term view, we can go into more details. And the two are useful for different goals. Take for example the long term view.&lt;/p&gt;
+
+&lt;p&gt;If we look at the context, we see that some parts of a software system are evolving much more than the others. Knowing the long term evolutionary context in which the system became what it is, can help us steer it in the future.&lt;/p&gt;
+
+&lt;h1 id=&#34;the-short-term-evolutionary-context&#34;&gt;The Short-Term Evolutionary Context&lt;/h1&gt;
+
+&lt;p&gt;And just as the long term context can help us steer the system towards the long term future, the short term context can help us steer it towards the short term future. Quite obvious you&amp;rsquo;ll say. And you&amp;rsquo;d be right.&lt;/p&gt;
+
+&lt;p&gt;This is what we showed with my colleague Lille Hattori at the Univerisy of Lugano, to which I contributed a little bit. In this case, the goal was to be able to replay past development sessions to give context to somebody trying to understand a piece of code.&lt;/p&gt;
+
+&lt;p&gt;One of the ways in which this worked very well for us was &amp;hellip;&lt;/p&gt;
+
+&lt;h1 id=&#34;the-very-long-term&#34;&gt;The Very Long Term?&lt;/h1&gt;
+
+&lt;p&gt;&amp;ndash; I remember a keynote by a biologist &amp;hellip;
+&amp;ndash; Who is looking at the very long view?
+&amp;ndash; There is the work of Stewart Brand and the Long Now Foundation who are working on thinking really long term. What are the equivalent software projects? How do we ensure that our systems will be running 1000 years later?&lt;/p&gt;
+
+&lt;h1 id=&#34;the-ecosystem-context&#34;&gt;The Ecosystem Context&lt;/h1&gt;
+
+&lt;p&gt;No man is an island, entirely of itself says the poet John Donne.&lt;/p&gt;
+
+&lt;p&gt;Any useful non-trivial system is part of a larger ecosystem.&lt;/p&gt;
+
+&lt;p&gt;As Vernor Vinge says,&lt;/p&gt;
+
+&lt;p&gt;And just as a sociologist, or a historian, when trying to understand somebody, they need to understand them in context, as a software analyst one must take the broader ecosystem in context. The system that we looked at earlier, if we zoom out we learn that is part of a larger ecosystem in which it interacts with other systems.&lt;/p&gt;
+
+&lt;p&gt;This is the software context.&lt;/p&gt;
+
+&lt;p&gt;Surely, we can zoom out even more and look at all the systems that are written in a given language. If we do that however, there are often challenges in extracting dependencies. And also the analysis can often become less reliable because it is hard to verify that the data is actually correct in some cases (can point to a later example with antarctica&amp;hellip;)&lt;/p&gt;
+
+&lt;h1 id=&#34;the-social-context-of-an-ecosystem&#34;&gt;The Social Context of an Ecosystem&lt;/h1&gt;
+
+&lt;p&gt;And then, there is the social context.&lt;/p&gt;
+
+&lt;p&gt;This is the co&lt;/p&gt;
+
+&lt;p&gt;Some organizational ecosystems can however be large. Google is famously storing all their code in one place.&lt;/p&gt;
+
+&lt;p&gt;Some very interesting work can be done if we analyze an ecosystem in its broader context, and some very interesting statistics can be derived if we understand the ecosystem in itself.&lt;/p&gt;
+
+&lt;p&gt;The ecosystem policies, the rules written or unwritten determine the long term survival of the ecosystem. E.g.
+- the R community enforces all the published packages to depend on the latest version of every other package.
+- At the opposite spectrum seems to me to be the Mathlab ecosystem, where reuse is based on some files on a website that can be downloaded. No version control. No history. No dependency management.
+- the Google ecosystem has a billion lines of code that are available to everybody. You can load all the projects in eclipse. and in this huge forrest of projects, automated bots float around and make a large number of commits to the version repository.
+- at the same time while Backward Inc. which employs thousands of software professionals can not reproduce an earlier version of their system in A.D. 2014
+- tell me the rules of your ecosystem, and I can tell you whether it&amp;rsquo;s meant to be healthy or not.&lt;/p&gt;
+
+&lt;p&gt;This is why designing the rules of the game for an ecosystem is a tricky business.
+The examples I gave are large, huge, ecosystems that very few of us will ever start.&lt;/p&gt;
+
+&lt;p&gt;But, on the other hand, even a smaller ecosystem requires a &amp;ldquo;constitution&amp;rdquo;, a basic set of rules by which it functions if it is to survive. And why would you want an ecosystem? Take for example one of the projects that I&amp;rsquo;ve started recently which aims to model the knowledge of a learner in order to help them improve. Learner tracing through a knowledge field. We want to track him in every place in which he encounters knowledge. But in the days in which everyone has so many devices in which one can interact with knowledge, tablets, phones, phablets, smartwatches, laptops, smart TVs, etc. it becomes increasingly unlikely that a single player can provide all the tracking. We thus need an ecosystem of independent players who can collaborate.
+- what should the platform&lt;/p&gt;
+
+&lt;h2 id=&#34;api-statistics&#34;&gt;&amp;ndash; API Statistics&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;API&lt;/p&gt;
+
+&lt;p&gt;Take for example an API. You can look at it as much as you want, and you can analyze it in the context too, but as long as you don&amp;rsquo;t start to look at it in the broader Java ecosystem in which it is used there are things that you will never learn about it.&lt;/p&gt;
+
+&lt;p&gt;For example, only if you look at the way the clients of the JDK, or the downstream as we call them use the JDK will you be able to learn about what are the most important parts of it. And if you did, you could probably improve the way documentation is being generated and code is being navigated.&lt;/p&gt;
+
+&lt;p&gt;This is something that we did together with my colleague Boris. We augmented the documentation browser based on the usage of the APIs.&lt;/p&gt;
+
+&lt;p&gt;This is a general problem, it does not happen only with the JDK. I am reminded of&lt;/p&gt;
+
+&lt;p&gt;We once did a study on what are the developer needs in software ecosystems.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-knowledge-context&#34;&gt;&amp;ndash; The Knowledge Context&lt;/h2&gt;
+
+&lt;p&gt;What about our metrics which talk about&lt;/p&gt;
+
+&lt;h1 id=&#34;what-does-google-say-about-context&#34;&gt;What Does Google Say About Context?&lt;/h1&gt;
+
+&lt;p&gt;The future is contextualization.&lt;/p&gt;
+
+&lt;p&gt;take this system here:
+- we look at it: looks quite simple and metrics look quite good (happy)
+- a lot of dead code, code that is not used by any other part of the system (sad)
+- we look at it&amp;rsquo;s evolution: it&amp;rsquo;s been evolving for years, refining, and refining: must be important.
+- we look at the dependencies: a lot of dead code???  (sad)
+- we zoom out in the organization - we see a system that everybody depends on (happy)(must be important)
+- we look at the organization - it&amp;rsquo;s an organization which moves too fast, and people can not keep up, they make breaking changes &amp;hellip; so, it&amp;rsquo;s going to be hard to keep up. do we want (sad)
+- still, the community has been supporting this project and similar ones for many years, and we can trust that they will do it in the future. (happy)&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>🎉 Nominated for the Teacher of the Year Award</title>
@@ -117,17 +332,19 @@ study inspired from our &lt;a href=&#34;https://zeeguu.unibe.ch&#34;&gt;Zeeguu&l
       <description>
 
 &lt;p&gt;Our work on Softwarenaut has finally been published in the Science
-of Computer Programming. The paper (&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung14a.pdf&#34;&gt;pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?query=lung14a&amp;amp;display=bibtex&#34;&gt;bibtex&lt;/a&gt;,&lt;a href=&#34;https://scholar.google.nl/scholar?cites=16074008290934254937&amp;amp;as_sdt=2005&amp;amp;sciodt=0,5&amp;amp;hl=en&#34;&gt;citations&lt;/a&gt;) is summarized
-with the following highlights:&lt;/p&gt;
+of Computer Programming. The paper
+(&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung14a.pdf&#34;&gt;pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?query=lung14a&amp;amp;display=bibtex&#34;&gt;bibtex&lt;/a&gt;,&lt;a href=&#34;https://scholar.google.nl/scholar?cites=16074008290934254937&amp;amp;as_sdt=2005&amp;amp;sciodt=0,5&amp;amp;hl=en&#34;&gt;citations&lt;/a&gt;)
+introduces Softwarenaut, a visual, interactive architecture recovery tool which
+leverages evolutionary analysis to support source code understanding.&lt;/p&gt;
 
-&lt;p&gt;➡ Softwarenaut is a visual, interactive architecture recovery tool which
-➡ leverages evolution to support advanced filters and detailed views and
-➡ enables sharing architectural views through an online view repository.
-➡ We illustrate the functionality of Softwarenaut through examples of its application.
-➡ We discuss architectural and tool-building aspects, and report on a usability study.&lt;/p&gt;
+&lt;p&gt;This page contains a very high level description of the tool.
+For details and case studies, see&lt;/p&gt;
 
-&lt;p&gt;This page contains a tutorial-like description of the tool. For a more detailed discussion see the paper
-(&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung14a.pdf&#34;&gt;pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?query=lung14a&amp;amp;display=bibtex&#34;&gt;bibtex&lt;/a&gt;,&lt;a href=&#34;https://scholar.google.nl/scholar?cites=16074008290934254937&amp;amp;as_sdt=2005&amp;amp;sciodt=0,5&amp;amp;hl=en&#34;&gt;citations&lt;/a&gt;)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;the journal article that describes the tool (&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung14a.pdf&#34;&gt;preprint pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?_k=mhZxW1Pf&amp;amp;query=Lung14a&amp;amp;display=bibtex&#34;&gt;bibtex&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;the conference paper that describes the way we visualized hierarchical clusterings of software systems (&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung05aExploreSemanticClusters.pdf&#34;&gt;preprint pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?_k=v0zYApEK&amp;amp;query=Lung05a&amp;amp;display=bibtex&#34;&gt;bibtex&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h3 id=&#34;aggregating-low-level-relations-along-a-hierarchical-decomposition-of-a-system&#34;&gt;Aggregating low-level relations along a hierarchical decomposition of a system&lt;/h3&gt;
 
@@ -183,81 +400,20 @@ long after they tool does not compile anymore :)&lt;/p&gt;
 
 &lt;iframe src=&#34;https://player.vimeo.com/video/62767181&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;h3 id=&#34;for-further-reading-see-our-article-from-2014&#34;&gt;For Further Reading See Our Article from 2014&lt;/h3&gt;
+&lt;h3 id=&#34;further-reading&#34;&gt;Further Reading&lt;/h3&gt;
 
-&lt;p&gt;The description on this page is a summary of the details presented in our article:&lt;/p&gt;
+&lt;p&gt;For details and case studies, see&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung14a.pdf&#34;&gt;Evolutionary and Collaborative Software Architecture Recovery with Softwarenaut&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;the journal article that describes the tool (&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung14a.pdf&#34;&gt;preprint pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?_k=mhZxW1Pf&amp;amp;query=Lung14a&amp;amp;display=bibtex&#34;&gt;bibtex&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;To cite the article, use the following bibtex:&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;the conference paper that describes the way we visualized hierarchical clusterings of software systems (&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung05aExploreSemanticClusters.pdf&#34;&gt;preprint pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?_k=v0zYApEK&amp;amp;query=Lung05a&amp;amp;display=bibtex&#34;&gt;bibtex&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;@article{Lung14a,
-    Annote = {internationaljournal},
-    Author = {Mircea Lungu and Michele Lanza and Oscar Nierstrasz},
-    Doi = {10.1016/j.scico.2012.04.007},
-    Journal = {Science of Computer Programming},
-    Medium = {2},
-    Number = {0},
-    Pages = {204 - 223},
-    Peerreview = {yes},
-    Publisher = {Elsevier},
-    Title = {Evolutionary and Collaborative Software Architecture Recovery with {Softwarenaut}},
-    Volume = {79},
-    Year = {2014}}&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&#34;code-and-installation&#34;&gt;Code and Installation&lt;/h3&gt;
 
-&lt;h1 id=&#34;installation&#34;&gt;Installation&lt;/h1&gt;
-
-&lt;p&gt;Softwarenaut is built on top of the Cincom distribution of Smalltalk for historical reasons. This means that in order to run the tool you also need Cincom Smalltalk.&lt;/p&gt;
-
-&lt;p&gt;To download the source code you need to have an installation of Cincom VisualWorks. It seems that recently the only way you can do that is by ordering a CD from Cincom. They are very quick in sending it, but it is still a nuissance and a very archaic way of distributing software! Once you have your VisualWorks installed you are ready to download the sources.&lt;/p&gt;
-
-&lt;p&gt;Connecting to the Bern Store&lt;/p&gt;
-
-&lt;p&gt;In the Store menu of the launcher, choose ’Connect to Repository’. A dialog pops up where you have to fill in information for connecting to a Store database. Provide the following information:&lt;/p&gt;
-
-&lt;p&gt;Interface: select PostgreSql from the dropdown box
-Environment: db.iam.unibe.ch:5432_scgStore
-User Name: storeguest (if you have one, use it)
-Password: storeguest (if you have one, use it)&lt;/p&gt;
-
-&lt;p&gt;To access the SCG Store do the following: in the Store menu of the launcher: Store -&amp;gt; Published Items.&lt;/p&gt;
-
-&lt;p&gt;Once there, load the MetaDBDevelopment bundle followed by the SoftwarenautDevelopment bundle. Every time you are asked to select a prerequisite, select the latest version that is available. (You can avoid clicking through a zillion of Ok&amp;rsquo;s if you go to Settings&amp;gt;Store&amp;gt;Prerequisites and select the &amp;ldquo;Load latest version&amp;hellip;&amp;rdquo; option.)&lt;/p&gt;
-
-&lt;h3 id=&#34;importing-a-system&#34;&gt;Importing a System&lt;/h3&gt;
-
-&lt;p&gt;In order to make Softwarenaut independent of the language that your system is written in, we have made it work on an intermediate representation that can work with any object-oriented language. That representation is the FAMIX meta-model.&lt;/p&gt;
-
-&lt;p&gt;There are a few ways in which you can obtain a FAMIX model of your system:&lt;/p&gt;
-
-&lt;p&gt;For Smalltalk systems, the importer is in the same image with Softwarenaut
-Using a third-party tool that can analyze your source-code and export it into FAMIX
-Importing a system from the SourcererDB (work in progress)
-Download one of the sample systems that are available online (work in progress)&lt;/p&gt;
-
-&lt;p&gt;When you run Softwarenaut, it runs out of a Smalltalk &amp;ldquo;image&amp;rdquo;, a full smalltalk system whose source code co-exists with that of Softwarenaut and is interpreted by a Smalltalk VM. This means that the tool has access to its own source code together with a few other thousand classes that make up a basic Smalltalk distribution.&lt;/p&gt;
-
-&lt;p&gt;You can import and analyze any system from smalltalk by selecting the menu option Import-&amp;gt;From Smalltalk&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Once you select the option, you are presented with a list of namespaces that you can import. One special namespace is SN - the namespace of the Softwarenaut itself. If you load it you can analyze the system with itself.&lt;/p&gt;
-
-&lt;h3 id=&#34;importing-multiple-versions&#34;&gt;Importing Multiple Versions&lt;/h3&gt;
-
-&lt;p&gt;Softwarenaut provides also multi-version analysis support. For this one needs to have multiple models of the same system.&lt;/p&gt;
-
-&lt;p&gt;To load multiple models of the same system for multi-version analysis choose the option File&amp;gt;Import History of FAMIX (2.1) Models and in the pop-up dialog select a directory where you have already prepared models for several versions of the system that you are analyzing.&lt;/p&gt;
-
-&lt;p&gt;Warning: For large systems, importing a single version can take a few minutes. Consequently importing multiple versions will take proportionally more time. This means that you want to keep the number of versions that you analyze small. Select the versions that you want to analyze accordingly.&lt;/p&gt;
-
-&lt;p&gt;Once all your versions are loaded, you are presented with a Model History builder. From the left panel select the versions that constitute your history and add them to the right panel. Then select &amp;ldquo;Build History&amp;rdquo; and give a name to your history (usually the name of the system).&lt;/p&gt;
-
-&lt;p&gt;After this Softwarenaut builds the internal hierarchical graphs for every version and you are ready to proceed to analysis. The models for all the versions will now know that they are part of the same history.&lt;/p&gt;
-
-&lt;p&gt;Multi-Version views will be enabled in the detail view tab. One such example is the Relationship Evolution detail view for dependencies.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://github.com/mircealungu/Softwarenaut/&#34;&gt;Softwarenaut GitHub repo&lt;/a&gt; contains instructions on how to &lt;a href=&#34;https://github.com/mircealungu/Softwarenaut/blob/master/INSTALL.md&#34;&gt;obtain the code
+and install the system&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -331,6 +487,23 @@ we used the following conventions for visualizing our information map:&lt;/p&gt;
 &lt;h3 id=&#34;possible-student-project&#34;&gt;Possible Student Project&lt;/h3&gt;
 
 &lt;p&gt;There are a few very nice ways in which this work could be continued. A student interested in working on this topic for a thesis should &lt;a href=&#34;https://mircealungu.github.io/#contact&#34;&gt; contact me&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Keynote at Smalltalks in Argentina</title>
+      <link>https://mircealungu.github.io/post/12-11-11-keynote-smalltalks-argentina/</link>
+      <pubDate>Tue, 20 Nov 2012 12:00:00 +0000</pubDate>
+      
+      <guid>https://mircealungu.github.io/post/12-11-11-keynote-smalltalks-argentina/</guid>
+      <description>&lt;p&gt;&lt;img src=/img/ar-teaching.jpg style=&#34;box-shadow:none; float: left; width:210px; padding: 10px; padding-top:0px; margin-top: 0px; margin-left: 0px; padding-left: 0px; margin-bottom: 0px; border-width: 0px;&#34; /&gt;
+&lt;img src=/img/ar-talking.jpg style=&#34;box-shadow:none; float: left; width:210px; padding: 10px; padding-top:0px; margin-top: 0px; margin-left: 0px; padding-left: 0px; margin-bottom: 0px; border-width: 0px;&#34; /&gt;
+&lt;img src=/img/ar-enjoying.jpg style=&#34;box-shadow:none; float: left; width:210px; padding: 10px; padding-top:0px; margin-top: 0px; margin-left: 0px; padding-left: 0px; margin-bottom: 0px; border-width: 0px;&#34; /&gt;
+&lt;div  style=&#34;clear:both;&#34;&gt;&lt;/div&gt;
+&lt;small&gt;
+&lt;/small&gt;
+I was invited to give a keynote at Smalltalks in Argentina. Before the conference I spent some time with students at the University of Buenos Aires with Gabriela Arevallo and the other organizers of the conference. The conference was great. The argentinian Smalltalk community is extremely welcoming and passionate. I look forward to going back one day.
+&lt;/div&gt;&lt;/p&gt;
 </description>
     </item>
     
