@@ -7,8 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Mircea F Lungu</copyright>
-    <lastBuildDate>Sun, 27 Nov 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Jan 2017 12:00:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Three Types of Context in Software Analytics</title>
+      <link>https://mircealungu.github.io/post/17-01-20--sen-symposium-talk/</link>
+      <pubDate>Fri, 20 Jan 2017 12:00:00 +0000</pubDate>
+      
+      <guid>https://mircealungu.github.io/post/17-01-20--sen-symposium-talk/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Time to Learn </title>
