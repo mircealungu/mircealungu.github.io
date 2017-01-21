@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mircea Lungu</title>
+    <link>https://mircealungu.github.io/tags/invited-presentations/index.xml</link>
+    <description>Recent content on Mircea Lungu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016 Mircea F Lungu</copyright>
+    <atom:link href="/tags/invited-presentations/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Invited Talk on Context in Software Analytics</title>
+      <link>https://mircealungu.github.io/post/17-01-20--sen-symposium-talk/</link>
+      <pubDate>Fri, 20 Jan 2017 12:00:00 +0000</pubDate>
+      
+      <guid>https://mircealungu.github.io/post/17-01-20--sen-symposium-talk/</guid>
+      <description>&lt;p&gt;I was invited to give a talk at the SEN symposium organized in Amsterdam.
+The symposium represents the yearly meeting for software engineering
+researchers and practitioners. This year among the other speakers there
+were Felienne Hermans, Andreas Zeller, and Hans Wanders the CIO of the Netherlands!&lt;/p&gt;
+
+&lt;p&gt;These are the slides of my talk are &lt;a href=&#34;https://mircealungu.github.io/pdf/SEN-Symposium--TalkSlides.pdf&#34;&gt;online&lt;/a&gt;&lt;/p&gt;
+
+&lt;div  style=&#34;clear:both;&#34;&gt;&lt;/div&gt;
+
+&lt;p&gt;The organizers have equiped the participants with voting cards: yellow and
+red. This is a nice idea, since you can interact with the audience in a more
+playful manner. At some point, I asked the audience to lift their red cards if they
+prefer to read War and Peace and the yellow cards if they&amp;rsquo;d prefer to read
+the source code of ArgoUML.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mircealungu.github.io/img/warandpeace-vs-argouml.jpg&#34; alt=&#34;lala&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
