@@ -11,15 +11,12 @@
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Invited Talk on Context in Software Analytics</title>
+      <title>Invited Talk at the SEN Symposium</title>
       <link>https://mircealungu.github.io/post/17-01-20--sen-symposium-talk/</link>
       <pubDate>Fri, 20 Jan 2017 12:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/post/17-01-20--sen-symposium-talk/</guid>
-      <description>&lt;p&gt;I was invited to give a talk at the SEN symposium organized in Amsterdam.
-The symposium represents the yearly meeting for software engineering
-researchers and practitioners. This year among the other speakers there
-were Felienne Hermans, Andreas Zeller, and Hans Wanders the CIO of the Netherlands!&lt;/p&gt;
+      <description>&lt;p&gt;The SEN symposium in Amsterdam is a yearly event that gathers software engineering researchers and practitioners. This year I was invited to give a talk along several other great researchers and practitioners including: Felienne Hermans, Andreas Zeller, and Hans Wanders the CIO of the Netherlands!&lt;/p&gt;
 
 &lt;p&gt;These are the slides of my talk are &lt;a href=&#34;https://mircealungu.github.io/pdf/SEN-Symposium--TalkSlides.pdf&#34;&gt;online&lt;/a&gt;&lt;/p&gt;
 
