@@ -19,39 +19,47 @@
 
 &lt;p&gt;The SEN symposium in Amsterdam is a yearly event that gathers software engineering researchers and practitioners. This year I was invited to give a talk along several other great researchers and practitioners including: Felienne Hermans, Andreas Zeller, and Hans Wanders the CIO of the Netherlands!&lt;/p&gt;
 
-&lt;h1 id=&#34;context-in-software-analytics&#34;&gt;Context in Software Analytics&lt;/h1&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 
-&lt;p&gt;I started my talk observing that Google has very relevant search
-results because they take the context of the search into account.&lt;/p&gt;
+&lt;p&gt;&lt;img src=/img/context-slide.png style=&#34;box-shadow:none;  width:300px; padding: 10px; padding-top:0px; margin-top: 0px; margin-left: auto; margin-right: auto; padding-left: 0px; margin-bottom: 0px; border-width: 1;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;I then argued that our work in software analytics becomes more relevant
-and powerful if we take the context into into account. I discussed
-in particular three types of context that I have encountered in
-my work:&lt;/p&gt;
+&lt;p&gt;I started my talk observing that Google, Facebook, and Twitter
+are using context in order to provide us with the best&amp;hellip; ads!
+I then argued that in software analytics we can use context in
+order to create more powerful tools and analyses.&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;The Temporal&lt;/strong&gt; context allows our analysis to benefit from the
-temporal locality of the software evolution process&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;The (Eco)Systemic&lt;/strong&gt; context allows us to understand a system in the
+&lt;p&gt;In particular I discussed three types of context that I have experienced
+with in my work:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;The Temporal&lt;/strong&gt; context allows us to replay the evolution
+of the system to better understand it&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The (eco)Systemic&lt;/strong&gt; context allows us to understand a system in the
 broader context in which it interacts with other systems&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;The Personal&lt;/strong&gt; context allows our tools to adapt
-to the particular needs of the individual developer and become
-what Vannevar Bush envisioned &lt;em&gt;&amp;ldquo;intimate supplements of the human mind&amp;rdquo;&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;strong&gt;The Personal&lt;/strong&gt; context allows our analytics tools to become &lt;em&gt;&amp;ldquo;intimate
+supplements of the human mind&amp;rdquo;&lt;/em&gt; (Vannevar Bush)&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;For more details, the &lt;a href=&#34;https://mircealungu.github.io/pdf/SEN-Symposium--TalkSlides.pdf&#34;&gt;&lt;strong&gt;slides of my talk are online&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For more details, the &lt;a href=&#34;https://mircealungu.github.io/pdf/SEN-Symposium--TalkSlides.pdf&#34;&gt;&lt;strong&gt;slides of my talk are online&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div  style=&#34;clear:both;&#34;&gt;&lt;/div&gt;
 
-&lt;h1 id=&#34;fun-with-the-audience&#34;&gt;Fun with the Audience&lt;/h1&gt;
+&lt;h1 id=&#34;a-fun-audience&#34;&gt;A Fun Audience&lt;/h1&gt;
 
 &lt;p&gt;The organizers have provided the participants with voting cards: yellow and
 red. This is a nice idea, since you can interact with the audience in a more
-playful manner. At some point, I asked the audience to lift their red cards if they
+fun manner.&lt;/p&gt;
+
+&lt;p&gt;At some point, I took a picture of the audiencve after I asked them to lift their red cards if they
 prefer to read War and Peace and the yellow cards if they&amp;rsquo;d prefer to read
 the source code of ArgoUML.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://mircealungu.github.io/img/audience-voting.jpg&#34; alt=&#34;lala&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=/img/audience-voting.jpg style=&#34;box-shadow:none; height:300px; padding: 10px; padding-top:0px; margin-top: 0px; margin-left: auto; margin-right: auto; padding-left: 0px; margin-bottom: 0px; border-width: 1px;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Looking at the three yellow cards, it seems
+that in the audience there were three people who read War and Peace :)&lt;/p&gt;
+
+&lt;p&gt;&lt;div  style=&#34;clear:both;&#34;&gt;&lt;/div&gt;&lt;/p&gt;
 </description>
     </item>
     
