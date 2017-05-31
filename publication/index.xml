@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publication-rsses on Mircea Lungu</title>
-    <link>https://mircealungu.github.io/publication/index.xml</link>
-    <description>Recent content in Publication-rsses on Mircea Lungu</description>
+    <title>Publications on Mircea Lungu</title>
+    <link>https://mircealungu.github.io/publication/</link>
+    <description>Recent content in Publications on Mircea Lungu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Mircea F Lungu</copyright>
     <lastBuildDate>Mon, 10 Oct 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/publication/" rel="self" type="application/rss+xml" />
     
     <item>
       <title> Evolutionary and Collaborative Software Architecture Recovery with Softwarenaut</title>

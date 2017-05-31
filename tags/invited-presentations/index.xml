@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mircea Lungu</title>
-    <link>https://mircealungu.github.io/tags/invited-presentations/index.xml</link>
-    <description>Recent content on Mircea Lungu</description>
+    <title>Invited Presentations on Mircea Lungu</title>
+    <link>https://mircealungu.github.io/tags/invited-presentations/</link>
+    <description>Recent content in Invited Presentations on Mircea Lungu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Mircea F Lungu</copyright>
-    <atom:link href="/tags/invited-presentations/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Jan 2017 12:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/invited-presentations/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Invited Talk at the SEN Symposium</title>

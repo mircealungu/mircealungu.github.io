@@ -2,8 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://mircealungu.github.io/</loc>
-    <lastmod>2017-01-20T12:00:00+00:00</lastmod>
+    <loc>https://mircealungu.github.io/home/about/</loc>
+    <lastmod>2016-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mircealungu.github.io/home/news/</loc>
+    <lastmod>2016-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mircealungu.github.io/home/teaching/</loc>
+    <lastmod>2016-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mircealungu.github.io/home/contact/</loc>
+    <lastmod>2016-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mircealungu.github.io/post/17-05-31--phd-scholarhsip/</loc>
+    <lastmod>2017-05-31T12:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -52,11 +72,6 @@
   </url>
   
   <url>
-    <loc>https://mircealungu.github.io/home/about/</loc>
-    <lastmod>2016-04-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://mircealungu.github.io/project/polite/</loc>
     <lastmod>2015-04-27T00:00:00+00:00</lastmod>
   </url>
@@ -87,18 +102,122 @@
   </url>
   
   <url>
-    <loc>https://mircealungu.github.io/home/news/</loc>
-    <lastmod>2016-04-20T00:00:00+00:00</lastmod>
+    <loc>https://mircealungu.github.io/tags/accelerating-knowledge-acquisition/</loc>
+    <lastmod>2016-11-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mircealungu.github.io/home/teaching/</loc>
-    <lastmod>2016-04-20T00:00:00+00:00</lastmod>
+    <loc>https://mircealungu.github.io/tags/activities/</loc>
+    <lastmod>2012-11-20T12:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mircealungu.github.io/home/contact/</loc>
+    <loc>https://mircealungu.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mircealungu.github.io/tags/ecosystems/</loc>
+    <lastmod>2016-09-20T12:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mircealungu.github.io/home/</loc>
     <lastmod>2016-04-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mircealungu.github.io/tags/invited-presentations/</loc>
+    <lastmod>2017-01-20T12:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mircealungu.github.io/</loc>
+    <lastmod>2016-04-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mircealungu.github.io/tags/papers/</loc>
+    <lastmod>2017-01-19T12:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mircealungu.github.io/tags/polite/</loc>
+    <lastmod>2016-11-20T12:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mircealungu.github.io/post/</loc>
+    <lastmod>2017-05-31T12:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mircealungu.github.io/project/</loc>
+    <lastmod>2016-11-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mircealungu.github.io/publication/</loc>
+    <lastmod>2016-10-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mircealungu.github.io/tags/research/</loc>
+    <lastmod>2017-05-31T12:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mircealungu.github.io/tags/software-architecture/</loc>
+    <lastmod>2014-01-01T12:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mircealungu.github.io/tags/software-architecture-evolution/</loc>
+    <lastmod>2014-04-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mircealungu.github.io/tags/software-evolution/</loc>
+    <lastmod>2014-01-01T12:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mircealungu.github.io/tags/student-projects/</loc>
+    <lastmod>2013-11-20T12:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mircealungu.github.io/tags/</loc>
+    <lastmod>2016-11-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mircealungu.github.io/tags/teaching/</loc>
+    <lastmod>2016-11-21T12:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mircealungu.github.io/tags/visualization/</loc>
+    <lastmod>2014-01-01T12:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>
