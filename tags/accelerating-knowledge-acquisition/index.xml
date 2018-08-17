@@ -8,7 +8,9 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Mircea F Lungu</copyright>
     <lastBuildDate>Sun, 27 Nov 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/accelerating-knowledge-acquisition/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://mircealungu.github.io/tags/accelerating-knowledge-acquisition/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Time to Learn </title>
@@ -16,8 +18,7 @@
       <pubDate>Sun, 27 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/project/time-to-learn/</guid>
-      <description>&lt;p&gt;Softwarenaut is built on top of the Cincom distribution of Smalltalk for historical reasons. This means that in order to run the tool you also need Cincom Smalltalk. There are three ways in which you can install the tool.&lt;/p&gt;
-</description>
+      <description>Softwarenaut is built on top of the Cincom distribution of Smalltalk for historical reasons. This means that in order to run the tool you also need Cincom Smalltalk. There are three ways in which you can install the tool.</description>
     </item>
     
     <item>
@@ -35,8 +36,7 @@
       <pubDate>Mon, 27 Apr 2015 00:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/project/polite/</guid>
-      <description>&lt;p&gt;Polite Smalltalk is a small evolutionary mutation of the Smalltalk programming language that aims to encourage developers to think more about their programs as prose. The main mechanism by which Polite does this is what we define here as {\em sentence case identifiers} &amp;mdash; a naming convention that allows spaces in identifier names. Unlike projection editors which can easily allow spaces in their identifiers, Polite programs are stored as text.&lt;/p&gt;
-</description>
+      <description>Polite Smalltalk is a small evolutionary mutation of the Smalltalk programming language that aims to encourage developers to think more about their programs as prose. The main mechanism by which Polite does this is what we define here as {\em sentence case identifiers} &amp;mdash; a naming convention that allows spaces in identifier names. Unlike projection editors which can easily allow spaces in their identifiers, Polite programs are stored as text.</description>
     </item>
     
   </channel>

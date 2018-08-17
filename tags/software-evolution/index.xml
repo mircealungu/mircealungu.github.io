@@ -8,7 +8,9 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Mircea F Lungu</copyright>
     <lastBuildDate>Wed, 01 Jan 2014 12:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/software-evolution/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://mircealungu.github.io/tags/software-evolution/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>📝 Evolutionary and Collaborative Software Architecture Recovery </title>
@@ -16,92 +18,10 @@
       <pubDate>Wed, 01 Jan 2014 12:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/post/14-01-01-evolutionary-and-collaborative-software-architecture-recovery/</guid>
-      <description>
-
-&lt;p&gt;Our work on Softwarenaut has finally been published in the Science
-of Computer Programming. The paper
-(&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung14a.pdf&#34;&gt;pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?query=lung14a&amp;amp;display=bibtex&#34;&gt;bibtex&lt;/a&gt;,&lt;a href=&#34;https://scholar.google.nl/scholar?cites=16074008290934254937&amp;amp;as_sdt=2005&amp;amp;sciodt=0,5&amp;amp;hl=en&#34;&gt;citations&lt;/a&gt;)
-introduces Softwarenaut, a visual, interactive architecture recovery tool which
-leverages evolutionary analysis to support source code understanding.&lt;/p&gt;
-
-&lt;p&gt;This page contains a very high level description of the tool.
-For details and case studies, see&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;the journal article that describes the tool (&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung14a.pdf&#34;&gt;preprint pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?_k=mhZxW1Pf&amp;amp;query=Lung14a&amp;amp;display=bibtex&#34;&gt;bibtex&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;the conference paper that describes the way we visualized hierarchical clusterings of software systems (&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung05aExploreSemanticClusters.pdf&#34;&gt;preprint pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?_k=v0zYApEK&amp;amp;query=Lung05a&amp;amp;display=bibtex&#34;&gt;bibtex&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;aggregating-low-level-relations-along-a-hierarchical-decomposition-of-a-system&#34;&gt;Aggregating low-level relations along a hierarchical decomposition of a system&lt;/h3&gt;
-
-&lt;p&gt;Softwarenaut aggregates low-level relations along a hierarcical decomposition of a system (e.g. the package structure in Java). Softwarenaut can thus present a high-level overview of the architectural relationships between the modules in a system.&lt;/p&gt;
-
-&lt;p&gt;The figure presents the architecture of Softwarenaut visualized in Softwarenaut. The module sizes are proportional to their LOC and the relationships are proportional to the number of low-level relationships abstracted.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/464519/21022444/eb463a12-bd7c-11e6-9a37-f6925f371eff.png&#34; alt=&#34;architecture-of-softwarenaut&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;augmenting-the-big-picture-with-evolutionary-information&#34;&gt;Augmenting The Big Picture With Evolutionary Information&lt;/h3&gt;
-
-&lt;p&gt;The following view presents Softwarenaut visualizing itself but this time, augmenting the structure with evolutionary information. On top of the architectural view we have highlighted the classes that have the most activity in the recent evolution of the system (as of February 2011). One can see that it is a minority of classes that have been changing.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/464519/21022349/9ec2f748-bd7c-11e6-87ad-29c5332caba9.png&#34; alt=&#34;evolution screenshot&#34; /&gt;&lt;/p&gt;
-
-&lt;!-- ### Details About Relationship Evolution
-
-The following figure presents the evolution filmstrip for the relationship between the uml and kernel modules in ArgoUML between 2003 and 2007. Inheritance relationships are represented with red and invocation relationships are represented with black. One can see that in 2004 a reverse dependency was introduced between kernel and uml and it remained in the system until its latest analyzed version
-
-![screen-shot-2011-10-10-at-5 27 36-pm](https://cloud.githubusercontent.com/assets/464519/21023545/4c41a97e-bd81-11e6-81b1-fb038bd3b156.png)
- --&gt;
-
-&lt;h3 id=&#34;details-about-module-evolution&#34;&gt;Details About Module Evolution&lt;/h3&gt;
-
-&lt;p&gt;There are mahy module detail views which present information about a particular module. The Module Evolution presents a compressed version of the module history. The module is represented in every analyzed version as a treemap. When a new class is introduced it is marked with yellow. When a class changes it is colored with a shade of blue which is darker for larger changes. The figure presents the history of the cognitive package in ArgoUML.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/464519/21023626/9cffc058-bd81-11e6-906f-4f62c440717a.png&#34; alt=&#34;screen-shot-2011-10-14-at-1 56 14-am&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;coping-with-the-explosion-of-information-through-filtering&#34;&gt;Coping with the explosion of information through filtering&lt;/h3&gt;
-
-&lt;p&gt;Filters help coping with the explosion of information during exploration. There are two types of filters: entity filters and relationship filters. The Filters Panel allows the user to add and remove various filters during exploration. The filters panel appears instead of the Detail Panel when no entity is selected in the Architectural View.&lt;/p&gt;
-
-&lt;p&gt;Two categories of &lt;strong&gt;entity filters&lt;/strong&gt; are:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Size Related: Filters all the modules that are under a certain threshold (Small Modules) or above a certain threshold (Large modules).&lt;/li&gt;
-&lt;li&gt;Evolution Related:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Two categories of &lt;strong&gt;relationship filters&lt;/strong&gt; are:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Dependency Strength: they filters the relationships based on the number of low-level explicit relationships that are abstracted in the visible relationships (e.g. Weak dependencies, Strong dependencies). These are useful when starting the analysis of systems that have a large number of modules and dependencies between them.&lt;/li&gt;
-&lt;li&gt;Evolutionary: they filter relationships based on the evolution of the relationships during the lifetime of the system. Examples are: lifetime, newborn, old, new. They are available only when multiple versions of a system are loaded. They are useful for either limiting the amount of information at the first encounter with a system (e.g. lifetime) or trying to find problems (e.g. newborn combined with bidirectional).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;a-screencast-of-softwarenaut-in-action&#34;&gt;A Screencast of Softwarenaut in Action&lt;/h3&gt;
-
-&lt;p&gt;In 2012 I prepared a screencast of the way the
-tool looked at the time. I think screencasts are very important
-for research tools since they may give ideas to new toolmakers
-long after they tool does not compile anymore :)&lt;/p&gt;
-
-&lt;iframe src=&#34;https://player.vimeo.com/video/62767181&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;h3 id=&#34;further-reading&#34;&gt;Further Reading&lt;/h3&gt;
-
-&lt;p&gt;For details and case studies, see&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;the journal article that describes the tool (&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung14a.pdf&#34;&gt;preprint pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?_k=mhZxW1Pf&amp;amp;query=Lung14a&amp;amp;display=bibtex&#34;&gt;bibtex&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;the conference paper that describes the way we visualized hierarchical clusterings of software systems (&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung05aExploreSemanticClusters.pdf&#34;&gt;preprint pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?_k=v0zYApEK&amp;amp;query=Lung05a&amp;amp;display=bibtex&#34;&gt;bibtex&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;code-and-installation&#34;&gt;Code and Installation&lt;/h3&gt;
-
-&lt;p&gt;The &lt;a href=&#34;https://github.com/mircealungu/Softwarenaut/&#34;&gt;Softwarenaut GitHub repo&lt;/a&gt; contains instructions on how to &lt;a href=&#34;https://github.com/mircealungu/Softwarenaut/blob/master/INSTALL.md&#34;&gt;obtain the code
-and install the system&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Our work on Softwarenaut has finally been published in the Science of Computer Programming. The paper (pdf, bibtex,citations) introduces Softwarenaut, a visual, interactive architecture recovery tool which leverages evolutionary analysis to support source code understanding.
+This page contains a very high level description of the tool. For details and case studies, see
+ the journal article that describes the tool (preprint pdf, bibtex)
+ the conference paper that describes the way we visualized hierarchical clusterings of software systems (preprint pdf, bibtex)</description>
     </item>
     
   </channel>

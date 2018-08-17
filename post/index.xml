@@ -8,7 +8,9 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Mircea F Lungu</copyright>
     <lastBuildDate>Wed, 31 May 2017 12:00:00 +0000</lastBuildDate>
-    <atom:link href="/post/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://mircealungu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>PhD Scholarship in Software Engineering</title>
@@ -16,38 +18,9 @@
       <pubDate>Wed, 31 May 2017 12:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/post/17-05-31--phd-scholarhsip/</guid>
-      <description>
-
-&lt;p&gt;I am glad to announce that I have funding for a PhD student in the the Software Engineering and Architecture Research Group at the University of Groningen in the Netherlands.&lt;/p&gt;
-
-&lt;h2 id=&#34;the-topic&#34;&gt;The Topic&lt;/h2&gt;
-
-&lt;p&gt;The Software Engineering and Architecture Research Group (&lt;a href=&#34;http://www.cs.rug.nl/search/Main/People&#34;&gt;SEARCH&lt;/a&gt;) carries research in software engineering in general with particular interest in architecture, cloud computing, software evolution analysis, and intelligent tools for software development.&lt;/p&gt;
-
-&lt;p&gt;This particular position will be under the supervision of Dr. Mircea Lungu and is mainly targeted at candidates who have a strong background and interest in one of the following research directions:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;software analysis and visualization&lt;/li&gt;
-&lt;li&gt;software ecosystem evolution and monitoring&lt;/li&gt;
-&lt;li&gt;adaptable, personalized, and intelligent tools and systems&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;However, if your interest is different and you can provide a strong argument on why your topic would be relevant for software engineering research I would be happy to hear from you.&lt;/p&gt;
-
-&lt;h2 id=&#34;the-phd-scholarship&#34;&gt;The PhD Scholarship&lt;/h2&gt;
-
-&lt;p&gt;As a PhD student you have a salary and you are an employee with full rights of the University of Groningen. You have the chance of doing cutting-edge research in software engineering and you have the option of  becoming involved also in teaching and assisting courses. You should also be ready to travel, since part of your job will be traveling to conferences and to present your results.&lt;/p&gt;
-
-&lt;h2 id=&#34;the-university-of-groningen&#34;&gt;The University of Groningen&lt;/h2&gt;
-
-&lt;p&gt;The University of Groningen, one of the oldest universities in the Netherlands, constantly ranks as one of the best universities in the world (currently on position &lt;a href=&#34;http://www.shanghairanking.com/ARWU2017.html&#34;&gt;59&lt;/a&gt;). The university is home to a vibrant international student body.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.groningenlife.nl/en&#34;&gt;Life in Groningen is good&lt;/a&gt;. The city of Groningen has an active cultural scene and a world class university sports center which offers a wide range of athletic activities. Groningen is constantly ranked as the best Dutch city to study in.&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-apply&#34;&gt;How to Apply&lt;/h2&gt;
-
-&lt;p&gt;To apply, please send an email, including a short statement of interest and CV with at least two references to &lt;a href=&#34;http://mircealungu.github.io&#34;&gt;Dr. Mircea Lungu&lt;/a&gt;. The desired starting date should be before the end of 2017. The applications will be considered on a first come first served basis.&lt;/p&gt;
-</description>
+      <description>I am glad to announce that I have funding for a PhD student in the the Software Engineering and Architecture Research Group at the University of Groningen in the Netherlands.
+The Topic The Software Engineering and Architecture Research Group (SEARCH) carries research in software engineering in general with particular interest in architecture, cloud computing, software evolution analysis, and intelligent tools for software development.
+This particular position will be under the supervision of Dr.</description>
     </item>
     
     <item>
@@ -56,52 +29,9 @@
       <pubDate>Fri, 20 Jan 2017 12:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/post/17-01-20--sen-symposium-talk/</guid>
-      <description>
+      <description>The SEN symposium in Amsterdam is a yearly event that gathers software engineering researchers and practitioners. This year I was invited to give a talk along several great speakers including: Felienne Hermans, Andreas Zeller, Marielle Stoelinga, and Hans Wanders the CIO (!) of the Netherlands.
 
-&lt;p&gt;The SEN symposium in Amsterdam is a yearly event that gathers software engineering researchers and practitioners. This year I was invited to give a talk along several great speakers including: Felienne Hermans, Andreas Zeller, Marielle Stoelinga, and Hans Wanders the CIO (!) of the Netherlands.&lt;/p&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=/img/context-slide.png style=&#34;box-shadow:none;  width:300px; padding: 10px; padding-top:0px; margin-top: 0px; margin-left: auto; margin-right: auto; padding-left: 0px; margin-bottom: 0px; border-width: 1;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I started my talk observing that Google, Facebook, and Twitter
-are using context in order to provide us with the best&amp;hellip; ads!
-I then argued that in software analytics we can use context in
-order to create more powerful tools and analyses.&lt;/p&gt;
-
-&lt;p&gt;In particular I discussed three types of context that I have experienced
-with in my work:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;The Temporal&lt;/strong&gt; context allows us to replay the evolution
-of the system to better understand it&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;The (eco)Systemic&lt;/strong&gt; context allows us to understand a system in the
-broader context in which it interacts with other systems&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;The Personal&lt;/strong&gt; context allows our analytics tools to become &lt;em&gt;&amp;ldquo;intimate
-supplements of the human mind&amp;rdquo;&lt;/em&gt; (Vannevar Bush)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div  style=&#34;clear:both;&#34;&gt;&lt;/div&gt;
-
-&lt;h1 id=&#34;a-fun-audience&#34;&gt;A Fun Audience&lt;/h1&gt;
-
-&lt;p&gt;The organizers have provided the participants with voting cards: yellow and
-red. This is a nice idea, since you can interact with the audience in a more
-interactive manner.&lt;/p&gt;
-
-&lt;p&gt;At some point, I took a picture of the audiencve after I asked them to lift their red cards if they
-prefer to read War and Peace and the yellow cards if they&amp;rsquo;d prefer to read
-the source code of ArgoUML.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=/img/audience-voting.jpg style=&#34;box-shadow:none; height:300px; padding: 10px; padding-top:0px; margin-top: 0px; margin-left: auto; margin-right: auto; padding-left: 0px; margin-bottom: 0px; border-width: 1px;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Looking at the three yellow cards, it seems
-that in the audience there were three people who have already read War and Peace :)&lt;/p&gt;
-
-&lt;p&gt;&lt;div  style=&#34;clear:both;&#34;&gt;&lt;/div&gt;&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&#34;https://mircealungu.github.io/pdf/SEN-Symposium--TalkSlides.pdf&#34;&gt;&lt;strong&gt;slides of my talk are online&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
-</description>
+I started my talk observing that Google, Facebook, and Twitter are using context in order to provide us with the best&amp;hellip; ads! I then argued that in software analytics we can use context in order to create more powerful tools and analyses.</description>
     </item>
     
     <item>
@@ -110,62 +40,8 @@ that in the audience there were three people who have already read War and Peace
       <pubDate>Thu, 19 Jan 2017 12:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/post/17-01-19-analysis-bots/</guid>
-      <description>
-
-&lt;h3 id=&#34;the-story&#34;&gt;The Story&lt;/h3&gt;
-
-&lt;p&gt;Our paper on analysis bots has been accepted to the ICSE ERA
-track. The paper is co-written with Ivan Bestchastnick from
-University of British Columbia and Yanyan Zhuang from the
-University of Colorado.&lt;/p&gt;
-
-&lt;p&gt;The paper is written from the perspective of software engineering
-researchers and for a software engineering audience. It argues
-that we must implement a platform where analysis bots compete
-to provide the most meaningful analysis results to practitioners.&lt;/p&gt;
-
-&lt;p&gt;However, I think there is a more powerful and general
-perspective which is trying to emerge from the paper. In particular
-I find it fascinating to think of the introduction of automated
-agents in a workflow which is designed for people.&lt;/p&gt;
-
-&lt;p&gt;Or maybe this is simply automation catching up with us, software engineers?&lt;/p&gt;
-
-&lt;h3 id=&#34;the-paper&#34;&gt;The Paper&lt;/h3&gt;
-
-&lt;p&gt;The &lt;a href=&#34;https://mircealungu.github.io/papers/17-analysis-bots.pdf&#34;&gt;preprint (pdf)&lt;/a&gt; is available
-online. It&amp;rsquo;s not too long and an easy read ;)&lt;/p&gt;
-
-&lt;h3 id=&#34;the-bibtex&#34;&gt;The BibTex&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;@inproceedings{Best:2017,
- author = {Beschastnikh, Ivan and Lungu, Mircea and Zhuang, Yanyan},
- title = {{Accelerating Software Engineering Research Adoption
-with Analysis Bots}},
- booktitle = {Proceedings of the 39th International Conference on Software Engineering},
- series = {ICSE 2017},
- year = {2017},
- location = {Buenos Aires, Argentina},
- pages = {},
- url = {},
- doi = {},
- acmid = {},
- publisher = {ACM},
- address = {New York, NY, USA},
-} 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;the-abstract&#34;&gt;The Abstract&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;An important part of software engineering (SE) research is to develop new analysis techniques and to integrate these techniques into software development practice. However, since access to developers is non-trivial and research tool adoption is slow, new analyses are typically evaluated as follows: a prototype tool that embeds the analysis is implemented, a set of projects is identified, their revisions are selected, and the tool is run in a controlled environment, rarely involving the developers of the software. As a result, research artifacts are brittle and it is unclear if an analysis tool would actually be adopted.
-
-In this paper, we envision harnessing the rich interfaces provided by popular social coding platforms for automated deployment and evaluation of SE research analysis. We propose that SE analyses can be deployed as analysis bots. We focus on two specific benefits of such an approach: 
-    (1) analysis bots can help evaluate analysis techniques in a less controlled, and more realistic context, and 
-    (2) analysis bots provide an interface for developers to “subscribe” to new research techniques without needing to trust the implementation, the developer of the new tool, or to install the analysis tool locally. 
-
-We outline basic requirements for an analysis bots platform, and present research challenges that would need to be resolved for bots to flourish
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>The Story Our paper on analysis bots has been accepted to the ICSE ERA track. The paper is co-written with Ivan Bestchastnick from University of British Columbia and Yanyan Zhuang from the University of Colorado.
+The paper is written from the perspective of software engineering researchers and for a software engineering audience. It argues that we must implement a platform where analysis bots compete to provide the most meaningful analysis results to practitioners.</description>
     </item>
     
     <item>
@@ -174,31 +50,8 @@ We outline basic requirements for an analysis bots platform, and present researc
       <pubDate>Mon, 21 Nov 2016 12:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/post/16-11-20-teacher-of-the-year/</guid>
-      <description>&lt;p&gt;I have been nominated for the teacher of the year award!
-Especially after seeing all the other nominations I started
-feeling like I don&amp;rsquo;t deserve the honor. However, it is also
-true that together with my team, we put a lot of effort in
-  coming up with cool project ideas and
-  running them
-in the timespan of five months.&lt;/p&gt;
-
-&lt;p&gt;Thus, many thanks and congratulations for my teaching assistants:
-Laura Baakman,
-Jeroen Brandsma,
-Georgios Digkas,
-Sybren Gjaltema,
-Jelle van Wezel,
-Angelo Karountzos,
-Alexander Lukjanenkovs.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve been long due to write up the lessons learned during
-the most recent software engineering courses.
-Now I feel the duty to do it even more.
-Hopefully before I start the next batch!&lt;/p&gt;
-
-&lt;p&gt;And now for the impossible challenge: can you spot me in the picture?
-&lt;img src=&#34;https://mircealungu.github.io/img/teacher.jpg&#34; alt=&#34;lala&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>I have been nominated for the teacher of the year award! Especially after seeing all the other nominations I started feeling like I don&amp;rsquo;t deserve the honor. However, it is also true that together with my team, we put a lot of effort in coming up with cool project ideas and running them in the timespan of five months.
+Thus, many thanks and congratulations for my teaching assistants: Laura Baakman, Jeroen Brandsma, Georgios Digkas, Sybren Gjaltema, Jelle van Wezel, Angelo Karountzos, Alexander Lukjanenkovs.</description>
     </item>
     
     <item>
@@ -207,23 +60,9 @@ Hopefully before I start the next batch!&lt;/p&gt;
       <pubDate>Sun, 20 Nov 2016 12:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/post/16-11-20-polite-smalltalk-at-nool/</guid>
-      <description>&lt;p&gt;The programming languages reseachers have a healthy sense of humor. The -1th edition of the NOOL (New Object Oriented Languages) Workshop had a very creative call for papers. To keep up with the state of affairs, Jan Kurs and I submitted a paper with a most concise abstract:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;JavaProgrammersUseCamelCaseToSeparateWordsInIdentifiers. &lt;br/&gt;
-   Pythonistas_and_others_use_underscore_in_their_identifiers. &lt;br/&gt;
-   Polite programmers can use spaces if they like.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The paper presents briefly some of the design decisions that went into Polite, our evolutionary mutation of Smalltalk that brings the language
-closer to natural language. (&lt;a href=&#34;https://github.com/mircealungu/Polite_Programmers__NOOL16/blob/master/preprint.pdf&#34;&gt;preprint is online&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;Further Work on Polite Smalltalk:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;To try out Polite Smalltalk, &lt;a href=&#34;https://zenodo.org/record/61578#.WDYtDKIrKXQ&#34;&gt;Download the latest release from Zenodo&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>The programming languages reseachers have a healthy sense of humor. The -1th edition of the NOOL (New Object Oriented Languages) Workshop had a very creative call for papers. To keep up with the state of affairs, Jan Kurs and I submitted a paper with a most concise abstract:
+ JavaProgrammersUseCamelCaseToSeparateWordsInIdentifiers.  Pythonistas_and_others_use_underscore_in_their_identifiers.  Polite programmers can use spaces if they like.
+ The paper presents briefly some of the design decisions that went into Polite, our evolutionary mutation of Smalltalk that brings the language closer to natural language.</description>
     </item>
     
     <item>
@@ -232,17 +71,7 @@ closer to natural language. (&lt;a href=&#34;https://github.com/mircealungu/Poli
       <pubDate>Wed, 16 Nov 2016 12:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/post/16-11-16-introduction-to-data-science-course/</guid>
-      <description>&lt;p&gt;Today, with &lt;a href=&#34;http://www.cs.rug.nl/~kbunte/&#34;&gt;Kerstin Bunte&lt;/a&gt;,
-we are starting our new course on Introduction to Data Science.
-This will be interesting:
-we have 60 first year master students from
-  computer science,
-  astronomy, and
-  mathematics.
-What do they have
-in common? What topics can we cover such that most of them can
-benefit? Which topics are not too easy nor too challenging? We&amp;rsquo;ll see!&lt;/p&gt;
-</description>
+      <description>Today, with Kerstin Bunte, we are starting our new course on Introduction to Data Science. This will be interesting: we have 60 first year master students from computer science, astronomy, and mathematics. What do they have in common? What topics can we cover such that most of them can benefit? Which topics are not too easy nor too challenging? We&amp;rsquo;ll see!</description>
     </item>
     
     <item>
@@ -251,51 +80,8 @@ benefit? Which topics are not too easy nor too challenging? We&amp;rsquo;ll see!
       <pubDate>Tue, 20 Sep 2016 12:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/post/16-09-20-bootstrapping-an-ubiquitous-ecosystem/</guid>
-      <description>
-
-&lt;h3 id=&#34;the-story&#34;&gt;The Story&lt;/h3&gt;
-
-&lt;p&gt;I wrote a paper for the Ecosystem Architectures event (WEA&amp;rsquo;16) about the design of an ecosystem of applications which monitor a learner&amp;rsquo;s interactions with knowledge.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;An unconventional idea for an ecosystem, which shows well that there are many more opportunities to benefit from the ecosystem idea, than the various industrial applications. The concrete examples of the platform and the applications make the ideas tangible and well understandable. I particularly like the discussions of the lessons learned [&amp;hellip;]&amp;rdquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This was a very nice review to read.&lt;/p&gt;
-
-&lt;p&gt;The other reviews were also positive so the paper was accepted for presentation at WEA (Workshop on Ecosystem Architectures) that will take place in Copenhagen and is colocated with ECSA.&lt;/p&gt;
-
-&lt;h3 id=&#34;the-paper&#34;&gt;The Paper&lt;/h3&gt;
-
-&lt;p&gt;The paper talks about some of the challenges and
-opportunities that come with bootstrapping a
-ubiquitous monitoring ecosystem. It is a case
-study inspired from our &lt;a href=&#34;https://zeeguu.unibe.ch&#34;&gt;Zeeguu&lt;/a&gt; ecosystem.&lt;/p&gt;
-
-&lt;p&gt;The paper is &lt;a href=&#34;https://github.com/mircealungu/Bootstrapping_an_Ecosystem__WEA16/blob/master/preprint.pdf&#34;&gt;available online&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;the-bibtex&#34;&gt;The BibTex&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;@inproceedings{Lungu16,
- author = {Lungu, Mircea F.},
- title = {Bootstrapping an Ubiquitous Monitoring Ecosystem for Accelerating Vocabulary Acquisition},
- booktitle = {Proccedings of the 10th European Conference on Software Architecture Workshops},
- series = {ECSAW 2016},
- year = {2016},
- isbn = {978-1-4503-4781-5},
- location = {Copenhagen, Denmark},
- pages = {28:1--28:4},
- articleno = {28},
- numpages = {4},
- url = {http://doi.acm.org/10.1145/2993412.3003389},
- doi = {10.1145/2993412.3003389},
- acmid = {3003389},
- publisher = {ACM},
- address = {New York, NY, USA},
- keywords = {HCI, applied linguistics, software ecosystems},
-} 
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>The Story I wrote a paper for the Ecosystem Architectures event (WEA&amp;rsquo;16) about the design of an ecosystem of applications which monitor a learner&amp;rsquo;s interactions with knowledge.
+ &amp;ldquo;An unconventional idea for an ecosystem, which shows well that there are many more opportunities to benefit from the ecosystem idea, than the various industrial applications. The concrete examples of the platform and the applications make the ideas tangible and well understandable.</description>
     </item>
     
     <item>
@@ -304,92 +90,10 @@ study inspired from our &lt;a href=&#34;https://zeeguu.unibe.ch&#34;&gt;Zeeguu&l
       <pubDate>Wed, 01 Jan 2014 12:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/post/14-01-01-evolutionary-and-collaborative-software-architecture-recovery/</guid>
-      <description>
-
-&lt;p&gt;Our work on Softwarenaut has finally been published in the Science
-of Computer Programming. The paper
-(&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung14a.pdf&#34;&gt;pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?query=lung14a&amp;amp;display=bibtex&#34;&gt;bibtex&lt;/a&gt;,&lt;a href=&#34;https://scholar.google.nl/scholar?cites=16074008290934254937&amp;amp;as_sdt=2005&amp;amp;sciodt=0,5&amp;amp;hl=en&#34;&gt;citations&lt;/a&gt;)
-introduces Softwarenaut, a visual, interactive architecture recovery tool which
-leverages evolutionary analysis to support source code understanding.&lt;/p&gt;
-
-&lt;p&gt;This page contains a very high level description of the tool.
-For details and case studies, see&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;the journal article that describes the tool (&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung14a.pdf&#34;&gt;preprint pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?_k=mhZxW1Pf&amp;amp;query=Lung14a&amp;amp;display=bibtex&#34;&gt;bibtex&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;the conference paper that describes the way we visualized hierarchical clusterings of software systems (&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung05aExploreSemanticClusters.pdf&#34;&gt;preprint pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?_k=v0zYApEK&amp;amp;query=Lung05a&amp;amp;display=bibtex&#34;&gt;bibtex&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;aggregating-low-level-relations-along-a-hierarchical-decomposition-of-a-system&#34;&gt;Aggregating low-level relations along a hierarchical decomposition of a system&lt;/h3&gt;
-
-&lt;p&gt;Softwarenaut aggregates low-level relations along a hierarcical decomposition of a system (e.g. the package structure in Java). Softwarenaut can thus present a high-level overview of the architectural relationships between the modules in a system.&lt;/p&gt;
-
-&lt;p&gt;The figure presents the architecture of Softwarenaut visualized in Softwarenaut. The module sizes are proportional to their LOC and the relationships are proportional to the number of low-level relationships abstracted.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/464519/21022444/eb463a12-bd7c-11e6-9a37-f6925f371eff.png&#34; alt=&#34;architecture-of-softwarenaut&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;augmenting-the-big-picture-with-evolutionary-information&#34;&gt;Augmenting The Big Picture With Evolutionary Information&lt;/h3&gt;
-
-&lt;p&gt;The following view presents Softwarenaut visualizing itself but this time, augmenting the structure with evolutionary information. On top of the architectural view we have highlighted the classes that have the most activity in the recent evolution of the system (as of February 2011). One can see that it is a minority of classes that have been changing.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/464519/21022349/9ec2f748-bd7c-11e6-87ad-29c5332caba9.png&#34; alt=&#34;evolution screenshot&#34; /&gt;&lt;/p&gt;
-
-&lt;!-- ### Details About Relationship Evolution
-
-The following figure presents the evolution filmstrip for the relationship between the uml and kernel modules in ArgoUML between 2003 and 2007. Inheritance relationships are represented with red and invocation relationships are represented with black. One can see that in 2004 a reverse dependency was introduced between kernel and uml and it remained in the system until its latest analyzed version
-
-![screen-shot-2011-10-10-at-5 27 36-pm](https://cloud.githubusercontent.com/assets/464519/21023545/4c41a97e-bd81-11e6-81b1-fb038bd3b156.png)
- --&gt;
-
-&lt;h3 id=&#34;details-about-module-evolution&#34;&gt;Details About Module Evolution&lt;/h3&gt;
-
-&lt;p&gt;There are mahy module detail views which present information about a particular module. The Module Evolution presents a compressed version of the module history. The module is represented in every analyzed version as a treemap. When a new class is introduced it is marked with yellow. When a class changes it is colored with a shade of blue which is darker for larger changes. The figure presents the history of the cognitive package in ArgoUML.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/464519/21023626/9cffc058-bd81-11e6-906f-4f62c440717a.png&#34; alt=&#34;screen-shot-2011-10-14-at-1 56 14-am&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;coping-with-the-explosion-of-information-through-filtering&#34;&gt;Coping with the explosion of information through filtering&lt;/h3&gt;
-
-&lt;p&gt;Filters help coping with the explosion of information during exploration. There are two types of filters: entity filters and relationship filters. The Filters Panel allows the user to add and remove various filters during exploration. The filters panel appears instead of the Detail Panel when no entity is selected in the Architectural View.&lt;/p&gt;
-
-&lt;p&gt;Two categories of &lt;strong&gt;entity filters&lt;/strong&gt; are:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Size Related: Filters all the modules that are under a certain threshold (Small Modules) or above a certain threshold (Large modules).&lt;/li&gt;
-&lt;li&gt;Evolution Related:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Two categories of &lt;strong&gt;relationship filters&lt;/strong&gt; are:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Dependency Strength: they filters the relationships based on the number of low-level explicit relationships that are abstracted in the visible relationships (e.g. Weak dependencies, Strong dependencies). These are useful when starting the analysis of systems that have a large number of modules and dependencies between them.&lt;/li&gt;
-&lt;li&gt;Evolutionary: they filter relationships based on the evolution of the relationships during the lifetime of the system. Examples are: lifetime, newborn, old, new. They are available only when multiple versions of a system are loaded. They are useful for either limiting the amount of information at the first encounter with a system (e.g. lifetime) or trying to find problems (e.g. newborn combined with bidirectional).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;a-screencast-of-softwarenaut-in-action&#34;&gt;A Screencast of Softwarenaut in Action&lt;/h3&gt;
-
-&lt;p&gt;In 2012 I prepared a screencast of the way the
-tool looked at the time. I think screencasts are very important
-for research tools since they may give ideas to new toolmakers
-long after they tool does not compile anymore :)&lt;/p&gt;
-
-&lt;iframe src=&#34;https://player.vimeo.com/video/62767181&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;h3 id=&#34;further-reading&#34;&gt;Further Reading&lt;/h3&gt;
-
-&lt;p&gt;For details and case studies, see&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;the journal article that describes the tool (&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung14a.pdf&#34;&gt;preprint pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?_k=mhZxW1Pf&amp;amp;query=Lung14a&amp;amp;display=bibtex&#34;&gt;bibtex&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;the conference paper that describes the way we visualized hierarchical clusterings of software systems (&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Lung05aExploreSemanticClusters.pdf&#34;&gt;preprint pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?_k=v0zYApEK&amp;amp;query=Lung05a&amp;amp;display=bibtex&#34;&gt;bibtex&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;code-and-installation&#34;&gt;Code and Installation&lt;/h3&gt;
-
-&lt;p&gt;The &lt;a href=&#34;https://github.com/mircealungu/Softwarenaut/&#34;&gt;Softwarenaut GitHub repo&lt;/a&gt; contains instructions on how to &lt;a href=&#34;https://github.com/mircealungu/Softwarenaut/blob/master/INSTALL.md&#34;&gt;obtain the code
-and install the system&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Our work on Softwarenaut has finally been published in the Science of Computer Programming. The paper (pdf, bibtex,citations) introduces Softwarenaut, a visual, interactive architecture recovery tool which leverages evolutionary analysis to support source code understanding.
+This page contains a very high level description of the tool. For details and case studies, see
+ the journal article that describes the tool (preprint pdf, bibtex)
+ the conference paper that describes the way we visualized hierarchical clusterings of software systems (preprint pdf, bibtex)</description>
     </item>
     
     <item>
@@ -398,71 +102,8 @@ and install the system&lt;/a&gt;.&lt;/p&gt;
       <pubDate>Wed, 20 Nov 2013 12:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/post/13-09-01-visualizing-stack-overflow/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;https://mircealungu.github.io/img/stackoverflow.png&#34; alt=&#34;visualizing-stack-overflow&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;&amp;ldquo;A nobel prize is waiting for the one who visualizes the economy
-of information&amp;rdquo;&lt;/b&gt; (Steward Brand, The Media Lab)&lt;/p&gt;
-
-&lt;p&gt;One of my current travelling companions is “The Media Lab – Inventing the Future at MIT” by Steward Brand. Like several other books about the history of computing in the 80s, this one is also fascinating and it shows again how much ahead of their time were people in those years… and how we are still reaping the ideas that they saw. The book reports on an anecdote by Harlan Cleveland :&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;“I have wanted for some time to find a map of information flows around the world. The other day I had one hour to kill between appointments in new york city, so I dropped into the Rand-McNally shop to ask for such a map. My request created quite a stir, and virtually every employee was called into consultation. They brought out all sorts of maps showing flows of food and feedgrains, oil and coal, weapons and manufacturers – but finally admitted that they had no map of information flows and didn’t think their competitors had one either.” (Steward Brand, Inventing the Future at MIT, pp. 245)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;can-we-make-a-map-of-information-flow-in-the-world-today&#34;&gt;Can we make a map of information flow in the world today?&lt;/h3&gt;
-
-&lt;p&gt;Yes we can! In the article that we will present at SSE in Saint Petersburg this summer we show how can we do it for software engineering based on StackOverflow data.&lt;/p&gt;
-
-&lt;p&gt;StackOverflow is the principal website for software engineers in search for answers to programming questions. The quality of the answers and the fact that the mean time to a question being answered is 11 minutes make it the &lt;em&gt;de facto market for information&lt;/em&gt; regarding programming.&lt;/p&gt;
-
-&lt;p&gt;In the StackOverflow information market the currency is &lt;em&gt;reputation points&lt;/em&gt;. The reputation points are offered by the user originating a question to the one that best answers it. Others who found the answer useful can provide further points by upvoting the answer later.&lt;/p&gt;
-
-&lt;p&gt;As data source for our map we use ten million questions and answers (published as a database dump by A. Bacchelli at U. Lugano). Among other things the data source contains also geolocation information for a large percentage of the the users. Thus, if we aggregate the exchanges of information to geographical regions we will obtain a map.&lt;/p&gt;
-
-&lt;h3 id=&#34;how-to-visualize-the-map&#34;&gt;How to &lt;em&gt;visualize&lt;/em&gt; the map?&lt;/h3&gt;
-
-&lt;p&gt;Inspired from our earlier work on
-    &lt;a href=&#34;https://mircealungu.github.io/post/14-01-01-evolutionary-and-collaborative-software-architecture-recovery/&#34;&gt;visualizing software&lt;/a&gt;
-we used the following conventions for visualizing our information map:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The areas of countries and continents is proportional to the reputation of their users&lt;/li&gt;
-&lt;li&gt;The thickness of an arrow indicating information flow (answers) between regions is proportional to the number of answers abstracted in it&lt;/li&gt;
-&lt;li&gt;Where we had sufficient space, we labelled countries with their corresponding flags&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This map of software engineering information flow in the paper looks like the figure below:&lt;/p&gt;
-
-&lt;div style=&#34;margin: 0 -48%; padding: 0 -48%;&#34;&gt;
-    &lt;img src=&#34;https://mircealungu.github.io/img/stackoverflow-full.png&#34; /&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&#34;what-can-we-learn&#34;&gt;What can we learn?&lt;/h3&gt;
-
-&lt;p&gt;The most straightforward observations based on this map are:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;EU is exporting more answers to the US than the other way around!&lt;/li&gt;
-&lt;li&gt;However, US has more reputation than EU&lt;/li&gt;
-&lt;li&gt;Several small countries like Switzerland or Netherland have disproportionately high reputation with respect to their population&lt;/li&gt;
-&lt;li&gt;China is practically absent even if Joel Spolsky (the founder of SO) &lt;a href=&#34;https://stackoverflow.blog/2011/04/stack-overflow-around-the-world/&#34;&gt;reports&lt;/a&gt; large numbers of visitors to the site from there&lt;/li&gt;
-&lt;li&gt;Africa does not contribute much&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;what-next&#34;&gt;What next?&lt;/h3&gt;
-
-&lt;p&gt;The map is taken from our paper (&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Sche13a-GeolocatingStackOverflow.pdf&#34;&gt;pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?_k=dvvBNH0e&amp;amp;query=Sche13a&amp;amp;display=bibtex&#34;&gt;Bibtex&lt;/a&gt;) which contains more details about the data collection and analysis (including details on geo-locating users, and the evolution over time of the data).&lt;/p&gt;
-
-&lt;p&gt;Is the map representative of the way programming information is spread around the world? Are there other similar maps that you are aware of?&lt;/p&gt;
-
-&lt;p&gt;If you want to talk more about this topic &lt;a href=&#34;https://mircealungu.github.io/#contact&#34;&gt; let me know&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;possible-student-project&#34;&gt;Possible Student Project&lt;/h3&gt;
-
-&lt;p&gt;There are a few very nice ways in which this work could be continued. A student interested in working on this topic for a thesis should &lt;a href=&#34;https://mircealungu.github.io/#contact&#34;&gt; contact me&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>&amp;ldquo;A nobel prize is waiting for the one who visualizes the economy of information&amp;rdquo; (Steward Brand, The Media Lab)
+One of my current travelling companions is “The Media Lab – Inventing the Future at MIT” by Steward Brand. Like several other books about the history of computing in the 80s, this one is also fascinating and it shows again how much ahead of their time were people in those years… and how we are still reaping the ideas that they saw.</description>
     </item>
     
     <item>
@@ -471,15 +112,7 @@ we used the following conventions for visualizing our information map:&lt;/p&gt;
       <pubDate>Tue, 20 Nov 2012 12:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/post/12-11-11-keynote-smalltalks-argentina/</guid>
-      <description>&lt;p&gt;&lt;img src=/img/ar-teaching.jpg style=&#34;box-shadow:none; float: left; width:210px; padding: 10px; padding-top:0px; margin-top: 0px; margin-left: 0px; padding-left: 0px; margin-bottom: 0px; border-width: 0px;&#34; /&gt;
-&lt;img src=/img/ar-talking.jpg style=&#34;box-shadow:none; float: left; width:210px; padding: 10px; padding-top:0px; margin-top: 0px; margin-left: 0px; padding-left: 0px; margin-bottom: 0px; border-width: 0px;&#34; /&gt;
-&lt;img src=/img/ar-enjoying.jpg style=&#34;box-shadow:none; float: left; width:210px; padding: 10px; padding-top:0px; margin-top: 0px; margin-left: 0px; padding-left: 0px; margin-bottom: 0px; border-width: 0px;&#34; /&gt;
-&lt;div  style=&#34;clear:both;&#34;&gt;&lt;/div&gt;
-&lt;small&gt;
-&lt;/small&gt;
-I was invited to give a keynote at Smalltalks in Argentina. Before the conference I spent some time with students at the University of Buenos Aires with Gabriela Arevallo and the other organizers of the conference. The conference was great. The argentinian Smalltalk community is extremely welcoming and passionate. I look forward to going back one day.
-&lt;/div&gt;&lt;/p&gt;
-</description>
+      <description>I was invited to give a keynote at Smalltalks in Argentina. Before the conference I spent some time with students at the University of Buenos Aires with Gabriela Arevallo and the other organizers of the conference. The conference was great. The argentinian Smalltalk community is extremely welcoming and passionate. I look forward to going back one day.</description>
     </item>
     
   </channel>
