@@ -11,46 +11,6 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>PhD Scholarship in Software Engineering</title>
-      <link>https://mircealungu.github.io/post/17-05-31--phd-scholarhsip/</link>
-      <pubDate>Wed, 31 May 2017 12:00:00 +0000</pubDate>
-      
-      <guid>https://mircealungu.github.io/post/17-05-31--phd-scholarhsip/</guid>
-      <description>
-
-&lt;p&gt;I am glad to announce that I have funding for a PhD student in the the Software Engineering and Architecture Research Group at the University of Groningen in the Netherlands.&lt;/p&gt;
-
-&lt;h2 id=&#34;the-topic&#34;&gt;The Topic&lt;/h2&gt;
-
-&lt;p&gt;The Software Engineering and Architecture Research Group (&lt;a href=&#34;http://www.cs.rug.nl/search/Main/People&#34;&gt;SEARCH&lt;/a&gt;) carries research in software engineering in general with particular interest in architecture, cloud computing, software evolution analysis, and intelligent tools for software development.&lt;/p&gt;
-
-&lt;p&gt;This particular position will be under the supervision of Dr. Mircea Lungu and is mainly targeted at candidates who have a strong background and interest in one of the following research directions:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;software analysis and visualization&lt;/li&gt;
-&lt;li&gt;software ecosystem evolution and monitoring&lt;/li&gt;
-&lt;li&gt;adaptable, personalized, and intelligent tools and systems&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;However, if your interest is different and you can provide a strong argument on why your topic would be relevant for software engineering research I would be happy to hear from you.&lt;/p&gt;
-
-&lt;h2 id=&#34;the-phd-scholarship&#34;&gt;The PhD Scholarship&lt;/h2&gt;
-
-&lt;p&gt;As a PhD student you have a salary and you are an employee with full rights of the University of Groningen. You have the chance of doing cutting-edge research in software engineering and you have the option of  becoming involved also in teaching and assisting courses. You should also be ready to travel, since part of your job will be traveling to conferences and to present your results.&lt;/p&gt;
-
-&lt;h2 id=&#34;the-university-of-groningen&#34;&gt;The University of Groningen&lt;/h2&gt;
-
-&lt;p&gt;The University of Groningen, one of the oldest universities in the Netherlands, constantly ranks as one of the best universities in the world (currently on position &lt;a href=&#34;http://www.shanghairanking.com/ARWU2017.html&#34;&gt;59&lt;/a&gt;). The university is home to a vibrant international student body.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.groningenlife.nl/en&#34;&gt;Life in Groningen is good&lt;/a&gt;. The city of Groningen has an active cultural scene and a world class university sports center which offers a wide range of athletic activities. Groningen is constantly ranked as the best Dutch city to study in.&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-apply&#34;&gt;How to Apply&lt;/h2&gt;
-
-&lt;p&gt;To apply, please send an email, including a short statement of interest and CV with at least two references to &lt;a href=&#34;http://mircealungu.github.io&#34;&gt;Dr. Mircea Lungu&lt;/a&gt;. The desired starting date should be before the end of 2017. The applications will be considered on a first come first served basis.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Invited Talk at the SEN Symposium</title>
       <link>https://mircealungu.github.io/post/17-01-20--sen-symposium-talk/</link>
       <pubDate>Fri, 20 Jan 2017 12:00:00 +0000</pubDate>
@@ -521,6 +481,23 @@ we used the following conventions for visualizing our information map:&lt;/p&gt;
 &lt;h3 id=&#34;possible-student-project&#34;&gt;Possible Student Project&lt;/h3&gt;
 
 &lt;p&gt;There are a few very nice ways in which this work could be continued. A student interested in working on this topic for a thesis should &lt;a href=&#34;https://mircealungu.github.io/#contact&#34;&gt; contact me&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Keynote at Smalltalks in Argentina</title>
+      <link>https://mircealungu.github.io/post/12-11-11-keynote-smalltalks-argentina/</link>
+      <pubDate>Tue, 20 Nov 2012 12:00:00 +0000</pubDate>
+      
+      <guid>https://mircealungu.github.io/post/12-11-11-keynote-smalltalks-argentina/</guid>
+      <description>&lt;p&gt;&lt;img src=/img/ar-teaching.jpg style=&#34;box-shadow:none; float: left; width:210px; padding: 10px; padding-top:0px; margin-top: 0px; margin-left: 0px; padding-left: 0px; margin-bottom: 0px; border-width: 0px;&#34; /&gt;
+&lt;img src=/img/ar-talking.jpg style=&#34;box-shadow:none; float: left; width:210px; padding: 10px; padding-top:0px; margin-top: 0px; margin-left: 0px; padding-left: 0px; margin-bottom: 0px; border-width: 0px;&#34; /&gt;
+&lt;img src=/img/ar-enjoying.jpg style=&#34;box-shadow:none; float: left; width:210px; padding: 10px; padding-top:0px; margin-top: 0px; margin-left: 0px; padding-left: 0px; margin-bottom: 0px; border-width: 0px;&#34; /&gt;
+&lt;div  style=&#34;clear:both;&#34;&gt;&lt;/div&gt;
+&lt;small&gt;
+&lt;/small&gt;
+I was invited to give a keynote at Smalltalks in Argentina. Before the conference I spent some time with students at the University of Buenos Aires with Gabriela Arevallo and the other organizers of the conference. The conference was great. The argentinian Smalltalk community is extremely welcoming and passionate. I look forward to going back one day.
+&lt;/div&gt;&lt;/p&gt;
 </description>
     </item>
     
