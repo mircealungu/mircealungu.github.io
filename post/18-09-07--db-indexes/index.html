@@ -156,7 +156,7 @@ we recommend further personalized reading and personalized
 vocabulary exercises.</p>
 
 <p>The Zeeguu web application has a classical client-server
-architecture with the backend being implemnted with Flask
+architecture with the backend being implemented with Flask
 &ndash; one of the most popular web application frameworks
 for Python.</p>
 
@@ -192,7 +192,7 @@ based on my interactions with the reader yesterday and today.</p>
 <p>If you look at the article titles. you see that today I read two
 French articles and yesterday I read a German one.</p>
 
-<p>If you look at the session lengths,you see that this morning I was
+<p>If you look at the session lengths, you see that this morning I was
 not very focused: it took me multiple focused sessions to read
 the article about the Coca Cola bottle size&hellip; might be a problem
 with my attention span, but might also be a problem with the
@@ -213,7 +213,7 @@ about the user sessions to the front-end web application is as slow as this slot
 
 <p><img src=/img/sloth.gif style="border: 1px solid #ccddcc; padding: 6px; margin: 36px; margin-left: auto; margin-right: auto;" /></p>
 
-<p>Remember that I told you that FMD is alredy deployed with the Zeeguu API.</p>
+<p>Remember that I told you that FMD is already deployed with the Zeeguu API.</p>
 
 <p>Thus, to find out why is the endpoint so slow, I opened the FMD dashboard and enabled the Profiler for the
  endpoint. When the profiler is enabled, for every
@@ -242,8 +242,8 @@ in the following code (which is not fully visible in the image):</p>
 <p>&nbsp;</p>
 
 <p>This is Python code that uses SQLAlchemy.
-Sqlalchemy is  a very powerful ORM which will convert this Python code to SQL and
-send the correponding queries to MySQL. At least in theory
+SQLAlchemy is  a very powerful ORM which will convert this Python code to SQL and
+send the corresponding queries to MySQL. At least in theory
 we do not need to know MySQL if we use SQLAlchemy. (But
 because of something that Joel Spolsky calls <a href="https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/">the law of
 leaky abstractions</a>,
