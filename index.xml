@@ -11,6 +11,222 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Using a Performance Monitor to Illustrate the Power of DB Indexes</title>
+      <link>https://mircealungu.github.io/post/18-09-07--db-indexes/</link>
+      <pubDate>Thu, 06 Sep 2018 10:00:00 +0000</pubDate>
+      
+      <guid>https://mircealungu.github.io/post/18-09-07--db-indexes/</guid>
+      <description>
+
+&lt;p&gt;TL;DR;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- Database indexes are easy and powerful tools for performance enginering 
+- An internal performance monitor enables quick insights into service performance
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2 id=&#34;prologue-two-research-projects&#34;&gt;Prologue: Two Research Projects&lt;/h2&gt;
+
+&lt;p&gt;Project #1 - In &lt;a href=&#34;http://zeeguu.org&#34;&gt;Zeeguu&lt;/a&gt; we research how we
+can make learning a foreign language more fun. We monitor
+a learners interactions with foreign texts and based on this
+we recommend further personalized reading and personalized
+vocabulary exercises.&lt;/p&gt;
+
+&lt;p&gt;The Zeeguu web application has a classical client-server
+architecture with the backend being implemnted with Flask
+&amp;ndash; one of the most popular web application frameworks
+for Python.&lt;/p&gt;
+
+&lt;p&gt;Project #2: The &lt;a href=&#34;https://github.com/flask-dashboard/Flask-MonitoringDashboard/&#34;&gt;Flask Monitoring Dashboard&lt;/a&gt;
+(FMD) is an advanced internal monitor that tracks the evolution of
+performance and utilization of web applications. It can
+be deployed with near zero effort for Flask-based apps
+and APIs. The main developers of the FMD are Bogdan Petre and
+Patrick Vogel, two of my past master students in Groningen.&lt;/p&gt;
+
+&lt;p&gt;In the long tradition of &lt;em&gt;eating your own dogfood&lt;/em&gt;
+the FMD is used to monitor the performance evolution
+of the Zeeguu API.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2 id=&#34;context-why-computing-reading-sessions-is-not-so-easy&#34;&gt;Context: Why Computing Reading Sessions Is Not So Easy&lt;/h2&gt;
+
+&lt;p&gt;Zeeguu contains a module that computes the length of user reading sessions, which are periods of time in which a reader is focused while reading a text.&lt;/p&gt;
+
+&lt;p&gt;Computing reading sessions is not easy, because users might be reading an article
+and then leave it open while chatting with their friends on WhatsApp
+or maybe &lt;em&gt;crushing it&lt;/em&gt; at Candy Crush.
+Trying to predict when the user stopped paying attention requires
+complicated heuristics that
+are based all the actions that a user performed while interacting
+with a text.&lt;/p&gt;
+
+&lt;p&gt;The Screenshot bellow is from the Zeeguu web app and
+shows the reading sessions that were inferred
+based on my interactions with the reader yesterday and today.&lt;/p&gt;
+
+&lt;p&gt;If you look at the article titles. you see that today I read two
+French articles and yesterday I read a German one.&lt;/p&gt;
+
+&lt;p&gt;If you look at the session lengths,you see that this morning I was
+not very focused: it took me multiple focused sessions to read
+the article about the Coca Cola bottle size&amp;hellip; might be a problem
+with my attention span, but might also be a problem with the
+interestingness of the article&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=/img/db-indexes-1.png style=&#34;border: 1px solid #ccddcc; padding: 6px; margin: 36px; margin-left: auto; margin-right: auto;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2 id=&#34;the-first-step-towards-solution-is-admitting-you-have-a-problem&#34;&gt;The First Step Towards Solution is Admitting You Have a Problem&lt;/h2&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;This morning I realized that this endpoint which provides the information
+about the user sessions to the front-end web application is as slow as this sloth:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=/img/sloth.gif style=&#34;border: 1px solid #ccddcc; padding: 6px; margin: 36px; margin-left: auto; margin-right: auto;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Remember that I told you that FMD is alredy deployed with the Zeeguu API.&lt;/p&gt;
+
+&lt;p&gt;Thus, to find out why is the endpoint so slow, I opened the FMD dashboard and enabled the Profiler for the
+ endpoint. When the profiler is enabled, for every
+call to the endpoint the FMD samples continuously the Python
+call stack in such a way that it can present where the time
+is being spent during the computations associated with the endpoint.&lt;/p&gt;
+
+&lt;p&gt;After enabling the profiler for the endpoint, I made sure to call
+the endpoint one more time. Then I went to the Profiler tab  to discover the information presented in the following figure which shows the time spent every one of the
+code lines that are being called from the endpoint.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=/img/db-indexes-2.png style=&#34;border: 1px solid #ccddcc; margin: 0 auto; padding: 0 20; width: 100%; &#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;The first line shows us that the endpoint was computing stuff for 43 seconds!&lt;/p&gt;
+
+&lt;p&gt;The last line shows that 98% of the the 43 seconds is spent
+in the following code (which is not fully visible in the image):&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cls.query.filter(UserActivityData.time &amp;lt; self.last_action_time).all()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;This is Python code that uses SQLAlchemy.
+Sqlalchemy is  a very powerful ORM which will convert this Python code to SQL and
+send the correponding queries to MySQL. At least in theory
+we do not need to know MySQL if we use SQLAlchemy. (But
+because of something that Joel Spolsky calls &lt;a href=&#34;https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/&#34;&gt;the law of
+leaky abstractions&lt;/a&gt;,
+most of the times we still need to understand some SQL anyway&amp;hellip; )&lt;/p&gt;
+
+&lt;p&gt;So we now know that the slowness of our endpoint is due to the SQL query
+that is generated by the SQLAlchemy code in the above-mentioned
+line. And we also know that, due to the SQLAlchemy naming conventions,
+the very slow SQL query must work with the &lt;code&gt;user_activity_data&lt;/code&gt; table
+and its &lt;code&gt;time&lt;/code&gt; column (this is given away by the &lt;code&gt;UserActivityData.time&lt;/code&gt; part of the
+code above).&lt;/p&gt;
+
+&lt;p&gt;Looking at the table structure
+in the database and at the session computation algorithm we
+observe two things:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the table has not been designed with the session computation
+algorithm in mind, and the algorithm iterates many times through
+all the table rows&lt;/li&gt;
+&lt;li&gt;the &lt;code&gt;user_activity_data&lt;/code&gt; table is a very large table with
+hundreds of thousands of records&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;fixing-the-problem-without-touching-the-algorithm&#34;&gt;Fixing the Problem Without Touching the Algorithm&lt;/h1&gt;
+
+&lt;p&gt;The first thing that comes to my mind is a recent discussion with
+my sister about DB indexes and how they are very powerful performance tools. So I&amp;rsquo;m thinking, maybe
+this is an opportunity to show with a case study the
+impact of an index.&lt;/p&gt;
+
+&lt;p&gt;I thus go to the database and I add a new index that is
+inspired by the &lt;code&gt;UserActivityData.time&lt;/code&gt; that appears
+in the very slow code line above:&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CREATE INDEX index_uadtime ON user_activity_data(time)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;This will make MySQL create additional internal structures
+that will allow it to optimize queries that involve
+in their condition the &lt;code&gt;user_activity_data&lt;/code&gt;
+table and the &lt;code&gt;time&lt;/code&gt; column.&lt;/p&gt;
+
+&lt;p&gt;I redeploy the API, request again the endpoint
+and then I visit again the Profiler page, and lo and behold!
+Instead of 43 seconds now my endpoint takes 1.6 seconds.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=/img/db-indexes-3.png style=&#34;border: 1px solid #ccddcc; margin: 0 auto; padding: 0 20; width: 100%; &#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I now have a nice example to show to my sister about
+the huge impact indexes have on database performance.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h1 id=&#34;the-morales-of-this-story&#34;&gt;The Morales of this Story&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;For the Beginner:&lt;/strong&gt; Indexes are very important for
+the performance of your database. Also, profiling
+the performance of your code is a skill you will have
+to learn. The FMD is a good starting point if you
+are a Flask developer.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;For the Advanced:&lt;/strong&gt; An internal monitor for your
+API can be a wonderful and much faster way of getting
+insight into the workings of your service. Sure, you
+can also deploy a profiler from your development
+environment, but having the profiler available to be
+deployed in production with a single click has the
+huge advantage of you getting information about the
+&lt;strong&gt;real&lt;/strong&gt; data.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;For the Flask/Python Developer:&lt;/strong&gt; FMD is an awesome
+tool. So grab it while it&amp;rsquo;s still
+a research project and is free. In exchange we might
+ask you some questions at some point. But hey, that&amp;rsquo;s
+nothing for the easy insights you get with it.&lt;/p&gt;
+
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Zeeguu &amp;ndash; &lt;a href=&#34;https://www.researchgate.net/publication/322489283_As_We_May_Study_Towards_the_Web_as_a_Personalized_Language_Textbook&#34;&gt;scientific paper&lt;/a&gt;, &lt;a href=&#34;https://zeeguu.org&#34;&gt;website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;FMD &amp;ndash; &lt;a href=&#34;https://github.com/flask-dashboard/Vissoft-17-Paper/blob/master/FlaskDashboard-Preprint.pdf&#34;&gt;paper&lt;/a&gt;, &lt;a href=&#34;https://github.com/flask-dashboard/Flask-MonitoringDashboard/&#34;&gt;website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Starting as Associate at IT University in Copenhagen</title>
+      <link>https://mircealungu.github.io/post/18-07-01--started-at-itu/</link>
+      <pubDate>Sun, 01 Jul 2018 12:00:00 +0000</pubDate>
+      
+      <guid>https://mircealungu.github.io/post/18-07-01--started-at-itu/</guid>
+      <description>&lt;p&gt;&lt;img src=/img/itu.jpg style=&#34;box-shadow:none; float: left; width:60%; padding: 10px; padding-top:0px; margin-top: 0px; margin-left: 0px; padding-left: 0px; margin-bottom: 0px; border-width: 0px;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I am glad to announce that I have started as Associate Professor at the IT University in Copenhagen.
+I will be teaching Software Architecture, Technical Interaction Desgin, and Advanced Software Engineering. I will also be continuing my work on software evolution, software ecosystems, and using technology to enhance personalized learning. The building looks amazing. The colleagues are diverse and telented. And the city is as bike-friendly as Groningen was. I have a feeling that is &amp;ldquo;the beginning of a beautiful friendship&amp;rdquo; :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Invited Talk at the SEN Symposium</title>
       <link>https://mircealungu.github.io/post/17-01-20--sen-symposium-talk/</link>
       <pubDate>Fri, 20 Jan 2017 12:00:00 +0000</pubDate>
@@ -408,96 +624,6 @@ long after they tool does not compile anymore :)&lt;/p&gt;
 
 &lt;p&gt;The &lt;a href=&#34;https://github.com/mircealungu/Softwarenaut/&#34;&gt;Softwarenaut GitHub repo&lt;/a&gt; contains instructions on how to &lt;a href=&#34;https://github.com/mircealungu/Softwarenaut/blob/master/INSTALL.md&#34;&gt;obtain the code
 and install the system&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>📝 Mapping the Open Information Economy</title>
-      <link>https://mircealungu.github.io/post/13-09-01-visualizing-stack-overflow/</link>
-      <pubDate>Wed, 20 Nov 2013 12:00:00 +0000</pubDate>
-      
-      <guid>https://mircealungu.github.io/post/13-09-01-visualizing-stack-overflow/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;https://mircealungu.github.io/img/stackoverflow.png&#34; alt=&#34;visualizing-stack-overflow&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;&amp;ldquo;A nobel prize is waiting for the one who visualizes the economy
-of information&amp;rdquo;&lt;/b&gt; (Steward Brand, The Media Lab)&lt;/p&gt;
-
-&lt;p&gt;One of my current travelling companions is “The Media Lab – Inventing the Future at MIT” by Steward Brand. Like several other books about the history of computing in the 80s, this one is also fascinating and it shows again how much ahead of their time were people in those years… and how we are still reaping the ideas that they saw. The book reports on an anecdote by Harlan Cleveland :&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;“I have wanted for some time to find a map of information flows around the world. The other day I had one hour to kill between appointments in new york city, so I dropped into the Rand-McNally shop to ask for such a map. My request created quite a stir, and virtually every employee was called into consultation. They brought out all sorts of maps showing flows of food and feedgrains, oil and coal, weapons and manufacturers – but finally admitted that they had no map of information flows and didn’t think their competitors had one either.” (Steward Brand, Inventing the Future at MIT, pp. 245)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;can-we-make-a-map-of-information-flow-in-the-world-today&#34;&gt;Can we make a map of information flow in the world today?&lt;/h3&gt;
-
-&lt;p&gt;Yes we can! In the article that we will present at SSE in Saint Petersburg this summer we show how can we do it for software engineering based on StackOverflow data.&lt;/p&gt;
-
-&lt;p&gt;StackOverflow is the principal website for software engineers in search for answers to programming questions. The quality of the answers and the fact that the mean time to a question being answered is 11 minutes make it the &lt;em&gt;de facto market for information&lt;/em&gt; regarding programming.&lt;/p&gt;
-
-&lt;p&gt;In the StackOverflow information market the currency is &lt;em&gt;reputation points&lt;/em&gt;. The reputation points are offered by the user originating a question to the one that best answers it. Others who found the answer useful can provide further points by upvoting the answer later.&lt;/p&gt;
-
-&lt;p&gt;As data source for our map we use ten million questions and answers (published as a database dump by A. Bacchelli at U. Lugano). Among other things the data source contains also geolocation information for a large percentage of the the users. Thus, if we aggregate the exchanges of information to geographical regions we will obtain a map.&lt;/p&gt;
-
-&lt;h3 id=&#34;how-to-visualize-the-map&#34;&gt;How to &lt;em&gt;visualize&lt;/em&gt; the map?&lt;/h3&gt;
-
-&lt;p&gt;Inspired from our earlier work on
-    &lt;a href=&#34;https://mircealungu.github.io/post/14-01-01-evolutionary-and-collaborative-software-architecture-recovery/&#34;&gt;visualizing software&lt;/a&gt;
-we used the following conventions for visualizing our information map:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The areas of countries and continents is proportional to the reputation of their users&lt;/li&gt;
-&lt;li&gt;The thickness of an arrow indicating information flow (answers) between regions is proportional to the number of answers abstracted in it&lt;/li&gt;
-&lt;li&gt;Where we had sufficient space, we labelled countries with their corresponding flags&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This map of software engineering information flow in the paper looks like the figure below:&lt;/p&gt;
-
-&lt;div style=&#34;margin: 0 -48%; padding: 0 -48%;&#34;&gt;
-    &lt;img src=&#34;https://mircealungu.github.io/img/stackoverflow-full.png&#34; /&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&#34;what-can-we-learn&#34;&gt;What can we learn?&lt;/h3&gt;
-
-&lt;p&gt;The most straightforward observations based on this map are:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;EU is exporting more answers to the US than the other way around!&lt;/li&gt;
-&lt;li&gt;However, US has more reputation than EU&lt;/li&gt;
-&lt;li&gt;Several small countries like Switzerland or Netherland have disproportionately high reputation with respect to their population&lt;/li&gt;
-&lt;li&gt;China is practically absent even if Joel Spolsky (the founder of SO) &lt;a href=&#34;https://stackoverflow.blog/2011/04/stack-overflow-around-the-world/&#34;&gt;reports&lt;/a&gt; large numbers of visitors to the site from there&lt;/li&gt;
-&lt;li&gt;Africa does not contribute much&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;what-next&#34;&gt;What next?&lt;/h3&gt;
-
-&lt;p&gt;The map is taken from our paper (&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Sche13a-GeolocatingStackOverflow.pdf&#34;&gt;pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?_k=dvvBNH0e&amp;amp;query=Sche13a&amp;amp;display=bibtex&#34;&gt;Bibtex&lt;/a&gt;) which contains more details about the data collection and analysis (including details on geo-locating users, and the evolution over time of the data).&lt;/p&gt;
-
-&lt;p&gt;Is the map representative of the way programming information is spread around the world? Are there other similar maps that you are aware of?&lt;/p&gt;
-
-&lt;p&gt;If you want to talk more about this topic &lt;a href=&#34;https://mircealungu.github.io/#contact&#34;&gt; let me know&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;possible-student-project&#34;&gt;Possible Student Project&lt;/h3&gt;
-
-&lt;p&gt;There are a few very nice ways in which this work could be continued. A student interested in working on this topic for a thesis should &lt;a href=&#34;https://mircealungu.github.io/#contact&#34;&gt; contact me&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Keynote at Smalltalks in Argentina</title>
-      <link>https://mircealungu.github.io/post/12-11-11-keynote-smalltalks-argentina/</link>
-      <pubDate>Tue, 20 Nov 2012 12:00:00 +0000</pubDate>
-      
-      <guid>https://mircealungu.github.io/post/12-11-11-keynote-smalltalks-argentina/</guid>
-      <description>&lt;p&gt;&lt;img src=/img/ar-teaching.jpg style=&#34;box-shadow:none; float: left; width:210px; padding: 10px; padding-top:0px; margin-top: 0px; margin-left: 0px; padding-left: 0px; margin-bottom: 0px; border-width: 0px;&#34; /&gt;
-&lt;img src=/img/ar-talking.jpg style=&#34;box-shadow:none; float: left; width:210px; padding: 10px; padding-top:0px; margin-top: 0px; margin-left: 0px; padding-left: 0px; margin-bottom: 0px; border-width: 0px;&#34; /&gt;
-&lt;img src=/img/ar-enjoying.jpg style=&#34;box-shadow:none; float: left; width:210px; padding: 10px; padding-top:0px; margin-top: 0px; margin-left: 0px; padding-left: 0px; margin-bottom: 0px; border-width: 0px;&#34; /&gt;
-&lt;div  style=&#34;clear:both;&#34;&gt;&lt;/div&gt;
-&lt;small&gt;
-&lt;/small&gt;
-I was invited to give a keynote at Smalltalks in Argentina. Before the conference I spent some time with students at the University of Buenos Aires with Gabriela Arevallo and the other organizers of the conference. The conference was great. The argentinian Smalltalk community is extremely welcoming and passionate. I look forward to going back one day.
-&lt;/div&gt;&lt;/p&gt;
 </description>
     </item>
     
