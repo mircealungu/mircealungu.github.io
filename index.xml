@@ -20,30 +20,29 @@
 
 &lt;p&gt;TL;DR;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;- Database indexes are easy and powerful tools for performance enginering 
-- An internal performance monitor enables quick insights into service performance
+&lt;pre&gt;&lt;code&gt;- An internal performance monitor delivers fast insight into service performance
+- Database indexes are easy and powerful tools for performance enginering 
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h2 id=&#34;prologue-two-research-projects&#34;&gt;Prologue: Two Research Projects&lt;/h2&gt;
+&lt;h2 id=&#34;the-broad-context-two-research-projects&#34;&gt;The Broad Context: Two Research Projects&lt;/h2&gt;
 
-&lt;p&gt;Project #1 - In &lt;a href=&#34;http://zeeguu.org&#34;&gt;Zeeguu&lt;/a&gt; we research how we
-can make learning a foreign language more fun. We monitor
-a learners interactions with foreign texts and based on this
-we recommend further personalized reading and personalized
+&lt;p&gt;This is a story of finding and fixing a performance bug
+in one research project with the help of another research project.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Project #1&lt;/strong&gt; &amp;ndash; In &lt;a href=&#34;http://zeeguu.org&#34;&gt;Zeeguu&lt;/a&gt; we research how we
+can make learning a foreign language more fun. We created a platform
+that monitors a learners interactions with foreign texts and based on
+these past interactions we recommend further personalized reading and
 vocabulary exercises.&lt;/p&gt;
 
-&lt;p&gt;The Zeeguu web application has a classical client-server
-architecture with the backend being implemented with Flask
-&amp;ndash; one of the most popular web application frameworks
-for Python.&lt;/p&gt;
-
-&lt;p&gt;Project #2: The &lt;a href=&#34;https://github.com/flask-dashboard/Flask-MonitoringDashboard/&#34;&gt;Flask Monitoring Dashboard&lt;/a&gt;
+&lt;p&gt;&lt;strong&gt;Project #2&lt;/strong&gt; &amp;ndash; The &lt;a href=&#34;https://github.com/flask-dashboard/Flask-MonitoringDashboard/&#34;&gt;Flask Monitoring Dashboard&lt;/a&gt;
 (FMD) is an advanced internal monitor that tracks the evolution of
 performance and utilization of web applications. It can
-be deployed with near zero effort for Flask-based apps
-and APIs. The main developers of the FMD are Bogdan Petre and
+be &lt;strong&gt;deployed with one line of code&lt;/strong&gt; in Flask-based apps
+and APIs.
+The main developers of the FMD are Bogdan Petre and
 Patrick Vogel, two of my past master students in Groningen.&lt;/p&gt;
 
 &lt;p&gt;In the long tradition of &lt;em&gt;eating your own dogfood&lt;/em&gt;
@@ -52,57 +51,69 @@ of the Zeeguu API.&lt;/p&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h2 id=&#34;context-why-computing-reading-sessions-is-not-so-easy&#34;&gt;Context: Why Computing Reading Sessions Is Not So Easy&lt;/h2&gt;
+&lt;h2 id=&#34;reading-session-computation-in-zeeguu&#34;&gt;Reading Session Computation in Zeeguu&lt;/h2&gt;
 
-&lt;p&gt;Zeeguu contains a module that computes the length of user reading sessions, which are periods of time in which a reader is focused while reading a text.&lt;/p&gt;
+&lt;p&gt;Zeeguu aims to track the time spent by the learners reading
+articles by monitoring their interactions with the text
+in order to distill reading sessions &amp;ndash; periods of
+time in which a reader is focused on reading.&lt;/p&gt;
 
-&lt;p&gt;Computing reading sessions is not easy, because users might be reading an article
-and then leave it open while chatting with their friends on WhatsApp
-or maybe &lt;em&gt;crushing it&lt;/em&gt; at Candy Crush.
-Trying to predict when the user stopped paying attention requires
+&lt;p&gt;Computing reading sessions is however not easy:
+  users might leave an article open while chatting with their friends on WhatsApp
+  or playing Farmville on their phone; this time should not be counted as reading
+  time.&lt;/p&gt;
+
+&lt;p&gt;Trying to predict when the user stopped paying attention requires
 complicated heuristics that
 are based all the actions that a user performed while interacting
 with a text.&lt;/p&gt;
 
-&lt;p&gt;The Screenshot bellow is from the Zeeguu web app and
-shows the reading sessions that were inferred
-based on my interactions with the reader yesterday and today.&lt;/p&gt;
+&lt;p&gt;The figure below is a screenshot from the Zeeguu web app; it
+shows multiple reading sessions inferred
+based on my interactions with the Zeeguu reader yesterday and today.&lt;/p&gt;
 
 &lt;p&gt;If you look at the article titles. you see that today I read two
 French articles and yesterday I read a German one.&lt;/p&gt;
 
 &lt;p&gt;If you look at the session lengths, you see that this morning I was
 not very focused: it took me multiple focused sessions to read
-the article about the Coca Cola bottle size&amp;hellip; might be a problem
-with my attention span, but might also be a problem with the
-interestingness of the article&amp;hellip;&lt;/p&gt;
+the article about the Coca Cola bottle size. It seems that I was
+not very focused on this article this morning, but rather interleaved
+reading with my other morning routines.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=/img/db-indexes-1.png style=&#34;border: 1px solid #ccddcc; padding: 6px; margin: 36px; margin-left: auto; margin-right: auto;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;!-- ## Investigating A Performance Bottleneck --&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h2 id=&#34;the-first-step-towards-solution-is-admitting-you-have-a-problem&#34;&gt;The First Step Towards Solution is Admitting You Have a Problem&lt;/h2&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;p&gt;This morning I realized that this endpoint which provides the information
-about the user sessions to the front-end web application is as slow as this sloth:&lt;/p&gt;
+&lt;p&gt;However, today I realized that there is a big problem with
+displaying of information about the user sessions in
+the Zeeguu web app is very very slow; it feels as slow as this:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=/img/sloth.gif style=&#34;border: 1px solid #ccddcc; padding: 6px; margin: 36px; margin-left: auto; margin-right: auto;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Remember that I told you that FMD is already deployed with the Zeeguu API.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;p&gt;Thus, to find out why is the endpoint so slow, I opened the FMD dashboard and enabled the Profiler for the
- endpoint. When the profiler is enabled, for every
+&lt;h2 id=&#34;fmd-to-rescue-finding-the-reason-for-the-slowness&#34;&gt;FMD To Rescue: Finding The Reason for The Slowness&lt;/h2&gt;
+
+&lt;p&gt;The functionality for computing user sessions is implemented in
+an endpoint named &lt;code&gt;user_article_history&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;To find out why this endpoint is so slow, it&amp;rsquo;s very convenient to use the FMD.
+As mentioned before, the FMD is already deployed in the
+Zeeguu API and all we need to do is to enable &lt;strong&gt;profiling&lt;/strong&gt;
+from its user interface.&lt;/p&gt;
+
+&lt;p&gt;When the profiler is enabled, for every
 call to the endpoint the FMD samples continuously the Python
 call stack in such a way that it can present where the time
 is being spent during the computations associated with the endpoint.&lt;/p&gt;
 
-&lt;p&gt;After enabling the profiler for the endpoint, I made sure to call
-the endpoint one more time. Then I went to the Profiler tab  to discover the information presented in the following figure which shows the time spent every one of the
-code lines that are being called from the endpoint.&lt;/p&gt;
+&lt;p&gt;We thus enable the profiler for &lt;code&gt;user_article_history&lt;/code&gt;, make sure to call
+the endpoint one more time, then open the Profiler tab in FMD to discover
+the information presented in the figure below. The figure shows the time
+spent on the corresponding lines of code called from the endpoint.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=/img/db-indexes-2.png style=&#34;border: 1px solid #ccddcc; margin: 0 auto; padding: 0 20; width: 100%; &#34; /&gt;&lt;/p&gt;
 
@@ -110,8 +121,8 @@ code lines that are being called from the endpoint.&lt;/p&gt;
 
 &lt;p&gt;The first line shows us that the endpoint was computing stuff for 43 seconds!&lt;/p&gt;
 
-&lt;p&gt;The last line shows that 98% of the the 43 seconds is spent
-in the following code (which is not fully visible in the image):&lt;/p&gt;
+&lt;p&gt;The last line shows that 98% of the time is spent
+in the following code line (which is not fully visible in the image):&lt;/p&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
@@ -122,17 +133,17 @@ in the following code (which is not fully visible in the image):&lt;/p&gt;
 
 &lt;p&gt;This is Python code that uses SQLAlchemy.
 SQLAlchemy is  a very powerful ORM which will convert this Python code to SQL and
-send the corresponding queries to MySQL. At least in theory
-we do not need to know MySQL if we use SQLAlchemy. (But
+send the corresponding queries to a database management system (in our case MySQL).
+In theory we do not need to know MySQL if we use SQLAlchemy. In practice,
 because of something that Joel Spolsky calls &lt;a href=&#34;https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/&#34;&gt;the law of
 leaky abstractions&lt;/a&gt;,
-most of the times we still need to understand some SQL anyway&amp;hellip; )&lt;/p&gt;
+, most of the times we still need to understand some details about MySQL anyway.&lt;/p&gt;
 
-&lt;p&gt;So we now know that the slowness of our endpoint is due to the SQL query
+&lt;p&gt;So we now know that the slowness of our endpoint is probably due to the SQL query
 that is generated by the SQLAlchemy code in the above-mentioned
 line. And we also know that, due to the SQLAlchemy naming conventions,
 the very slow SQL query must work with the &lt;code&gt;user_activity_data&lt;/code&gt; table
-and its &lt;code&gt;time&lt;/code&gt; column (this is given away by the &lt;code&gt;UserActivityData.time&lt;/code&gt; part of the
+and its &lt;code&gt;time&lt;/code&gt; column (this is given away by the &lt;code&gt;UserActivityData.time&lt;/code&gt; part in the
 code above).&lt;/p&gt;
 
 &lt;p&gt;Looking at the table structure
@@ -147,7 +158,7 @@ all the table rows&lt;/li&gt;
 hundreds of thousands of records&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;fixing-the-problem-without-touching-the-algorithm&#34;&gt;Fixing the Problem Without Touching the Algorithm&lt;/h1&gt;
+&lt;h2 id=&#34;database-indexes-to-rescue-fixing-the-slowness&#34;&gt;Database Indexes to Rescue: Fixing the Slowness&lt;/h2&gt;
 
 &lt;p&gt;The first thing that comes to my mind is a recent discussion with
 my sister about DB indexes and how they are very powerful performance tools. So I&amp;rsquo;m thinking, maybe
@@ -160,7 +171,7 @@ in the very slow code line above:&lt;/p&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;CREATE INDEX index_uadtime ON user_activity_data(time)
+&lt;pre&gt;&lt;code&gt;CREATE INDEX ... ON user_activity_data(time)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
@@ -181,7 +192,7 @@ the huge impact indexes have on database performance.&lt;/p&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h1 id=&#34;the-morales-of-this-story&#34;&gt;The Morales of this Story&lt;/h1&gt;
+&lt;h2 id=&#34;in-conclusion&#34;&gt;In Conclusion&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;For the Beginner:&lt;/strong&gt; Indexes are very important for
 the performance of your database. Also, profiling
@@ -189,7 +200,7 @@ the performance of your code is a skill you will have
 to learn. The FMD is a good starting point if you
 are a Flask developer.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;For the Advanced:&lt;/strong&gt; An internal monitor for your
+&lt;p&gt;&lt;strong&gt;For the Intermediate:&lt;/strong&gt; An internal monitor for your
 API can be a wonderful and much faster way of getting
 insight into the workings of your service. Sure, you
 can also deploy a profiler from your development
@@ -198,11 +209,11 @@ deployed in production with a single click has the
 huge advantage of you getting information about the
 &lt;strong&gt;real&lt;/strong&gt; data.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;For the Flask/Python Developer:&lt;/strong&gt; FMD is an awesome
-tool. So grab it while it&amp;rsquo;s still
-a research project and is free. In exchange we might
-ask you some questions at some point. But hey, that&amp;rsquo;s
-nothing for the easy insights you get with it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;For the Flask/Python Developer:&lt;/strong&gt; FMD can be installed
+with &lt;a href=&#34;https://github.com/flask-dashboard/Flask-MonitoringDashboard/&#34;&gt;one line of Python code&lt;/a&gt;. And being
+a research project, is also free. So try it out.
+In exchange we might ask you for feedback at some point.
+But hey, that&amp;rsquo;s nothing for the easy obtained valuable insights you get with it.&lt;/p&gt;
 
 &lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
 

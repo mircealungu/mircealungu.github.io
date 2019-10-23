@@ -19,9 +19,9 @@
       
       <guid>https://mircealungu.github.io/post/18-09-07--db-indexes/</guid>
       <description>TL;DR;
-- Database indexes are easy and powerful tools for performance enginering - An internal performance monitor enables quick insights into service performance  &amp;nbsp;
-Prologue: Two Research Projects Project #1 - In Zeeguu we research how we can make learning a foreign language more fun. We monitor a learners interactions with foreign texts and based on this we recommend further personalized reading and personalized vocabulary exercises.
-The Zeeguu web application has a classical client-server architecture with the backend being implemented with Flask &amp;ndash; one of the most popular web application frameworks for Python.</description>
+- An internal performance monitor delivers fast insight into service performance - Database indexes are easy and powerful tools for performance enginering  &amp;nbsp;
+The Broad Context: Two Research Projects This is a story of finding and fixing a performance bug in one research project with the help of another research project.
+Project #1 &amp;ndash; In Zeeguu we research how we can make learning a foreign language more fun.</description>
     </item>
     
     <item>
