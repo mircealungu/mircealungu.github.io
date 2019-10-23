@@ -11,7 +11,7 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Using a Performance Monitor to Illustrate the Power of DB Indexes</title>
+      <title>Using a Performance Monitor to Illustrate the Importance of Database Indexes</title>
       <link>https://mircealungu.github.io/post/18-09-07--db-indexes/</link>
       <pubDate>Thu, 06 Sep 2018 10:00:00 +0000</pubDate>
       
@@ -38,7 +38,7 @@ these past interactions we recommend further personalized reading and
 vocabulary exercises.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Project #2&lt;/strong&gt; &amp;ndash; The &lt;a href=&#34;https://github.com/flask-dashboard/Flask-MonitoringDashboard/&#34;&gt;Flask Monitoring Dashboard&lt;/a&gt;
-(FMD) is an advanced internal monitor that tracks the evolution of
+(hereafter abbreviatred as FMD) is an advanced internal monitor that tracks the evolution of
 performance and utilization of web applications. It can
 be &lt;strong&gt;deployed with one line of code&lt;/strong&gt; in Flask-based apps
 and APIs.
