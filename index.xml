@@ -76,7 +76,7 @@ based on my interactions with the Zeeguu reader yesterday and today.&lt;/p&gt;
 French articles and yesterday I read a German one.&lt;/p&gt;
 
 &lt;p&gt;If you look at the session lengths, you see that this morning I was
-not very focused: it took me multiple focused sessions to read
+not very focused: it took me multiple sessions to read
 the article about the Coca Cola bottle size. It seems that I was
 not very focused on this article this morning, but rather interleaved
 reading with my other morning routines.&lt;/p&gt;
@@ -106,10 +106,10 @@ As mentioned before, the FMD is already deployed in the
 Zeeguu API and all we need to do is to enable &lt;strong&gt;profiling&lt;/strong&gt;
 from its user interface.&lt;/p&gt;
 
-&lt;p&gt;When the profiler is enabled, for every
-call to the endpoint the FMD samples continuously the Python
-call stack in such a way that it can present where the time
-is being spent during the computations associated with the endpoint.&lt;/p&gt;
+&lt;p&gt;When the profiler is enabled for an endpoint, for every
+call to that endpoint the FMD samples continuously the Python
+call stack such that it can present information about the
+lines of code where the most time was being spent.&lt;/p&gt;
 
 &lt;p&gt;We thus enable the profiler for &lt;code&gt;user_article_history&lt;/code&gt;, make sure to call
 the endpoint one more time, then open the Profiler tab in FMD to discover
