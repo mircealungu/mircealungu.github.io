@@ -8,9 +8,7 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Mircea F Lungu</copyright>
     <lastBuildDate>Tue, 20 Sep 2016 12:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://mircealungu.github.io/tags/ecosystems/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/tags/ecosystems/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>📝 Ubiquitous Monitoring Ecosystems</title>
@@ -18,8 +16,51 @@
       <pubDate>Tue, 20 Sep 2016 12:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/post/16-09-20-bootstrapping-an-ubiquitous-ecosystem/</guid>
-      <description>The Story I wrote a paper for the Ecosystem Architectures event (WEA&amp;rsquo;16) about the design of an ecosystem of applications which monitor a learner&amp;rsquo;s interactions with knowledge.
- &amp;ldquo;An unconventional idea for an ecosystem, which shows well that there are many more opportunities to benefit from the ecosystem idea, than the various industrial applications. The concrete examples of the platform and the applications make the ideas tangible and well understandable.</description>
+      <description>
+
+&lt;h3 id=&#34;the-story&#34;&gt;The Story&lt;/h3&gt;
+
+&lt;p&gt;I wrote a paper for the Ecosystem Architectures event (WEA&amp;rsquo;16) about the design of an ecosystem of applications which monitor a learner&amp;rsquo;s interactions with knowledge.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;An unconventional idea for an ecosystem, which shows well that there are many more opportunities to benefit from the ecosystem idea, than the various industrial applications. The concrete examples of the platform and the applications make the ideas tangible and well understandable. I particularly like the discussions of the lessons learned [&amp;hellip;]&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This was a very nice review to read.&lt;/p&gt;
+
+&lt;p&gt;The other reviews were also positive so the paper was accepted for presentation at WEA (Workshop on Ecosystem Architectures) that will take place in Copenhagen and is colocated with ECSA.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-paper&#34;&gt;The Paper&lt;/h3&gt;
+
+&lt;p&gt;The paper talks about some of the challenges and
+opportunities that come with bootstrapping a
+ubiquitous monitoring ecosystem. It is a case
+study inspired from our &lt;a href=&#34;https://zeeguu.unibe.ch&#34;&gt;Zeeguu&lt;/a&gt; ecosystem.&lt;/p&gt;
+
+&lt;p&gt;The paper is &lt;a href=&#34;https://github.com/mircealungu/Bootstrapping_an_Ecosystem__WEA16/blob/master/preprint.pdf&#34;&gt;available online&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;the-bibtex&#34;&gt;The BibTex&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;@inproceedings{Lungu16,
+ author = {Lungu, Mircea F.},
+ title = {Bootstrapping an Ubiquitous Monitoring Ecosystem for Accelerating Vocabulary Acquisition},
+ booktitle = {Proccedings of the 10th European Conference on Software Architecture Workshops},
+ series = {ECSAW 2016},
+ year = {2016},
+ isbn = {978-1-4503-4781-5},
+ location = {Copenhagen, Denmark},
+ pages = {28:1--28:4},
+ articleno = {28},
+ numpages = {4},
+ url = {http://doi.acm.org/10.1145/2993412.3003389},
+ doi = {10.1145/2993412.3003389},
+ acmid = {3003389},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {HCI, applied linguistics, software ecosystems},
+} 
+&lt;/code&gt;&lt;/pre&gt;
+</description>
     </item>
     
     <item>
@@ -28,8 +69,71 @@
       <pubDate>Wed, 20 Nov 2013 12:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/post/13-09-01-visualizing-stack-overflow/</guid>
-      <description>&amp;ldquo;A nobel prize is waiting for the one who visualizes the economy of information&amp;rdquo; (Steward Brand, The Media Lab)
-One of my current travelling companions is “The Media Lab – Inventing the Future at MIT” by Steward Brand. Like several other books about the history of computing in the 80s, this one is also fascinating and it shows again how much ahead of their time were people in those years… and how we are still reaping the ideas that they saw.</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://mircealungu.github.io/img/stackoverflow.png&#34; alt=&#34;visualizing-stack-overflow&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;&amp;ldquo;A nobel prize is waiting for the one who visualizes the economy
+of information&amp;rdquo;&lt;/b&gt; (Steward Brand, The Media Lab)&lt;/p&gt;
+
+&lt;p&gt;One of my current travelling companions is “The Media Lab – Inventing the Future at MIT” by Steward Brand. Like several other books about the history of computing in the 80s, this one is also fascinating and it shows again how much ahead of their time were people in those years… and how we are still reaping the ideas that they saw. The book reports on an anecdote by Harlan Cleveland :&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“I have wanted for some time to find a map of information flows around the world. The other day I had one hour to kill between appointments in new york city, so I dropped into the Rand-McNally shop to ask for such a map. My request created quite a stir, and virtually every employee was called into consultation. They brought out all sorts of maps showing flows of food and feedgrains, oil and coal, weapons and manufacturers – but finally admitted that they had no map of information flows and didn’t think their competitors had one either.” (Steward Brand, Inventing the Future at MIT, pp. 245)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;can-we-make-a-map-of-information-flow-in-the-world-today&#34;&gt;Can we make a map of information flow in the world today?&lt;/h3&gt;
+
+&lt;p&gt;Yes we can! In the article that we will present at SSE in Saint Petersburg this summer we show how can we do it for software engineering based on StackOverflow data.&lt;/p&gt;
+
+&lt;p&gt;StackOverflow is the principal website for software engineers in search for answers to programming questions. The quality of the answers and the fact that the mean time to a question being answered is 11 minutes make it the &lt;em&gt;de facto market for information&lt;/em&gt; regarding programming.&lt;/p&gt;
+
+&lt;p&gt;In the StackOverflow information market the currency is &lt;em&gt;reputation points&lt;/em&gt;. The reputation points are offered by the user originating a question to the one that best answers it. Others who found the answer useful can provide further points by upvoting the answer later.&lt;/p&gt;
+
+&lt;p&gt;As data source for our map we use ten million questions and answers (published as a database dump by A. Bacchelli at U. Lugano). Among other things the data source contains also geolocation information for a large percentage of the the users. Thus, if we aggregate the exchanges of information to geographical regions we will obtain a map.&lt;/p&gt;
+
+&lt;h3 id=&#34;how-to-visualize-the-map&#34;&gt;How to &lt;em&gt;visualize&lt;/em&gt; the map?&lt;/h3&gt;
+
+&lt;p&gt;Inspired from our earlier work on
+    &lt;a href=&#34;https://mircealungu.github.io/post/14-01-01-evolutionary-and-collaborative-software-architecture-recovery/&#34;&gt;visualizing software&lt;/a&gt;
+we used the following conventions for visualizing our information map:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The areas of countries and continents is proportional to the reputation of their users&lt;/li&gt;
+&lt;li&gt;The thickness of an arrow indicating information flow (answers) between regions is proportional to the number of answers abstracted in it&lt;/li&gt;
+&lt;li&gt;Where we had sufficient space, we labelled countries with their corresponding flags&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This map of software engineering information flow in the paper looks like the figure below:&lt;/p&gt;
+
+&lt;div style=&#34;margin: 0 -48%; padding: 0 -48%;&#34;&gt;
+    &lt;img src=&#34;https://mircealungu.github.io/img/stackoverflow-full.png&#34; /&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;what-can-we-learn&#34;&gt;What can we learn?&lt;/h3&gt;
+
+&lt;p&gt;The most straightforward observations based on this map are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;EU is exporting more answers to the US than the other way around!&lt;/li&gt;
+&lt;li&gt;However, US has more reputation than EU&lt;/li&gt;
+&lt;li&gt;Several small countries like Switzerland or Netherland have disproportionately high reputation with respect to their population&lt;/li&gt;
+&lt;li&gt;China is practically absent even if Joel Spolsky (the founder of SO) &lt;a href=&#34;https://stackoverflow.blog/2011/04/stack-overflow-around-the-world/&#34;&gt;reports&lt;/a&gt; large numbers of visitors to the site from there&lt;/li&gt;
+&lt;li&gt;Africa does not contribute much&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;what-next&#34;&gt;What next?&lt;/h3&gt;
+
+&lt;p&gt;The map is taken from our paper (&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Sche13a-GeolocatingStackOverflow.pdf&#34;&gt;pdf&lt;/a&gt;, &lt;a href=&#34;http://scg.unibe.ch/scgbib?_k=dvvBNH0e&amp;amp;query=Sche13a&amp;amp;display=bibtex&#34;&gt;Bibtex&lt;/a&gt;) which contains more details about the data collection and analysis (including details on geo-locating users, and the evolution over time of the data).&lt;/p&gt;
+
+&lt;p&gt;Is the map representative of the way programming information is spread around the world? Are there other similar maps that you are aware of?&lt;/p&gt;
+
+&lt;p&gt;If you want to talk more about this topic &lt;a href=&#34;https://mircealungu.github.io/#contact&#34;&gt; let me know&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;possible-student-project&#34;&gt;Possible Student Project&lt;/h3&gt;
+
+&lt;p&gt;There are a few very nice ways in which this work could be continued. A student interested in working on this topic for a thesis should &lt;a href=&#34;https://mircealungu.github.io/#contact&#34;&gt; contact me&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

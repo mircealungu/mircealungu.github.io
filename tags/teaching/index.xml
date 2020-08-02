@@ -8,9 +8,7 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Mircea F Lungu</copyright>
     <lastBuildDate>Thu, 06 Sep 2018 10:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://mircealungu.github.io/tags/teaching/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/tags/teaching/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Using a Performance Monitor to Illustrate the Importance of Database Indexes</title>
@@ -18,10 +16,213 @@
       <pubDate>Thu, 06 Sep 2018 10:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/post/18-09-07--db-indexes/</guid>
-      <description>TL;DR;
-- An internal performance monitor delivers fast insight into service performance - Database indexes are easy and powerful tools for performance enginering  &amp;nbsp;
-The Broad Context: Two Research Projects This is a story of finding and fixing a performance bug in one research project with the help of another research project.
-Project #1 &amp;ndash; In Zeeguu we research how we can make learning a foreign language more fun.</description>
+      <description>
+
+&lt;p&gt;TL;DR;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- An internal performance monitor delivers fast insight into service performance
+- Database indexes are easy and powerful tools for performance enginering 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2 id=&#34;the-broad-context-two-research-projects&#34;&gt;The Broad Context: Two Research Projects&lt;/h2&gt;
+
+&lt;p&gt;This is a story of finding and fixing a performance bug
+in one research project with the help of another research project.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Project #1&lt;/strong&gt; &amp;ndash; In &lt;a href=&#34;http://zeeguu.org&#34;&gt;Zeeguu&lt;/a&gt; we research how we
+can make learning a foreign language more fun. We created a platform
+that monitors a learners interactions with foreign texts and based on
+these past interactions we recommend further personalized reading and
+vocabulary exercises.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Project #2&lt;/strong&gt; &amp;ndash; The &lt;a href=&#34;https://github.com/flask-dashboard/Flask-MonitoringDashboard/&#34;&gt;Flask Monitoring Dashboard&lt;/a&gt;
+(hereafter abbreviatred as FMD) is an advanced internal monitor that tracks the evolution of
+performance and utilization of web applications. It can
+be &lt;strong&gt;deployed with one line of code&lt;/strong&gt; in Flask-based apps
+and APIs.
+The main developers of the FMD are Bogdan Petre and
+Patrick Vogel, two of my past master students in Groningen.&lt;/p&gt;
+
+&lt;p&gt;In the long tradition of &lt;em&gt;eating your own dog food&lt;/em&gt;
+the FMD is used to monitor the performance evolution
+of the Zeeguu API.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2 id=&#34;reading-session-computation-in-zeeguu&#34;&gt;Reading Session Computation in Zeeguu&lt;/h2&gt;
+
+&lt;p&gt;Zeeguu aims to track the time spent by the learners reading
+articles by monitoring their interactions with the text
+in order to distill reading sessions &amp;ndash; periods of
+time in which a reader is focused on reading.&lt;/p&gt;
+
+&lt;p&gt;Computing reading sessions is however not easy:
+  users might leave an article open while chatting with their friends on WhatsApp
+  or playing Farmville on their phone; this time should not be counted as reading
+  time.&lt;/p&gt;
+
+&lt;p&gt;Trying to predict when the user stopped paying attention requires
+complicated heuristics that
+are based all the actions that a user performed while interacting
+with a text.&lt;/p&gt;
+
+&lt;p&gt;The figure below is a screenshot from the Zeeguu web app; it
+shows multiple reading sessions inferred
+based on my interactions with the Zeeguu reader yesterday and today.&lt;/p&gt;
+
+&lt;p&gt;If you look at the article titles. you see that today I read two
+French articles and yesterday I read a German one.&lt;/p&gt;
+
+&lt;p&gt;If you look at the session lengths, you see that this morning I was
+not very focused: it took me multiple sessions to read
+the article about the Coca Cola bottle size. It seems that I was
+not very focused on this article this morning, but rather interleaved
+reading with my other morning routines.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=/img/db-indexes-1.png style=&#34;border: 1px solid #ccddcc; padding: 6px; margin: 36px; margin-left: auto; margin-right: auto;&#34; /&gt;&lt;/p&gt;
+
+&lt;!-- ## Investigating A Performance Bottleneck --&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;However, today I realized that there is a big problem with
+displaying of information about the user sessions in
+the Zeeguu web app; it is very very slow. In fact it feels
+as slow as this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=/img/sloth.gif style=&#34;border: 1px solid #ccddcc; padding: 6px; margin: 36px; margin-left: auto; margin-right: auto;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2 id=&#34;fmd-to-rescue-finding-the-reason-for-the-slowness&#34;&gt;FMD To Rescue: Finding The Reason for The Slowness&lt;/h2&gt;
+
+&lt;p&gt;The functionality for computing user sessions is implemented in
+an endpoint named &lt;code&gt;user_article_history&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;To find out why this endpoint is so slow, it&amp;rsquo;s very convenient to use the FMD.
+As mentioned before, the FMD is already deployed in the
+Zeeguu API and all we need to do is to enable &lt;strong&gt;profiling&lt;/strong&gt;
+from its user interface.&lt;/p&gt;
+
+&lt;p&gt;When the profiler is enabled for an endpoint, for every
+call to that endpoint the FMD samples continuously the Python
+call stack such that it can present information about the
+lines of code where the most time was being spent.&lt;/p&gt;
+
+&lt;p&gt;We thus enable the profiler for &lt;code&gt;user_article_history&lt;/code&gt;, make sure to call
+the endpoint one more time, then open the Profiler tab in FMD to discover
+the information presented in the figure below. The figure shows the time
+spent on the corresponding lines of code called from the endpoint.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=/img/db-indexes-2.png style=&#34;border: 1px solid #ccddcc; margin: 0 auto; padding: 0 20; width: 100%; &#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;The first line shows us that the endpoint was computing stuff for 43 seconds!&lt;/p&gt;
+
+&lt;p&gt;The last line shows that 98% of the time is spent
+in the following code line (which is not fully visible in the image):&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cls.query.filter(UserActivityData.time &amp;lt; self.last_action_time).all()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;This is Python code that uses SQLAlchemy.
+SQLAlchemy is  a very powerful ORM which will convert this Python code to SQL and
+send the corresponding queries to a database management system (in our case MySQL).
+In theory we do not need to know MySQL if we use SQLAlchemy. In practice,
+because of something that Joel Spolsky calls &lt;a href=&#34;https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/&#34;&gt;the law of
+leaky abstractions&lt;/a&gt;,
+most of the times we still need to understand some details about MySQL anyway.&lt;/p&gt;
+
+&lt;p&gt;So we now know that the slowness of our endpoint is probably due to the SQL query
+that is generated by the SQLAlchemy code in the above-mentioned
+line. And we also know that, due to the SQLAlchemy naming conventions,
+the very slow SQL query must work with the &lt;code&gt;user_activity_data&lt;/code&gt; table
+and its &lt;code&gt;time&lt;/code&gt; column (this is given away by the &lt;code&gt;UserActivityData.time&lt;/code&gt; part in the
+code above).&lt;/p&gt;
+
+&lt;p&gt;Looking at the table structure
+in the database and at the session computation algorithm we
+observe two things:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the table has not been designed with the session computation
+algorithm in mind, and the algorithm iterates many times through
+all the table rows&lt;/li&gt;
+&lt;li&gt;the &lt;code&gt;user_activity_data&lt;/code&gt; table is a very large table with
+hundreds of thousands of records&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;database-indexes-to-rescue-fixing-the-slowness&#34;&gt;Database Indexes to Rescue: Fixing the Slowness&lt;/h2&gt;
+
+&lt;p&gt;The first thing that comes to my mind is a recent discussion with
+my sister about DB indexes and how they are very powerful performance tools. So I&amp;rsquo;m thinking, maybe
+this is an opportunity to show with a case study the
+impact of an index.&lt;/p&gt;
+
+&lt;p&gt;I thus go to the database and I add a new index that is
+inspired by the &lt;code&gt;UserActivityData.time&lt;/code&gt; that appears
+in the very slow code line above:&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CREATE INDEX ... ON user_activity_data(time)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;This will make MySQL create additional internal structures
+that will allow it to optimize queries that involve
+in their condition the &lt;code&gt;user_activity_data&lt;/code&gt;
+table and the &lt;code&gt;time&lt;/code&gt; column.&lt;/p&gt;
+
+&lt;p&gt;I redeploy the API, request again the endpoint
+and then I visit again the Profiler page, and lo and behold!
+Instead of 43 seconds now my endpoint takes 1.6 seconds.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=/img/db-indexes-3.png style=&#34;border: 1px solid #ccddcc; margin: 0 auto; padding: 0 20; width: 100%; &#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I now have a nice example to show to my sister about
+the huge impact indexes have on database performance.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2 id=&#34;in-conclusion&#34;&gt;In Conclusion&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;For the Beginner:&lt;/strong&gt; Indexes are very important for
+the performance of your database. Also, profiling
+the performance of your code is a skill you will have
+to learn. The FMD is a good starting point if you
+are a Flask developer.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;For the Intermediate:&lt;/strong&gt; An internal monitor for your
+API can be a wonderful and much faster way of getting
+insight into the workings of your service. Sure, you
+can also deploy a profiler from your development
+environment, but having the profiler available to be
+deployed in production with a single click has the
+huge advantage of you getting information about the
+&lt;strong&gt;real&lt;/strong&gt; data.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;For the Flask/Python Developer:&lt;/strong&gt; FMD can be deployed
+with &lt;a href=&#34;https://github.com/flask-dashboard/Flask-MonitoringDashboard/&#34;&gt;one line of Python code&lt;/a&gt;. And being
+a research project, is also free. So try it out.
+In exchange we might ask you for feedback at some point.
+But hey, that&amp;rsquo;s nothing for the easy obtained valuable insights you get with it.&lt;/p&gt;
+
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Zeeguu &amp;ndash; &lt;a href=&#34;https://www.researchgate.net/publication/322489283_As_We_May_Study_Towards_the_Web_as_a_Personalized_Language_Textbook&#34;&gt;scientific paper&lt;/a&gt;, &lt;a href=&#34;https://zeeguu.org&#34;&gt;website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;FMD &amp;ndash; &lt;a href=&#34;https://github.com/flask-dashboard/Vissoft-17-Paper/blob/master/FlaskDashboard-Preprint.pdf&#34;&gt;paper&lt;/a&gt;, &lt;a href=&#34;https://github.com/flask-dashboard/Flask-MonitoringDashboard/&#34;&gt;website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
@@ -30,7 +231,11 @@ Project #1 &amp;ndash; In Zeeguu we research how we can make learning a foreign 
       <pubDate>Sun, 01 Jul 2018 12:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/post/18-07-01--started-at-itu/</guid>
-      <description>I am glad to announce that I have started as Associate Professor at the IT University in Copenhagen. I will be teaching Software Architecture, Technical Interaction Desgin, and Advanced Software Engineering. I will also be continuing my work on software evolution, software ecosystems, and using technology to enhance personalized learning. The building looks amazing. The colleagues are diverse and telented. And the city is as bike-friendly as Groningen was. I have a feeling that is &amp;ldquo;the beginning of a beautiful friendship&amp;rdquo; :)</description>
+      <description>&lt;p&gt;&lt;img src=/img/itu.jpg style=&#34;box-shadow:none; float: left; width:60%; padding: 10px; padding-top:0px; margin-top: 0px; margin-left: 0px; padding-left: 0px; margin-bottom: 0px; border-width: 0px;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I am glad to announce that I have started as Associate Professor at the IT University in Copenhagen.
+I will be teaching Software Architecture, Technical Interaction Desgin, and Advanced Software Engineering. I will also be continuing my work on software evolution, software ecosystems, and using technology to enhance personalized learning. The building looks amazing. The colleagues are diverse and telented. And the city is as bike-friendly as Groningen was. I have a feeling that is &amp;ldquo;the beginning of a beautiful friendship&amp;rdquo; :)&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -39,8 +244,31 @@ Project #1 &amp;ndash; In Zeeguu we research how we can make learning a foreign 
       <pubDate>Mon, 21 Nov 2016 12:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/post/16-11-20-teacher-of-the-year/</guid>
-      <description>I have been nominated for the teacher of the year award! Especially after seeing all the other nominations I started feeling like I don&amp;rsquo;t deserve the honor. However, it is also true that together with my team, we put a lot of effort in coming up with cool project ideas and running them in the timespan of five months.
-Thus, many thanks and congratulations for my teaching assistants: Laura Baakman, Jeroen Brandsma, Georgios Digkas, Sybren Gjaltema, Jelle van Wezel, Angelo Karountzos, Alexander Lukjanenkovs.</description>
+      <description>&lt;p&gt;I have been nominated for the teacher of the year award!
+Especially after seeing all the other nominations I started
+feeling like I don&amp;rsquo;t deserve the honor. However, it is also
+true that together with my team, we put a lot of effort in
+  coming up with cool project ideas and
+  running them
+in the timespan of five months.&lt;/p&gt;
+
+&lt;p&gt;Thus, many thanks and congratulations for my teaching assistants:
+Laura Baakman,
+Jeroen Brandsma,
+Georgios Digkas,
+Sybren Gjaltema,
+Jelle van Wezel,
+Angelo Karountzos,
+Alexander Lukjanenkovs.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been long due to write up the lessons learned during
+the most recent software engineering courses.
+Now I feel the duty to do it even more.
+Hopefully before I start the next batch!&lt;/p&gt;
+
+&lt;p&gt;And now for the impossible challenge: can you spot me in the picture?
+&lt;img src=&#34;https://mircealungu.github.io/img/teacher.jpg&#34; alt=&#34;lala&#34; /&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -49,7 +277,17 @@ Thus, many thanks and congratulations for my teaching assistants: Laura Baakman,
       <pubDate>Wed, 16 Nov 2016 12:00:00 +0000</pubDate>
       
       <guid>https://mircealungu.github.io/post/16-11-16-introduction-to-data-science-course/</guid>
-      <description>Today, with Kerstin Bunte, we are starting our new course on Introduction to Data Science. This will be interesting: we have 60 first year master students from computer science, astronomy, and mathematics. What do they have in common? What topics can we cover such that most of them can benefit? Which topics are not too easy nor too challenging? We&amp;rsquo;ll see!</description>
+      <description>&lt;p&gt;Today, with &lt;a href=&#34;http://www.cs.rug.nl/~kbunte/&#34;&gt;Kerstin Bunte&lt;/a&gt;,
+we are starting our new course on Introduction to Data Science.
+This will be interesting:
+we have 60 first year master students from
+  computer science,
+  astronomy, and
+  mathematics.
+What do they have
+in common? What topics can we cover such that most of them can
+benefit? Which topics are not too easy nor too challenging? We&amp;rsquo;ll see!&lt;/p&gt;
+</description>
     </item>
     
   </channel>
